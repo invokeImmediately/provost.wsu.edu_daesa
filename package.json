@@ -20,5 +20,14 @@
   "bugs": {
     "url": "https://github.com/invokeImmediately/oue.wsu.edu/issues"
   },
-  "homepage": "https://github.com/invokeImmediately/oue.wsu.edu#readme"
+  "homepage": "https://github.com/invokeImmediately/oue.wsu.edu#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^3.4.1",
+    "gulp-extname": "^0.2.2",
+    "gulp-group-css-media-queries": "^1.2.0",
+    "gulp-insert": "^0.5.0",
+    "gulp-insert-lines": "github:invokeimmediately/gulp-insert-lines",
+    "gulp-less": "^3.3.0"
+  }
 }
