@@ -1,0 +1,24 @@
+{
+  "name": "oue.wsu.edu",
+  "version": "1.0.0",
+  "description": "Website of the WSU Office of Undergraduate Education under the direction of the Vice Provost for Undergraduate Education",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/invokeImmediately/oue.wsu.edu.git"
+  },
+  "keywords": [
+    "Washington",
+    "State",
+    "University"
+  ],
+  "author": "Daniel Rieck <danielcrieck@gmail.com> (https://www.linkedin.com/in/danielcrieck/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/invokeImmediately/oue.wsu.edu/issues"
+  },
+  "homepage": "https://github.com/invokeImmediately/oue.wsu.edu#readme"
+}
