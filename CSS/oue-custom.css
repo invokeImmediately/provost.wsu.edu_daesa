@@ -4329,11 +4329,13 @@ section.pad-top div.column.half-pad {
     max-width: 792px;
   }
 }
-main > .page > .row:last-child > .column:last-child {
+body.home main > .page > .row:last-child > .column:last-child,
+body.page main > .page > .row:last-child > .column:last-child {
   padding-bottom: 2rem;
 }
 @media all and (min-width: 694px) {
-  main > .page > .row:last-child.halves > .column:first-child {
+  body.home main > .page > .row:last-child.halves > .column:first-child,
+  body.page main > .page > .row:last-child.halves > .column:first-child {
     padding-bottom: 2rem;
   }
 }
