@@ -7301,7 +7301,7 @@ main {
   background: #fff url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/texture_leather_crimson-colored_341x34.jpg) left bottom repeat-x;
   border-left: 1px solid #eff0f1;
 }
-.column .is-colored-gray {
+.column.is-colored-gray {
   background-color: #d7dadb;
 }
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
