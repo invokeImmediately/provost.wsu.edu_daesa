@@ -1541,7 +1541,14 @@ body.blog .article-summary aside {
 .column h2.centered {
   text-align: center;
 }
-.column h2.fancy {
+.column h2.narrower-top-margin {
+  margin-top: 1.25rem;
+}
+.column h2.no-top-margin {
+  margin-top: 0;
+}
+.column h2.fancy,
+.column.show-header.has-fancy-header > header:first-child > h2 {
   position: relative;
   padding: 0.3333rem 0.5rem;
   margin-left: -0.5rem;
@@ -1549,13 +1556,16 @@ body.blog .article-summary aside {
   margin-right: -0.5rem;
   background-color: rgba(94, 106, 113, 0.2);
 }
-.column h2.fancy.with-top-border {
+.column h2.fancy.with-top-border,
+.column.show-header.has-fancy-header > header:first-child > h2.with-top-border {
   padding-top: 0.5rem;
 }
-.column h2.fancy.with-top-border:not(:first-child) {
+.column h2.fancy.with-top-border:not(:first-child),
+.column.show-header.has-fancy-header > header:first-child > h2.with-top-border:not(:first-child) {
   margin-top: 2rem;
 }
-.column h2.fancy.with-top-border::before {
+.column h2.fancy.with-top-border::before,
+.column.show-header.has-fancy-header > header:first-child > h2.with-top-border::before {
   content: "";
   position: absolute;
   top: 0;
@@ -1565,12 +1575,6 @@ body.blog .article-summary aside {
   border-top: 1px solid rgba(70, 78, 84, 0.6667);
   border-bottom: 1px solid rgba(70, 78, 84, 0.3333);
   border-top-width: 2px;
-}
-.column h2.narrower-top-margin {
-  margin-top: 1.25rem;
-}
-.column h2.no-top-margin {
-  margin-top: 0;
 }
 .column h2:first-child,
 .column header:first-child + h2,
