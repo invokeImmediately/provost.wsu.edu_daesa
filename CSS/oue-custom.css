@@ -7662,6 +7662,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 }
 #cee-toc h2 {
   color: #fff;
+  padding-left: 2rem;
 }
 #cee-toc ul {
   margin: 0;
