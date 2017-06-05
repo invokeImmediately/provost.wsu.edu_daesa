@@ -7268,7 +7268,7 @@ main {
 .column.is-colored-gray {
   background-color: #d7dadb;
 }
-.pad-top.taller {
+.row.pad-top.taller .column {
   padding-top: 3rem;
 }
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
