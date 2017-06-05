@@ -7507,7 +7507,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 */
 #cee-toc {
-  background-color: #3a4146;
+  background-color: #2f3438;
 }
 #cee-toc h2 {
   color: #fff;
@@ -7517,29 +7517,36 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   margin: 0;
   padding: 0;
   overflow: hidden;
-  border-top: 1px solid #3a4146;
-  border-left: 1px solid #3a4146;
-  background-color: #3a4146;
+  border-top: 1px solid #2f3438;
+  border-left: 1px solid #2f3438;
+  background-color: #2f3438;
   list-style-type: none;
 }
 #cee-toc li {
   float: left;
+  list-style-image: none;
+  padding: 0;
 }
 #cee-toc li a {
   display: inline-block;
   color: white;
   text-align: center;
   padding: 14px 16px;
-  border-right: 1px solid #3a4146;
-  border-bottom: 1px solid #3a4146;
+  border-right: 1px solid #2f3438;
+  border-bottom: 1px solid #2f3438;
   border-radius: 0;
   background-color: #464e54;
   box-shadow: none;
 }
 #cee-toc li a:hover {
-  border-color: #3a4146;
-  background-color: #2f3438;
+  border-color: #2f3438;
+  background-color: #23272a;
   text-shadow: none;
+}
+@media all and (max-width: 791px) {
+  #cee-toc li a {
+    padding: 8px 10px;
+  }
 }
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
