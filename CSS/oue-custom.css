@@ -1557,15 +1557,15 @@ body.blog .article-summary aside {
   background-color: rgba(94, 106, 113, 0.2);
 }
 .column h2.fancy.with-top-border,
-.column.show-header.has-fancy-header > header:first-child > h2.with-top-border {
+.column.show-header.has-fancy-header > header:first-child > h2 {
   padding-top: 0.5rem;
 }
 .column h2.fancy.with-top-border:not(:first-child),
-.column.show-header.has-fancy-header > header:first-child > h2.with-top-border:not(:first-child) {
+.column.show-header.has-fancy-header > header:first-child > h2:not(:first-child) {
   margin-top: 2rem;
 }
 .column h2.fancy.with-top-border::before,
-.column.show-header.has-fancy-header > header:first-child > h2.with-top-border::before {
+.column.show-header.has-fancy-header > header:first-child > h2::before {
   content: "";
   position: absolute;
   top: 0;
