@@ -7576,6 +7576,10 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
     padding: 8px 10px;
   }
 }
+#cee-how-it-works + .row.thirds > .column {
+  background-repeat: no-repeat;
+  background-position: right bottom;
+}
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
