@@ -1656,6 +1656,7 @@ h2.article-title a {
   margin-top: 0;
 }
 .column h3.fancy,
+.column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy,
 .gform_heading h3.gform_title.fancy,
 .gform_heading h3.gform_title {
@@ -1667,6 +1668,7 @@ h2.article-title a {
   background-color: rgba(219, 120, 121, 0.075);
 }
 .column h3.fancy.with-top-border,
+.column.show-header.has-fancy-header > header:first-child > h3,
 .column h4.fancy.with-top-border,
 .gform_heading h3.gform_title.fancy.with-top-border,
 .gform_heading h3.gform_title.with-top-border,
@@ -1674,6 +1676,7 @@ h2.article-title a {
   padding-top: 0.4375rem;
 }
 .column h3.fancy.with-top-border:not(:first-child),
+.column.show-header.has-fancy-header > header:first-child > h3:not(:first-child),
 .column h4.fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.fancy.with-top-border:not(:first-child),
 .gform_heading h3.gform_title.with-top-border:not(:first-child),
@@ -1681,6 +1684,7 @@ h2.article-title a {
   margin-top: 2rem;
 }
 .column h3.fancy.with-top-border::before,
+.column.show-header.has-fancy-header > header:first-child > h3::before,
 .column h4.fancy.with-top-border::before,
 .gform_heading h3.gform_title.fancy.with-top-border::before,
 .gform_heading h3.gform_title.with-top-border::before,
