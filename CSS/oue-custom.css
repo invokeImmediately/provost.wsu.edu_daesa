@@ -1489,7 +1489,8 @@ aside.widget_archive label.screen-reader-text {
 .row.side-right .column.two aside p:not(.centered) {
   text-align: left;
 }
-body.single-post #wsuwp-main .row .column.one aside {
+body.single-post #wsuwp-main .row .column.one aside,
+.column > aside.quote {
   float: right;
   clear: right;
   width: 33%;
@@ -1502,7 +1503,8 @@ body.single-post #wsuwp-main .row .column.one aside {
   font-size: 0.9rem;
 }
 @media all and (max-width: 693px) {
-  body.single-post #wsuwp-main .row .column.one aside {
+  body.single-post #wsuwp-main .row .column.one aside,
+  .column > aside.quote {
     width: 94%;
     width: calc(100% - 0.5rem * 2);
     margin-top: 1rem;
