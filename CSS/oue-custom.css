@@ -7723,10 +7723,10 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
     padding: 8px 10px;
   }
 }
-#cee-latest-tweets header:first-child > h2 {
+#cee-latest-tweets header:first-child > h4 {
   text-align: center;
 }
-#cee-latest-tweets p {
+#cee-latest-tweets .column.two p {
   position: relative;
   max-width: 700px;
   height: 0;
@@ -7736,47 +7736,47 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   margin-right: auto !important;
 }
 @media all and (max-width: 1073px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 40%;
   }
 }
 @media all and (max-width: 989px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 35.5%;
   }
 }
 @media all and (max-width: 860px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 40%;
   }
 }
 @media all and (max-width: 746px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 38%;
   }
 }
 @media all and (max-width: 690px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 45%;
   }
 }
 @media all and (max-width: 590px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 50%;
   }
 }
 @media all and (max-width: 490px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 55%;
   }
 }
 @media all and (max-width: 430px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 60%;
   }
 }
 @media all and (max-width: 382px) {
-  #cee-latest-tweets p {
+  #cee-latest-tweets .column.two p {
     padding-bottom: 75%;
   }
 }
