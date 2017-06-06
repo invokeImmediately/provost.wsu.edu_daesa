@@ -7727,7 +7727,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 }
 #cee-latest-tweets p {
   position: relative;
-  max-width: 700px important;
+  max-width: 700px;
   height: 0;
   padding-bottom: 45%;
   margin-left: auto !important;
