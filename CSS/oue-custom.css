@@ -7841,6 +7841,17 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
     height: 280px;
   }
 }
+@media all and (max-width: 540px) {
+  #cee-peer-mentors .outer-wrapper {
+    height: 519px;
+  }
+  #cee-peer-mentors .outer-wrapper .art {
+    height: 199px;
+  }
+  #cee-peer-mentors .outer-wrapper .inner-wrapper {
+    height: 320px;
+  }
+}
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
