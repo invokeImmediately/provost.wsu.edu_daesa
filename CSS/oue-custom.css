@@ -7724,6 +7724,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   }
 }
 #cee-latest-tweets header:first-child > h4 {
+  color: #464e54;
   text-align: center;
 }
 #cee-latest-tweets .column.two p {
