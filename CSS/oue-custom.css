@@ -7663,6 +7663,11 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 *   ║ #### 1.4) Sections: By ID ########################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 */
+@media all and (min-width: 990px) {
+  #cee-intro.side-right .column.one {
+    width: 66%;
+  }
+}
 #cee-toc {
   background-color: #2f3438;
 }
@@ -7704,6 +7709,17 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   #cee-toc li a {
     padding: 8px 10px;
   }
+}
+#cee-latest-tweets header:first-child > h2 {
+  text-align: center;
+}
+#cee-latest-tweets iframe {
+  display: block;
+  width: 100%;
+  max-width: 700px;
+  height: 315px;
+  margin-left: auto;
+  margin-right: auto;
 }
 #cee-how-it-works + .row.thirds > .column {
   background-repeat: no-repeat;
