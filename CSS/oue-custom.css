@@ -7572,6 +7572,11 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 .column aside.quote .source {
   font-weight: bold;
 }
+@media all and (min-width: 361px) {
+  .column aside.quote {
+    font-size: 0.8rem;
+  }
+}
 .column .bluish-gray-acrylic-sidebar p,
 .column .green-marble-sidebar p,
 .column .gray-acrylic-sidebar p {
