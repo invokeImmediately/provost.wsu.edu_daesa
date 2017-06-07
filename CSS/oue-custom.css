@@ -7679,7 +7679,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 */
 @media all and (min-width: 990px) {
   #cee-intro.side-right .column.one {
-    width: 66%;
+    width: 63.5%;
   }
 }
 #cee-otp {
