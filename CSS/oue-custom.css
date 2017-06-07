@@ -7524,6 +7524,9 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 .column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/1303/2016/11/wpbg-news-events-v2.png) no-repeat center;
 }
+.row.has-dark-header > header:first-child {
+  font-size: 1rem;
+}
 .row.has-dark-header > header:first-child > h2 {
   padding: 0 0 0 .1em;
   margin-top: 1.5rem;
