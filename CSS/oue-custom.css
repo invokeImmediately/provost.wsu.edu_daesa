@@ -7881,6 +7881,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   text-decoration: none;
   color: #393939;
   border-bottom: none;
+  box-shadow: none;
 }
 #cee-workshops .wsuwp-content-syndicate-item a .read-more,
 #cee-workshops .wsuwp-content-syndicate-event a .read-more {
