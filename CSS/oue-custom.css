@@ -7861,6 +7861,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 }
 #cee-workshops .wsuwp-content-syndicate-list {
   list-style-type: none;
+  font-size: 0.925rem;
 }
 #cee-workshops .wsuwp-content-syndicate-item {
   margin-bottom: 1em;
@@ -7913,8 +7914,8 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  width: 3.5rem;
-  word-spacing: 3rem;
+  width: 2.5rem;
+  word-spacing: 2rem;
   z-index: 1;
 }
 #cee-workshops .content-item-event-date:first-line {
@@ -7950,7 +7951,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 }
 #cee-workshops .content-item-event-title {
   display: block;
-  margin-left: 4.25rem;
+  margin-left: 3.25rem;
 }
 #cee-workshops .content-item-event-title a {
   border-bottom: 0;
