@@ -7859,6 +7859,83 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
     height: 320px;
   }
 }
+#cee-workshops .wsuwp-content-syndicate-wrapper {
+  overflow: hidden;
+  padding-bottom: 2rem;
+}
+#cee-workshops .wsuwp-content-syndicate-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0;
+  position: relative;
+}
+#cee-workshops .wsuwp-content-syndicate-event {
+  box-sizing: border-box;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 25%;
+  flex: 1 0 25%;
+  list-style: none;
+  padding: .5em 1em 0 0;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  width: 25%;
+}
+#cee-workshops .content-item-event-date {
+  box-sizing: border-box;
+  color: #fff;
+  float: left;
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+  text-transform: uppercase;
+  width: 3.5rem;
+  word-spacing: 3rem;
+  z-index: 1;
+}
+#cee-workshops .content-item-event-date:first-line {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 24px;
+}
+#cee-workshops .content-item-event-date:before,
+#cee-workshops .content-item-event-date:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  -webkit-transition: background .4s;
+  transition: background .4s;
+  width: 100%;
+  z-index: -1;
+}
+#cee-workshops .content-item-event-date:before {
+  background: #717171;
+  height: 24px;
+  top: 0;
+}
+#cee-workshops .content-item-event-date:after {
+  background: #b5babe;
+  bottom: 0;
+  height: 48px;
+}
+#cee-workshops li:hover .content-item-event-date:before {
+  background: #b5babe;
+}
+#cee-workshops li:hover .content-item-event-date:after {
+  background: #981e32;
+}
+#cee-workshops .content-item-event-title {
+  display: block;
+  margin-left: 4.25rem;
+}
+#cee-workshops .content-item-event-title a {
+  border-bottom: 0;
+}
+#cee-workshops .content-item-event-meta {
+  display: none;
+}
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
