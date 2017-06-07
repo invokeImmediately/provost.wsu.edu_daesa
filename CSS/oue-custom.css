@@ -7893,6 +7893,11 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   padding: 0;
   position: relative;
 }
+@media all and (max-width: 791px) {
+  #cee-workshops .wsuwp-content-syndicate-list {
+    flex-wrap: wrap;
+  }
+}
 #cee-workshops .wsuwp-content-syndicate-event {
   box-sizing: border-box;
   -webkit-box-flex: 1;
@@ -7903,6 +7908,13 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
   -webkit-transition: background .4s;
   transition: background .4s;
   width: 25%;
+}
+@media all and (max-width: 791px) {
+  #cee-workshops .wsuwp-content-syndicate-event {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+  }
 }
 #cee-workshops .content-item-event-date {
   box-sizing: border-box;
