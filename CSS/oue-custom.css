@@ -7524,7 +7524,8 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 .column section.header-newsEvents {
   background: url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat left top, url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat right top, url(/wp-content/uploads/sites/1303/2016/11/wpbg-news-events-v2.png) no-repeat center;
 }
-.column.show-header.has-dark-header > header:first-child > h2 {
+.column.show-header.has-dark-header > header:first-child > h2,
+.row.has-dark-header > header:first-child > h2 {
   padding: 1rem 2rem;
   margin-right: -2rem;
   margin-left: -2rem;
