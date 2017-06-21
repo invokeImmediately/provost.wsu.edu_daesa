@@ -1,9 +1,12 @@
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 *   ║ MASTER STYLE SHEET for WSU Office of Undergraduate Education Websites ############################################### ║
 *   ╠=======================================================================================================================╣
+*   ║ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)                                    ║
+*   ║                                                                                                                       ║
 *   ║ DESCRIPTION: Intended for use with all elements regardless of semantics                                               ║
+*   ║                                                                                                                       ║
 *   ║ LAYOUT: This document is laid out according to the W3C HTML5 language specification (please see                       ║
-*   ║          https://www.w3.org/TR/html5/ for more information). Rule-sets are generally declared in the                  ║
+*   ║          https://www.w3.org/TR/html5/ for more information). rulesets are generally declared in the                   ║
 *   ║          same sequence as their matching elements appear in the HTML5 spec. Moreover, style                           ║
 *   ║          declarations are made according to browser rendering sequence; styles for controlling layout                 ║
 *   ║          are followed by those related to painting and then by those associated with dynamic changes to               ║
@@ -11,16 +14,16 @@
 *   ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-*     ║ #### GLOBAL LESS VARIABLES, LESS MIXINS, AND CSS3 RULE-SETS ##################################################### ║
+*     ║ #### GLOBAL LESS VARIABLES, LESS MIXINS, AND CLASS SPECIFIC rulesets ############################################ ║
 *     ╠===================================================================================================================╣
-*     ║ LESS variables and mixins and low-specificity CSS3 rule-sets designed for either styling nodes without            ║
+*     ║ LESS variables and mixins and low-specificity CSS3 rulesets designed for either styling nodes without             ║
 *     ║ regard to semantics or being included within LESS dependencies.                                                   ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ++++ ADDITIONAL FONTS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       │   LESS variables and parametric mixins designed for inclusion in dependencies to specify                      │
-*       │   coloring of backgrounds, borders, text, and outlines.                                                       │
+*       │   CSS classes and LESS variables and parametric mixins designed for inclusion in dependencies to facilitate   │
+*       │   typographical design of dependent layouts.                                                                  │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 @import url(https://fonts.googleapis.com/css?family=Roboto+Mono:300|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif);
@@ -54,12 +57,6 @@ span.accentuated-text {
 .has-subst-font.serif {
   font-family: 'PT Serif', 'Palatino', serif;
 }
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ MIXINS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       │   Classes derived from LESS mixins designed for inclusion within dependencies, regardless of semantics, to    │
-*       │   specify spacing, padding, sizing, textual flow, and responsive behaviors.                                   │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 .initially-hidden,
 .column .initially-hidden {
   display: none;
@@ -349,8 +346,6 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *       │ ++++ ANIMATIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       │   Classes derived from LESS mixins designed for efficiently declaring animations, transitions, and            │
-*       │   transformationswith automatic cross-platform support.                                                       │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .fade-in-from-top {
@@ -581,7 +576,7 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
   }
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ Purely CLASS SPECIFIC CSS3 rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ CLASS SPECIFIC rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 :target:not(.no-anchor-highlighting) {
@@ -704,43 +699,39 @@ header:first-child + .has-pull-quote-bordering:not(.alt) {
   visibility: visible;
 }
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*     ║ #### DOCUMENT SECTIONS ########################################################################################## ║
+*     ║ #### SEMANTICALLY SPECIFIC RULESETS: DOCUMENT SECTIONS ########################################################## ║
 *     ╠===================================================================================================================╣
-*     ║ Rule-sets that target section-level nodes.                                                                        ║
+*     ║ rulesets that target section-level nodes.                                                                         ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ HTML rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ HTML rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 html {
   font-size: 17px;
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ BODY rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ BODY rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ ARTICLE rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ ARTICLE rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-div.column article.post {
+.column article.post {
   padding: 1em;
   border: 1px solid rgba(0, 0, 0, 0.3333);
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.25);
 }
-div.column article.post + article.post {
+.column article.post + article.post {
   margin-top: 1.5em;
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ SECTION rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ SECTIONS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*    │ SECTIONS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 section.column-one-with-bottom-margin > .column.one {
   margin-bottom: 2rem;
@@ -793,12 +784,6 @@ section:not(.row).article-header .header-content h3 {
     border: 1px solid white;
     color: #fff;
     text-shadow: 0 0.3333px 0 #afafaf, 0 0.6667px 0 #989898, 0 1px 0 #7f7f7f, 0 1.3333px 0 #686868, 0 1.6667px 0 #4f4f4f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
-    /*.rgb-black(); text-shadow: 0 .5px 0 #aaa, 0 1px 0 #888,
-						 0 1.5px .5px rgba(@rval,@gval,@bval,.1),
-						 0 0 2.5px rgba(@rval,@gval,@bval,.1),
-						 0 .5px 1.5px rgba(@rval,@gval,@bval,.3),
-						 0 1px 2.5px rgba(@rval,@gval,@bval,.2),
-						 0 0 .5px #000, 0 1.5px 1px #000;*/
   }
   section:not(.row).article-header .header-content h3 > mark.highlight {
     text-shadow: 0 0.3333px 0 #77898b, 0 0.6667px 0 #687779, 0 1px 0 #576365, 0 1.3333px 0 #475153, 0 1.6667px 0 #363e3f, 0 2px 0.3333px rgba(0, 0, 0, 0.1), 0 0 1.6667px rgba(0, 0, 0, 0.1), 0 0.3333px 1px rgba(0, 0, 0, 0.3), 0 1px 1.6667px rgba(0, 0, 0, 0.2), 0 1.6667px 3.3333px rgba(0, 0, 0, 0.25), 0 3.3333px 3.3333px rgba(0, 0, 0, 0.2), 0 6.6667px 6.6667px rgba(0, 0, 0, 0.15);
@@ -936,10 +921,6 @@ section.side-right .column.two p {
 .column section:not(:last-child) > *:last-child:not(.vpue-jump-bar) {
   padding-bottom: 0;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· SPACING OVERWRITES to improve responsive design ·································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
 main section.row > .column > p:not(.no-btm-margin),
 main section.row > .column > article > .article-body > p:not(.no-btm-margin),
 main section.row > .column > article > .article-summary > p:not(.no-btm-margin),
@@ -1030,152 +1011,224 @@ main section.row > .column table > tbody > tr > td > div > p + ol:not(.spaces-to
   margin-top: -0.66666667rem;
 }
 main section.row:last-child > .column > p:last-child,
-main section.row:last-child > .column > article > .article-body > p:last-child,
-main section.row:last-child > .column > article > .article-summary > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > p:last-child,
+main section.row:last-child > .column > .column > section > p:last-child,
 main section.row:last-child > .column > section > p:last-child,
-main section.row:last-child > .column > section > p:last-child,
-main section.row:last-child > .column > article > .article-body > section > p:last-child,
-main section.row:last-child > .column > article > .article-summary > section > p:last-child,
-main section.row:last-child > .column > section > section > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > p:last-child,
+main section.row:last-child > .column > .column > section > section > p:last-child,
 main section.row:last-child > .column > div > p:last-child,
-main section.row:last-child > .column > article > .article-body > div > p:last-child,
-main section.row:last-child > .column > article > .article-summary > div > p:last-child,
-main section.row:last-child > .column > section > div > p:last-child,
+main section.row:last-child > .column > .column > article > .article-body > div > p:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > p:last-child,
+main section.row:last-child > .column > .column > section > div > p:last-child,
 main section.row:last-child > .column > ul:last-child,
-main section.row:last-child > .column > article > .article-body > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > ul:last-child,
+main section.row:last-child > .column > .column > section > ul:last-child,
 main section.row:last-child > .column > section > ul:last-child,
-main section.row:last-child > .column > section > ul:last-child,
-main section.row:last-child > .column > article > .article-body > section > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > section > ul:last-child,
-main section.row:last-child > .column > section > section > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > ul:last-child,
+main section.row:last-child > .column > .column > section > section > ul:last-child,
 main section.row:last-child > .column > div > ul:last-child,
-main section.row:last-child > .column > article > .article-body > div > ul:last-child,
-main section.row:last-child > .column > article > .article-summary > div > ul:last-child,
-main section.row:last-child > .column > section > div > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-body > div > ul:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > ul:last-child,
+main section.row:last-child > .column > .column > section > div > ul:last-child,
 main section.row:last-child > .column > ol:last-child,
-main section.row:last-child > .column > article > .article-body > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-body > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > ol:last-child,
+main section.row:last-child > .column > .column > section > ol:last-child,
 main section.row:last-child > .column > section > ol:last-child,
-main section.row:last-child > .column > section > ol:last-child,
-main section.row:last-child > .column > article > .article-body > section > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > section > ol:last-child,
-main section.row:last-child > .column > section > section > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-body > section > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > section > ol:last-child,
+main section.row:last-child > .column > .column > section > section > ol:last-child,
 main section.row:last-child > .column > div > ol:last-child,
-main section.row:last-child > .column > article > .article-body > div > ol:last-child,
-main section.row:last-child > .column > article > .article-summary > div > ol:last-child,
-main section.row:last-child > .column > section > div > ol:last-child {
+main section.row:last-child > .column > .column > article > .article-body > div > ol:last-child,
+main section.row:last-child > .column > .column > article > .article-summary > div > ol:last-child,
+main section.row:last-child > .column > .column > section > div > ol:last-child {
   margin-bottom: 0;
 }
 @media all and (max-width: 693px) {
   main section.row:last-child.halves > .column:not(:last-child) > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > section > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > section > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > div > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > div > p:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > p:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > div > p:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > p:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > section > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > section > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > div > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > div > ul:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > ul:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > div > ul:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > ul:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > section > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > section > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > section > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > section > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > section > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > section > section > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > section > section > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > section > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > div > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > div > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > div > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-body > div > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-body > div > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-body > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-body > div > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.quarters > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
   main section.row:last-child.side-right > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > article > .article-summary > div > ol:last-child,
   main section.row:last-child.halves > .column:not(:last-child) > section > div > ol:last-child,
   main section.row:last-child.thirds > .column:not(:last-child) > section > div > ol:last-child,
-  main section.row:last-child.side-right > .column:not(:last-child) > section > div > ol:last-child {
+  main section.row:last-child.quarters > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.side-right > .column:not(:last-child) > section > div > ol:last-child,
+  main section.row:last-child.side-left > .column:not(:last-child) > section > div > ol:last-child {
     margin-bottom: 1rem;
   }
 }
@@ -1361,19 +1414,9 @@ main section.row > .column table > tbody > tr > td > div > ol:last-child {
     padding-left: 0.25rem;
   }
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· LINKED COLUMNS content group ····················································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
-/*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ ASIDE rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-/*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*     │ ASIDES layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ ASIDE layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 aside.widget {
   box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 0 2px rgba(0, 0, 0, 0.2), 3px 4px 4px rgba(0, 0, 0, 0.25) !important;
@@ -1519,10 +1562,8 @@ body.single-post #wsuwp-main .row .column.one aside,
 body.blog .article-summary aside {
   display: none;
 }
-/*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ H1-H6 & HEADER rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ H1-H6 & HEADER rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 .column h1 {
@@ -2070,22 +2111,14 @@ header.main-header .header-group {
 .column header:first-child + h3.fancy.with-top-border {
   margin-top: 0;
 }
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ FOOTER rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 footer.article-footer div.author-info {
   display: none;
 }
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### CONTENT GROUPING NODES ##################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ Rule-sets that target nodes for grouping content.                                                                 ║
+*     ║ rulesets that target nodes for grouping content.                                                                  ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ PARAGRAPH rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!  ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *    │ PARAGRAPHS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -3400,10 +3433,6 @@ body.single-post .column p.article-media-contacts + :not(.article-media-contacts
 }
 /*!  └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ LIST rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 /*!   ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
 *     │ LIST layouts ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *     └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
@@ -4123,10 +4152,6 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 }
 /*!   └───────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ DIV rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 div.article-body {
   position: relative;
   line-height: 1.375em;
@@ -4252,36 +4277,17 @@ div.award-banner {
     width: 70%;
   }
 }
+/*!       ┌-----------------------------------------------------------------------------------------------------------┐
+*         │ ···· (div).column rulesets ·············································································· │
+*         └-----------------------------------------------------------------------------------------------------------┘
+*/
 section.pad-top.half-pad,
 section.pad-top div.column.half-pad {
   padding-top: 1rem;
 }
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· div.column ······································································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │ Highly specific styling applied to div.column container elements as specified in the    │
- *         │ WSU Spine WordPress Theme.                                                              │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
 .column {
   font-size: 1rem;
   color: #464e54;
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │············ GENERIC CLASSES for div.column content containers ························· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- *         │···· HORIZONTAL RULE children of div.column elements ··································· │
- *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
- */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 *         │ ···· SECTION children of div.column elements ·········································· │
-	 *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 */
-  /*         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 *         │ ···· ADDITIONAL CLASSES for elements contained within div.column elements ············· │
-	 *         ├---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  ---  --- ┤
-	 */
 }
 .column:nth-child(1) {
   margin-top: 0;
@@ -4422,8 +4428,6 @@ body.page main > .page > .row:last-child > .column:last-child {
     padding-bottom: 2rem;
   }
 }
-/*         └-----------------------------------------------------------------------------------------┘        
- */
 div.callout,
 span.callout {
   height: auto;
@@ -5221,37 +5225,15 @@ div.recent-updates p.recent-update-3 {
     z-index: 1;
   }
 }
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ MAIN rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+/*   ┌──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*    │ MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*    └──────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
-/*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
- *     │ ++++++++ MAIN +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
- *     ├-------------------------------------------------------------------------------------------------┤
- *     │ Rule-sets for styling main elements within OUE pages built using the WSU Spine theme for        │
- *     │ WordPress.                                                                                      │
- *     │  ╘═» This file assumes the following LESS files have been imported upstream:                    │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/animations.less                            │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/color-palette.less                         │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/fonts.less                                 │
- *     │        • //github.com/invokeImmediately/WSU-UE---CSS/mixins.less                                │
- *     ├-------------------------------------------------------------------------------------------------┤
- */
-/*         ┌-----------------------------------------------------------------------------------------┐
- *         │ ···· Style rule-sets wrapped in INCLUSIONAL MIXINS ···································· │
- *         └-----------------------------------------------------------------------------------------┘
- */
-/*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
- */
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### TEXT-LEVEL NODES ########################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ Rule-sets that target nodes with text-level semantics.                                                            ║
+*     ║ rulesets that target nodes with text-level semantics.                                                             ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ A rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ HYPERLINKS +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -5486,7 +5468,7 @@ a.vpue-tooltip span b {
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ STRONG rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ STRONG rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 strong.opening-line {
@@ -5499,7 +5481,7 @@ strong.stands-out {
   font-size: 1.2em;
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ MARK rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ MARK rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 mark.highlight {
@@ -5508,7 +5490,7 @@ mark.highlight {
   color: #AEC7CB;
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ SPAN rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ SPAN rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
@@ -5583,7 +5565,7 @@ span.has-tooltip:hover {
   }
 }
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ CITE rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ CITE rulesets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 cite.article-author {
@@ -5592,12 +5574,8 @@ cite.article-author {
 /*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
 *     ║ #### EMBEDDED CONTENT ########################################################################################### ║
 *     ╠===================================================================================================================╣
-*     ║ Rule-sets that target nodes representing embedded content.                                                        ║
+*     ║ rulesets that target nodes representing embedded content.                                                         ║
 *     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ IMG rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++ IMG selectors ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
@@ -5804,10 +5782,6 @@ figure figcaption {
     display: none;
   }
 }
-/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ IFRAME rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
-*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ IFRAMES rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     ├-------------------------------------------------------------------------------------------------┤
@@ -5850,6 +5824,12 @@ figure figcaption {
 }
 /*     └─────────────────────────────────────────────────────────────────────────────────────────────────┘
  */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### TABULAR DATA ############################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets that nodes for representing tabular data.                                                                ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*     ┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
  *     │ ++++++++ TABLES +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
  *     ├-------------------------------------------------------------------------------------------------┤
@@ -6050,12 +6030,16 @@ figure figcaption {
  */
 /*  └──────────────────────────────────────────────────────────────────────────────────────────────┘
  */
-/*  ╔════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### INPUT FORMS ##################################################################################### ║
- *  ╠========================================================================================================╣
- *  ║ Styling applied to input elements to which the gravity form classes have been applied.                 ║
- *  ╚════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### FORMS ###################################################################################################### ║
+*     ╠===================================================================================================================╣
+*     ║ Styling applied to nodes representing a form's user interface.                                                    ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
+/*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+*       │ FORM ELEMENT LAYOUTS ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
 input.read-more-state {
   display: none;
 }
@@ -6368,19 +6352,6 @@ div.read-more-target {
 .column ul.gform_fields.top_label li.gfield:first-child {
   margin-top: 0.5rem;
 }
-.column ul.gform_fields > li.gfield.gfield_contains_required {
-  /*input:not(.gf-value-entered):not(:focus),
-				select:not(.gf-value-entered):not(:focus),
-				textarea:not(.gf-value-entered):not(:focus) {
-					background-color: rgba(255,0,0,0.1);
-				}
-				ul.gfield_checkbox, ul.gfield_radio {
-					.transition(~"background 0.3s ease");
-					&:not(.gf-value-entered) {
-						background-color: rgba(255,0,0,0.1);
-					}
-				}*/
-}
 .column ul.gform_fields > li.gfield.gfield_contains_required input,
 .column ul.gform_fields > li.gfield.gfield_contains_required select,
 .column ul.gform_fields > li.gfield.gfield_contains_required textarea {
@@ -6392,6 +6363,21 @@ div.read-more-target {
 .column ul.gform_fields > li.gfield.gfield_contains_required select:focus,
 .column ul.gform_fields > li.gfield.gfield_contains_required textarea:focus {
   background-color: #edf3f4 !important;
+}
+.column ul.gform_fields > li.gfield.gfield_contains_required input:not(.gf-value-entered):not(:focus),
+.column ul.gform_fields > li.gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),
+.column ul.gform_fields > li.gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_checkbox,
+.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio {
+  -webkit-transition: background 0.3s ease;
+  -moz-transition: background 0.3s ease;
+  transition: background 0.3s ease;
+}
+.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),
+.column ul.gform_fields > li.gfield.gfield_contains_required ul.gfield_radio:not(.gf-value-entered) {
+  background-color: rgba(255, 0, 0, 0.1);
 }
 .column ul.gform_fields > li.gfield.gfield_contains_required span.address_line_2 input {
   background-color: #fff !important;
@@ -6518,14 +6504,14 @@ div.read-more-target {
     opacity: 1;
   }
 }
-/*  ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
- *  ║ #### SCRIPTING ###################################################################################################### ║
- *  ╠=======================================================================================================================╣
- *  ║ Rule-sets for interactive elements that do not function as intended without the support of JavaScript.                ║
- *  ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
- */
+/*!   ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
+*     ║ #### SCRIPTING ################################################################################################## ║
+*     ╠===================================================================================================================╣
+*     ║ rulesets for interactive elements that do not function as intended without the support of JavaScript.             ║
+*     ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+*/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ Purely CLASS SPECIFIC CSS3 rule-sets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ CLASS SPECIFIC rulesets related to script-driven elements ++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!       ┌-----------------------------------------------------------------------------------------------------------┐
@@ -6711,10 +6697,6 @@ div.read-more-target {
   display: none;
   width: 100%;
 }
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· qTip tooltips ······················································································ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
 /* ===============================================================================================================
  * qTip2 JavaScript Plugin for Tooltips
  * ---------------------------------------------------------------------------------------------------------------
@@ -7167,10 +7149,6 @@ x:-o-prefocus {
 .qtipmodal-ie6fix {
   position: absolute !important;
 }
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· jQuery-based photo slideshows ······································································ │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
 /* ===============================================================================================================
  * Cycle2dcr jQuery Plugin
  * ---------------------------------------------------------------------------------------------------------------
@@ -7338,12 +7316,8 @@ x:-o-prefocus {
     right: 4px;
   }
 }
-/*!       ┌-----------------------------------------------------------------------------------------------------------┐
-*         │ ···· Quick-tabs panels ·················································································· │
-*         └-----------------------------------------------------------------------------------------------------------┘
-*/
 /*!     ┌───────────────────────────────────────────────────────────────────────────────────────────────────────────────┐
-*       │ ++++ DIV rule-sets ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
+*       │ ++++ DIV rulesets +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ │
 *       └───────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 */
 /*!       ┌-----------------------------------------------------------------------------------------------------------┐
