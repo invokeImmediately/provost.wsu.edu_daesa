@@ -9,14 +9,11 @@ var compiledCssSrcFileName = 'oue-custom.css',
 	extName = require('gulp-extname');
 
 gulp.task('buildMinCss', function () {
-	// First compile LESS code into CSS…
 	gulp.src('./CSS/*.less')
 		.pipe(lessc({
 			paths: ['./WSU-UE---CSS/']
 		}))
-		.pipe(gulp.dest('./CSS/'));
-	// … then group media queries in compiled CSS & minify.
-	gulp.src('./CSS/' + compiledCssSrcFileName)
+		.pipe(gulp.dest('./CSS/'))
 		.pipe(gcmq())
 		.pipe(insertLines({
 			'before': /^@media/,

@@ -1,19 +1,12 @@
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ OUE-WIDE CUSTOM LAYOUTS ############################################################################################# ║
-*   ║ #### Authored by Daniel C. Rieck, Ph.D. <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately) ############### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*/
 @grid-behavior: "hybrid";
+@otp-background: #2f3438;
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
-/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
-
 /*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ LAYOUTS SPECIFIC TO THE UCORE WEBSITE ############################################################################### ║
+*   ║ LAYOUTS SPECIFIC TO THE CEE WEBSITE ################################################################################# ║
 *   ║ #### Authored by D. Rieck ########################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 1.1) Sections: Body & Page Level ############################################################################### ║
+*   ║ #### 1.1) Sections: Body, Page, & Column Level ###################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 */
 body {
@@ -33,8 +26,23 @@ body {
 }
 
 main {
-	background: @hex-white;
+	padding-bottom: 34px;
+	background: @hex-white url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/texture_leather_crimson-colored_341x34.jpg) left bottom repeat-x;
 	border-left: 1px solid @hex-bright-gray;
+}
+
+.row,
+.column {
+	&.is-colored-white {
+		background-color: @hex-lighter-gray;
+	}
+	&.is-colored-gray {
+		background-color: @hex-lighter-gray;
+	}
+}
+
+.row.pad-top.taller .column {
+	padding-top: (@v-dflt-spcng / 2 * 3);
 }
 
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
@@ -43,7 +51,7 @@ main {
 */
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @hex-crimson url(/wp-content/uploads/sites/1303/2017/02/site-header_platinum-background_crimson-tileable.jpg) repeat scroll left top;
+	background: @hex-crimson url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/texture_leather_crimson-colored_341x341.jpg) left top repeat;
 	color: @hex-white !important;
 }
 
@@ -164,6 +172,37 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 	}
 }
 
+header {
+	.row.has-dark-header > &:first-child {
+		font-size: 1rem;
+		& > h2 {
+			padding: 0 0 0 .1em;
+			margin-top: 1.5rem;
+			margin-bottom: .75rem;
+			margin-left: -.1em;
+			font-size: @v-h2-sz;
+			.has-responsive-font(@v-h2-sz, @v-hX-lnhght, @v-fnt-sclng-fctrs-alt);
+			line-height: 1.375em;
+			font-weight: 800;
+			color: @hex-darker-gray;
+			text-transform: uppercase;
+		}
+	}
+	.column.show-header.has-dark-header > &:first-child > h2,
+	.row.has-dark-header > &:first-child > h2 {
+		padding: (@v-dflt-spcng / 2) @v-dflt-spcng;
+		margin-right: (-1 * @v-dflt-spcng);
+		margin-bottom: (@v-dflt-spcng / 2);
+		margin-left: (-1 * @v-dflt-spcng);
+		color: white;
+		background-color: @otp-background;
+	}
+	.row.has-dark-header > &:first-child > h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+}
+
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 1.3) Sections: Asides ########################################################################################## ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
@@ -195,6 +234,20 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 				background-size: 100% auto;
 				border: 1px solid #464e54;
 				box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
+			}
+		}
+		&.quote {
+			margin-bottom: @v-btm-mrgns;
+			margin-left: (@v-dflt-spcng / 2);
+			background-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/genericons-neue_quote_99x99.png);
+			background-position: 10px top;
+			background-repeat: no-repeat;
+			color: black;
+			.source {
+				font-weight: bold;
+			}
+			@media all and (min-width: (@v-mbl-thrshld + 1)) {
+				font-size: 0.8rem;
 			}
 		}
 	}
@@ -258,210 +311,326 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 }
 
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 1.4) Sections: By ID ########################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+#cee-intro.side-right {
+	.column.one {
+		@media all and (min-width: (@v-spn-thrshld + 1)) {
+			width: 63.5%;
+		}
+	}
+}
+
+#cee-otp {
+	@highlight-color: #23272a;
+	background-color: @otp-background;
+	h2 {
+		color: @hex-white;
+		padding-left: @v-dflt-spcng;
+		//text-align: center;
+	}
+	ul {
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		border-top: 1px solid @otp-background;
+		border-left: 1px solid @otp-background;
+		background-color: @otp-background;
+		list-style-type: none;
+	}
+	li {
+		float: left;
+		list-style-image: none;
+		padding: 0;
+		a {
+			display: inline-block;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			border-right: 1px solid @otp-background;
+			border-bottom: 1px solid @otp-background;
+			border-radius: 0;
+			background-color: @hex-darker-gray;
+			box-shadow: none;
+			&:hover {
+				border-color: @otp-background;
+				background-color: @highlight-color;
+				text-shadow: none;
+			}
+			@media all and (max-width: @v-tblt-thrshld) {
+				padding: 8px 10px;
+			}
+		}
+	}
+}
+
+#cee-latest-tweets {
+	header:first-child > h4 {
+		color: @hex-darker-gray;
+		text-align: center;
+	}
+	.column.two p {
+		position: relative;
+		max-width: 700px;
+		height: 0;
+		max-height: 315px;
+		padding-bottom: 45%;
+		margin-left: auto !important;
+		margin-right: auto !important;
+		@media all {
+			@media (max-width: @v-dsktp-thrshld) {
+				padding-bottom: 50%;
+			}
+			@media (max-width: @v-spn-thrshld) {
+				padding-bottom: 45%;
+			}
+			@media (max-width: 860px) {
+				padding-bottom: 50%;
+			}
+			@media (max-width: 690px) {
+				padding-bottom: 45%;
+			}
+			@media (max-width: 590px) {
+				padding-bottom: 50%;
+			}
+			@media (max-width: 490px) {
+				padding-bottom: 55%;
+			}
+			@media (max-width: 430px) {
+				padding-bottom: 60%;
+			}
+			@media (max-width: 382px) {
+				padding-bottom: 75%;
+			}
+		}
+	}
+	iframe {
+		position: absolute !important;
+		top: 0 !important;
+		left: 0 !important;
+		display: block !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+#cee-how-it-works {
+	& + .row.thirds > .column {
+		background-repeat: no-repeat;
+		background-position: right bottom;
+	}
+}
+
+#cee-peer-mentors {
+	.outer-wrapper {
+		display: block;
+		width: 100%;
+		height: 298px;
+		margin: @v-dflt-spcng 0 (@v-dflt-spcng / 2);
+		.art,
+		.inner-wrapper {
+			display: inline-block;
+			box-sizing: border-box;
+			float: left;
+			height: 100%;			
+		}
+		.art {
+			width: 33%;
+			background: #ddbea1 url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/photo_tutoring_peer-mentor.jpg) center/cover no-repeat;
+		}
+		.inner-wrapper {
+			position: relative;
+			width: 67%;
+			background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/icon_meeting_gray-02.png) right bottom no-repeat;
+		}
+		.inner-content {
+			box-sizing: border-box;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: 100%;
+			padding: (@v-dflt-spcng / 2);
+			.transform(~"translate(-50%, -50%)");
+		}
+		@media all {
+			@media (max-width: 840px) {
+				height: 439px;
+				.art,
+				.inner-wrapper {
+					width: 100%;
+				}
+				.art {
+					height: 199px;
+					background-position: center 10%;
+				}
+				.inner-wrapper {
+					height: 240px;
+				}
+			}
+			@media (max-width: 680px) {
+				height: 479px;
+				.art {
+					height: 199px;
+				}
+				.inner-wrapper {
+					height: 280px;
+				}
+			}
+			@media (max-width: 540px) {
+				height: 519px;
+				.art {
+					height: 199px;
+				}
+				.inner-wrapper {
+					height: 320px;
+				}
+			}
+		}
+	}
+}
+
+#cee-workshops {
+	.wsuwp-content-syndicate-wrapper {
+		overflow: hidden;
+	}
+	.wsuwp-content-syndicate-list {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		position: relative;
+		padding: 0;
+		list-style-type: none;
+		font-size: 0.925rem;
+		@media all and (max-width: @v-tblt-thrshld) {
+			flex-wrap: wrap;
+		}
+	}
+	.wsuwp-content-syndicate-item,
+	.wsuwp-content-syndicate-event {
+		a {
+			text-decoration: none;
+			color: #393939;
+			border-bottom: none;
+			box-shadow: none;
+			.read-more {
+				font-size: .75em;
+				font-weight: 700;
+				color: #981e32;
+			}
+		}
+	}	
+	.wsuwp-content-syndicate-item {
+		margin-bottom: 1em;
+		a:hover {
+			color: #981e32;
+			border-bottom: solid 1px #981e32;
+		}
+	}
+	.wsuwp-content-syndicate-event {
+		box-sizing: border-box;
+		-webkit-box-flex: 1;
+			-ms-flex: 1 0 25%;
+				flex: 1 0 25%;
+		@media all and (max-width: @v-tblt-thrshld) {
+				-webkit-box-flex: 1;
+					-ms-flex: 1 0 50%;
+						flex: 1 0 50%;
+		}
+		list-style: none;
+		padding: .5em 1em 0 0;
+		-webkit-transition: background .4s;
+		transition: background .4s;
+		width: 25%;
+	}
+	.content-item-event-date {
+		box-sizing: border-box;
+		color: #fff;
+		float: left;
+		font-size: 32px;
+		font-weight: 600;
+		line-height: 50px;
+		position: relative;
+		text-align: center;
+		text-transform: uppercase;
+		width: 2.5rem;
+		word-spacing: 2rem;
+		z-index: 1;
+		&:first-line {
+			font-size: 12px;
+			font-weight: 300;
+			line-height: 24px;
+		}
+		&:before,
+		&:after {
+			content: "";
+			left: 0;
+			position: absolute;
+			-webkit-transition: background .4s;
+			transition: background .4s;
+			width: 100%;
+			z-index: -1;
+		}
+		&:before {
+			background: #717171;
+			height: 24px;
+			top: 0;
+		}
+		&:after {
+			background: #b5babe;
+			bottom: 0;
+			height: 48px;
+		}
+	}
+	li:hover .content-item-event-date {
+		&:before {
+			background: #b5babe;
+		}
+		&:after {
+			background: #981e32;
+		}
+	}
+	.content-item-event-title {
+		display: block;
+		margin-left: 3.25rem;
+		a {
+			border-bottom: 0;
+			text-shadow: none;
+			&:hover {
+				background-color: #efefef;
+			}
+		}
+	}
+	.content-item-event-meta {
+		display: none;
+	}
+}
+
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 *   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
 *   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 */
-.course-lists,
-.learning-goals,
-.graduation-requirements {
-	&:extend(ul.content-boxes all);
-}
-
-.course-lists {
-	margin-top: @v-btm-mrgns !important;
-	& > li {
-		float: left;
-		width: 49%;
-		min-height: 198px;
-		margin-bottom: 2%;
-        @media all and (max-width: @v-rghtclmn-thrshld) {
-            width: 98%;
-			margin-bottom: 4%;
-        }
-		@media all and (max-width: @v-bckgrnd-thrshld) {
-			overflow-x: visible;
-		}
-		& + li {
-			margin-top: 0;
-		}
-		&.cascade-sizer, &.gutter-sizer {
-			height: 0;
-			min-height: 0;
-			padding: 0;
-			border: none;
-			background: none;
-			box-shadow: none;
-		}
-		&.gutter-sizer {
-			width: 2%;
-		}
-		& > h3:first-child {
-			padding: (@v-dflt-spcng / 4);
-			margin: 0;
-			.rgb-accent-green(); background-color: rgba(@rval, @gval, @bval, 0.5);
-			border-top: 1px solid rgba(@rval, @gval, @bval, 0.0);
-			border-top-left-radius: 4px;
-			 border-top-right-radius: 4px;
-			color: @hex-dark-green;
-			text-transform: none;
-			strong {
-				text-transform: uppercase;
-			}
-		}
-		& > h4:nth-child(2) {
-			&:extend(.has-alt-font);
-			padding: (@v-dflt-spcng * 3 / 20) (@v-dflt-spcng / 4);
-			margin-top: 0;
-			 margin-bottom: 0;
-			.rgb-accent-green(); background-color: rgba(@rval, @gval, @bval, 0.75);
-			font-size: @v-p-sz * 1.1;
-			font-weight: 700;
-			color: @hex-bright-green;
-			& + * {
-				margin-top: (@v-dflt-spcng / 4);
-			}
-		}
-		& > h5 {
-			padding-right: (@v-dflt-spcng / 4);
-			padding-left: (@v-dflt-spcng / 4);
-			.rgb-accent-green(); background-color: rgba(@rval, @gval, @bval, 0.33);
-			color: @hex-dark-green;
-		}
-		& > p {
-			font-size: inherit !important;
-			text-align: left;
-			padding-right: (@v-dflt-spcng / 4);
-			padding-left: (@v-dflt-spcng / 4);
-			& + ul,
-			& + ol {
-				margin-top: (@v-btm-mrgns * 1 / 3) !important;
-			}
-			& > span.about-requirements {
-				margin-bottom: 0.5em;
-				font-weight: bold;
-				font-style: italic;
-			}
-		}
-		& > * {
-			&:not(:first-child) {
-				margin-top: @v-btm-mrgns;
-			}
-			&:last-child {
-				padding-bottom: (@v-dflt-spcng / 4);
-			}
-		}
+.column ul:not(.content-boxes) {
+	li { list-style-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/ico-cougar-bullet-point.png); }
+	&.gray-bullets {
+		li { list-style-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/ico-cougar-bullet-point_gray.png); }
 	}
 }
 
-.learning-goals,
-.graduation-requirements {
-	margin-top: @v-btm-mrgns !important;
-	.has-sectionally-responsive-font((@v-p-sz * @v-scl-dwn), @v-p-lnhght);
-	& > li {
-		float: left;
-		min-height: 198px;
-		width: 49%;
-		margin-bottom: 2%;
-		font-size: inherit;
-		list-style-type: none;
-		box-shadow:	0 1px 2px 0 rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.22),
-					2px 2px 7px 0 rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.1);
-        @media screen {
-			@media (max-width: @v-rghtclmn-thrshld) {
-				width: 100%;
-				margin-bottom: 4%;
-			}
-			@media (max-width: @v-bckgrnd-thrshld) {
-				overflow-x: auto;
-			}
-		}
-		@media print {
-			margin-bottom: 0.5rem !important;
-			box-shadow: none;
-			border: 1px solid @hex-black;
-		}
-		& > :not(ol):not(ul) {
-			padding-right: 1rem;
-			padding-left: 1rem;
-		}
-		& > :first-child {
-			padding-top: 1em;
-		}
-		& > :last-child {
-			padding-bottom: 1em;
-		}
-		& > * {
-			& + * {
-				margin-top: 1em;
-			}
-		}
-		& > p,
-		& > h5 {
-			& + ul,
-			& + ol {
-				margin-top: 0.25em;
-			}
-		}
-		& > p,
-		& > ul li,
-		& > ol li {
-			font-size: inherit !important;
-		}
-		& > ul,
-		& > ol {
-			padding-left: 3rem;
-		}
-		& > p {
-			& > em {
-				.has-subst-font.serif;
-			}
-		}
-		img {
-			float: right;
-			width: 150px;
-			.spaces-rgt-qrtr;
-			.spaces-btm-qrtr;
-			.spaces-lft-qrtr;
-		}
-		& + li {
-			margin-top: 0;
-		}
-	}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.2) Content Grouping: Paragraphs ############################################################################## ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+p.jump-back-link-wrapper {
+	font-size: 0.8rem !important;
 }
 
-.graduation-requirements {
-	& > li {
-		min-height: 0;
-		&:first-child {
-			width: 100%;
-			padding-bottom: 21.058%;
-			background: @hex-white url(/wp-content/uploads/sites/1303/2017/02/graphic_university-building-trace-v2.png) center bottom/100% auto no-repeat;
-			overflow: hidden;
-			@media print {
-				background: @hex-white;
-				padding-bottom: 0;
-			}
-		}
-		h1,
-		h2,
-		h3,
-		h4,
-		h5,
-		h6 {
-			text-transform: none;
-			strong {
-				color: @hex-black;
-				text-transform: uppercase;
-			}
-		}
-		hr {
-			width: 85%;
-			margin-top: 1em;
-			margin-right: auto;
-			margin-left: auto;
-			margin-bottom: 0.5em;
-		}
-	}
+/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*   ║ #### 2.2) Content Grouping: Divs #################################################################################### ║
+*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+*/
+div.tribe-events-single-section {
+	padding-top: (@v-dflt-spcng / 2);
 }
 
 /*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
@@ -622,8 +791,7 @@ body.page:not(.home) main.spine-blank-template > header.main-header {
 */
 .include-quick-tabs-layout(true);
 .use-linked-columns();
-@pseudo-footer-bg: { background: @hex-crimson url(/wp-content/uploads/sites/1303/2017/02/site-header_platinum-background_crimson-tileable.jpg) repeat scroll left top; };
-.use-main-pseudo-footer(@pseudo-footer-bg);
+.use-paragraph-notices(url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/icon_genericons-neue_notice_v5.png));
 
 /*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 */
