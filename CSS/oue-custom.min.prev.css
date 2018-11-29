@@ -1,0 +1,51 @@
+﻿/*
+Welcome to custom CSS for the WSU Spine Theme!
+
+You may delete these comments and get started with your custom stylesheet.
+Before doing so, please review the WSU web standards:
+
+https://brand.wsu.edu/media/web/web-standards/
+
+As a general rule of thumb, if your styles target aspects of the spine
+(#spine), that's against standard, whereas if you're styling elsewhere on
+the page, it's all good.
+*/
+* + .grid--home-intro {
+	margin-top: 2em;
+}
+
+.grid--home-intro {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	display: grid;
+	grid-template-columns: 10% 70% 20%;
+	grid-template-columns: 20% calc(60% - 4em) 20%;
+	grid-template-areas: "left-button tagline right-button";
+	grid-column-gap: calc(2em);
+}
+
+.grid--home-intro__left-button {
+	flex-basis: 18%;
+	flex-basis: calc(20% - 4em / 3);
+	grid-area: left-button;
+}
+
+.grid--home-intro__tagline {
+	flex-basis: 56%;
+	flex-basis: calc(60% - 4em / 3);
+	grid-area: tagline;
+	text-align: center;
+}
+
+.grid--home-intro__right-button {
+	flex-basis: 18%;
+	flex-basis: calc(20% - 4em / 3);
+	grid-area: right-button;
+}
+
+.grid--home-intro__left-button,
+.grid--home-intro__right-button {
+	background-color: #981e32;
+	color: white;
+}
