@@ -1,14 +1,59 @@
+/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+**  │ FILENAME: ucore-custom.less                                                                  │
+**  │                                                                                              │
+**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+**  │                                                                                              │
+**  │ SUMMARY: Style rules for presenting content on the website for the WSU Office of             │
+**  │   undergraduate Education (OUE) website, which is built using the builder template of the    │
+**  │   Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling         │
+**  │   associated with the theme.                                                                 │
+**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+
+/*    ──────────────────────────────────────────────────────────────────────────────────────────────
+**    TABLE OF CONTENTS:
+**    ───────────────────────────────────────────────────────────────────────────────────────────
+**    §1: Settings for global Less variables...................................................33
+**    §2: Import of OUE-wide style rules.......................................................40
+**    §3: Styling at body & page level.........................................................54
+**    §4: Styling at the section level.........................................................79
+**      >>> §4.1: Headers......................................................................83
+**         →→→ §4.1.1: Main header.............................................................87
+**      >>> §4.2: Asides......................................................................101
+**    §5: Styling at the content grouping level...............................................178
+**      >>> §5.1: Lists.......................................................................182
+**    §6: Styling at the embedded content level...............................................188
+**      >>> §6.1: Tabular data................................................................192
+**    §7: Styling included via Less mixins....................................................198
+**    §8: Site-specific semantic CSS styling..................................................209
+**    ──────────────────────────────────────────────────────────────────────────────────────────────
+*/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §1: Settings for global Less variables
+*/
+
 @grid-behavior: "hybrid";
-@otp-background: #2f3438;
+@oue-rules-wrapper: ~"";
+
+/*    ----------------------------------------------------------------------------------------------
+**    §2: Import of OUE-wide style rules
+*/
+
 @import "..\WSU-UE---CSS\wp-master-style-sheet.less";
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ LAYOUTS SPECIFIC TO THE CEE WEBSITE ################################################################################# ║
-*   ║ #### Authored by D. Rieck ########################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 1.1) Sections: Body, Page, & Column Level ###################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*! ================================================================================================
+*** STYLE RULES SPECIFIC TO THE UCORE WEBSITE
+*** ================================================================================================
+***   GIT REPOSITORY: https://github.com/invokeImmediately/ucore.wsu.edu/
+***     (Please see above git repository for fully documented, precompiled source code.)
+*** ================================================================================================
+**/
+
+/*    ----------------------------------------------------------------------------------------------
+**    §3: Styling at body & page level
 */
+
 body {
 	background: @hex-bright-gray;
 }
@@ -26,32 +71,25 @@ body {
 }
 
 main {
-	padding-bottom: 34px;
-	background: @hex-white url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/texture_leather_crimson-colored_341x34.jpg) left bottom repeat-x;
+	background: @hex-white;
 	border-left: 1px solid @hex-bright-gray;
 }
 
-.row,
-.column {
-	&.is-colored-white {
-		background-color: @hex-lighter-gray;
-	}
-	&.is-colored-gray {
-		background-color: @hex-lighter-gray;
-	}
-}
-
-.row.pad-top.taller .column {
-	padding-top: (@v-dflt-spcng / 2 * 3);
-}
-
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 1.2) Sections: Headers ######################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*    ----------------------------------------------------------------------------------------------
+**    §4: Styling at the section level
 */
+
+/*      ····························································································
+**      >>> §4.1: Headers
+*/
+
+/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+**         →→→ §4.1.1: Main header
+*/
+
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @hex-crimson url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/texture_leather_crimson-colored_341x341.jpg) left top repeat;
+	background: @hex-crimson url(/wp-content/uploads/sites/1303/2017/02/site-header_platinum-background_crimson-tileable.jpg) left top/cover no-repeat scroll;
 	color: @hex-white !important;
 }
 
@@ -59,154 +97,12 @@ header.main-header {
 	color: @hex-white !important;
 }
 
-body.page:not(.home) main.spine-blank-template > header.main-header {
-	height: 85px;
-	& > div.header-group {
-		padding-bottom: 1em !important;
-	}
-}
-
-.row.halves.article-header {
-	position: relative;
-	height: 230px;
-	&.gutter .column:not(.gutterless) {
-		padding-left: 0;
-		padding-right: 0;
-	}
-	&.pad-top .column {
-		padding-top: 0;
-	}
-	.column {	
-		&.one {
-			position: absolute;
-			right: 40%;
-			left: 0;
-			width: auto;
-			height: 100%;			
-			padding-left: 0;
-			padding-right: 0;			
-			background: @hex-dark-gray;
-			& > h1 {
-				position: absolute;
-				top: 50%;
-				right: @v-dflt-spcng;
-				left: @v-dflt-spcng;
-				margin-bottom: 0.35em;
-				color: @hex-white;
-				.transform(~"translateY(-50%)");
-				@media (max-width: @v-rghtclmn-thrshld) {
-					font-size: 6.5vw;
-					right: (@v-dflt-spcng / 2);
-					left: (@v-dflt-spcng / 2);
-				}
-			}
-			& > :not(h1) {
-				display: none;
-			}
-		}
-		&.two {
-			position: absolute;
-			right: 0;
-			left: 60%;
-			width: auto;
-			height: 100%;
-			background-color: @hex-gray;
-			background-position: center center;
-			background-size: cover;
-		}
-		&.one, &.two {
-			@media (max-width: @v-rghtclmn-thrshld) {
-				float: left;
-				clear: none;
-			}
-		}
-	}
-}
- 
-.row.single.article-header {
-	height: 230px;
-	.column {
-		background: @hex-dark-gray;
-		background: linear-gradient(to right, rgba(red(@hex-white), green(@hex-white), blue(@hex-white), 0),
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 0) 60%,
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1) 60%,
-		 rgba(red(@hex-accent-green), green(@hex-accent-green), blue(@hex-accent-green), 1)),
-		 linear-gradient(@hex-dark-gray, @hex-dark-gray);
-		position: relative;
-		padding-left: 0;
-		padding-right: 0;
-		width: 100%;
-		height: 100%;
-		& > h1 {
-			position: absolute;
-			top: 50%;
-			left: 2rem;
-			right: 40%;
-			right: ~"calc(40% + 2rem)";
-			margin-bottom: 0.35em;
-			color: @hex-white;
-			.transform(~"translateY(-50%)");
-		}
-		& > :not(h1) {
-			display: none;
-		}
-		&:before {
-			content: "";
-			position: absolute;
-			top: 1rem;
-			right: 1rem;
-			width: 10%;
-			height: 0;
-		}
-	}
-}
-
-.column {
-	&:extend(.has-dflt-font);
-	section {
-		&.header-newsEvents {
-			background: url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat left top,
-				url(/wp-content/uploads/sites/1303/2016/11/section-bar.png) no-repeat right top,
-				url(/wp-content/uploads/sites/1303/2016/11/wpbg-news-events-v2.png) no-repeat center;
-		}
-	}
-}
-
-header {
-	.row.has-dark-header > &:first-child {
-		font-size: 1rem;
-		& > h2 {
-			padding: 0 0 0 .1em;
-			margin-top: 1.5rem;
-			margin-bottom: .75rem;
-			margin-left: -.1em;
-			font-size: @v-h2-sz;
-			.has-responsive-font(@v-h2-sz, @v-hX-lnhght, @v-fnt-sclng-fctrs-alt);
-			line-height: 1.375em;
-			font-weight: 800;
-			color: @hex-darker-gray;
-			text-transform: uppercase;
-		}
-	}
-	.column.show-header.has-dark-header > &:first-child > h2,
-	.row.has-dark-header > &:first-child > h2 {
-		padding: (@v-dflt-spcng / 2) @v-dflt-spcng;
-		margin-right: (-1 * @v-dflt-spcng);
-		margin-bottom: (@v-dflt-spcng / 2);
-		margin-left: (-1 * @v-dflt-spcng);
-		color: white;
-		background-color: @otp-background;
-	}
-	.row.has-dark-header > &:first-child > h2 {
-		margin-top: 0;
-		margin-bottom: 0;
-	}
-}
-
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 1.3) Sections: Asides ########################################################################################## ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*      ····························································································
+**      >>> §4.2: Asides
 */
+
+// TODO: Remove?
+
 .column {
 	aside {
 		font-size: .8rem;
@@ -235,38 +131,6 @@ header {
 				border: 1px solid #464e54;
 				box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
 			}
-		}
-		&.quote {
-			margin-bottom: @v-btm-mrgns;
-			margin-left: (@v-dflt-spcng / 2);
-			background-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/genericons-neue_quote_99x99.png);
-			background-position: 10px top;
-			background-repeat: no-repeat;
-			color: black;
-			.source {
-				font-weight: bold;
-			}
-			@media all and (min-width: (@v-mbl-thrshld + 1)) {
-				font-size: 0.8rem;
-			}
-		}
-	}
-}
-
-.column {
-	.bluish-gray-acrylic-sidebar, .green-marble-sidebar, .gray-acrylic-sidebar {
-		p {
-			font-size: .75rem;
-		}
-		h2 + hr {
-			margin-top: .25rem;
-			background-color: rgba(70,78,84,0.75);
-		}
-		h3 {
-			font-size: 1.275rem;
-		}
-		h4 {
-			font-size: 1.05rem;
 		}
 	}
 }
@@ -310,499 +174,41 @@ header {
 	}
 }
 
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 1.4) Sections: By ID ########################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*    ----------------------------------------------------------------------------------------------
+**    §5: Styling at the content grouping level
 */
-#cee-intro.side-right {
-	.column.one {
-		@media all and (min-width: (@v-spn-thrshld + 1)) {
-			width: 63.5%;
-		}
-	}
-}
 
-#cee-otp {
-	@highlight-color: #23272a;
-	background-color: @otp-background;
-	h2 {
-		color: @hex-white;
-		padding-left: @v-dflt-spcng;
-		//text-align: center;
-	}
-	ul {
-		margin: 0;
-		padding: 0;
-		overflow: hidden;
-		border-top: 1px solid @otp-background;
-		border-left: 1px solid @otp-background;
-		background-color: @otp-background;
-		list-style-type: none;
-	}
-	li {
-		float: left;
-		list-style-image: none;
-		padding: 0;
-		a {
-			display: inline-block;
-			color: white;
-			text-align: center;
-			padding: 14px 16px;
-			border-right: 1px solid @otp-background;
-			border-bottom: 1px solid @otp-background;
-			border-radius: 0;
-			background-color: @hex-darker-gray;
-			box-shadow: none;
-			&:hover {
-				border-color: @otp-background;
-				background-color: @highlight-color;
-				text-shadow: none;
-			}
-			@media all and (max-width: @v-tblt-thrshld) {
-				padding: 8px 10px;
-			}
-		}
-	}
-}
-
-#cee-latest-tweets {
-	header:first-child > h4 {
-		color: @hex-darker-gray;
-		text-align: center;
-	}
-	.column.two p {
-		position: relative;
-		max-width: 700px;
-		height: 0;
-		max-height: 315px;
-		padding-bottom: 45%;
-		margin-left: auto !important;
-		margin-right: auto !important;
-		@media all {
-			@media (max-width: @v-dsktp-thrshld) {
-				padding-bottom: 50%;
-			}
-			@media (max-width: @v-spn-thrshld) {
-				padding-bottom: 45%;
-			}
-			@media (max-width: 860px) {
-				padding-bottom: 50%;
-			}
-			@media (max-width: 690px) {
-				padding-bottom: 45%;
-			}
-			@media (max-width: 590px) {
-				padding-bottom: 50%;
-			}
-			@media (max-width: 490px) {
-				padding-bottom: 55%;
-			}
-			@media (max-width: 430px) {
-				padding-bottom: 60%;
-			}
-			@media (max-width: 382px) {
-				padding-bottom: 75%;
-			}
-		}
-	}
-	iframe {
-		position: absolute !important;
-		top: 0 !important;
-		left: 0 !important;
-		display: block !important;
-		width: 100% !important;
-		height: 100% !important;
-	}
-}
-
-#cee-how-it-works {
-	& + .row.thirds > .column {
-		background-repeat: no-repeat;
-		background-position: right bottom;
-	}
-}
-
-#cee-peer-mentors {
-	.outer-wrapper {
-		display: block;
-		width: 100%;
-		height: 298px;
-		margin: @v-dflt-spcng 0 (@v-dflt-spcng / 2);
-		.art,
-		.inner-wrapper {
-			display: inline-block;
-			box-sizing: border-box;
-			float: left;
-			height: 100%;			
-		}
-		.art {
-			width: 33%;
-			background: #ddbea1 url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/photo_tutoring_peer-mentor.jpg) center/cover no-repeat;
-		}
-		.inner-wrapper {
-			position: relative;
-			width: 67%;
-			background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/icon_meeting_gray-02.png) right bottom no-repeat;
-		}
-		.inner-content {
-			box-sizing: border-box;
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			width: 100%;
-			padding: (@v-dflt-spcng / 2);
-			.transform(~"translate(-50%, -50%)");
-		}
-		@media all {
-			@media (max-width: 840px) {
-				height: 439px;
-				.art,
-				.inner-wrapper {
-					width: 100%;
-				}
-				.art {
-					height: 199px;
-					background-position: center 10%;
-				}
-				.inner-wrapper {
-					height: 240px;
-				}
-			}
-			@media (max-width: 680px) {
-				height: 479px;
-				.art {
-					height: 199px;
-				}
-				.inner-wrapper {
-					height: 280px;
-				}
-			}
-			@media (max-width: 540px) {
-				height: 519px;
-				.art {
-					height: 199px;
-				}
-				.inner-wrapper {
-					height: 320px;
-				}
-			}
-		}
-	}
-}
-
-#cee-workshops {
-	.wsuwp-content-syndicate-wrapper {
-		overflow: hidden;
-	}
-	.wsuwp-content-syndicate-list {
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-		position: relative;
-		padding: 0;
-		list-style-type: none;
-		font-size: 0.925rem;
-		@media all and (max-width: @v-tblt-thrshld) {
-			flex-wrap: wrap;
-		}
-	}
-	.wsuwp-content-syndicate-item,
-	.wsuwp-content-syndicate-event {
-		a {
-			text-decoration: none;
-			color: #393939;
-			border-bottom: none;
-			box-shadow: none;
-			.read-more {
-				font-size: .75em;
-				font-weight: 700;
-				color: #981e32;
-			}
-		}
-	}	
-	.wsuwp-content-syndicate-item {
-		margin-bottom: 1em;
-		a:hover {
-			color: #981e32;
-			border-bottom: solid 1px #981e32;
-		}
-	}
-	.wsuwp-content-syndicate-event {
-		box-sizing: border-box;
-		-webkit-box-flex: 1;
-			-ms-flex: 1 0 25%;
-				flex: 1 0 25%;
-		@media all and (max-width: @v-tblt-thrshld) {
-				-webkit-box-flex: 1;
-					-ms-flex: 1 0 50%;
-						flex: 1 0 50%;
-		}
-		list-style: none;
-		padding: .5em 1em 0 0;
-		-webkit-transition: background .4s;
-		transition: background .4s;
-		width: 25%;
-	}
-	.content-item-event-date {
-		box-sizing: border-box;
-		color: #fff;
-		float: left;
-		font-size: 32px;
-		font-weight: 600;
-		line-height: 50px;
-		position: relative;
-		text-align: center;
-		text-transform: uppercase;
-		width: 2.5rem;
-		word-spacing: 2rem;
-		z-index: 1;
-		&:first-line {
-			font-size: 12px;
-			font-weight: 300;
-			line-height: 24px;
-		}
-		&:before,
-		&:after {
-			content: "";
-			left: 0;
-			position: absolute;
-			-webkit-transition: background .4s;
-			transition: background .4s;
-			width: 100%;
-			z-index: -1;
-		}
-		&:before {
-			background: #717171;
-			height: 24px;
-			top: 0;
-		}
-		&:after {
-			background: #b5babe;
-			bottom: 0;
-			height: 48px;
-		}
-	}
-	li:hover .content-item-event-date {
-		&:before {
-			background: #b5babe;
-		}
-		&:after {
-			background: #981e32;
-		}
-	}
-	.content-item-event-title {
-		display: block;
-		margin-left: 3.25rem;
-		a {
-			border-bottom: 0;
-			text-shadow: none;
-			&:hover {
-				background-color: #efefef;
-			}
-		}
-	}
-	.content-item-event-meta {
-		display: none;
-	}
-}
-
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 2.1) Content Grouping: Lists ################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*      ····························································································
+**      >>> §5.1: Lists
 */
-.column ul:not(.content-boxes) {
-	li { list-style-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/ico-cougar-bullet-point.png); }
-	&.gray-bullets {
-		li { list-style-image: url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/ico-cougar-bullet-point_gray.png); }
-	}
-}
 
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 2.2) Content Grouping: Paragraphs ############################################################################## ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+// TODO: Design layout for programs & Units lists
+
+/*    ----------------------------------------------------------------------------------------------
+**    §6: Styling at the embedded content level
 */
-p.jump-back-link-wrapper {
-	font-size: 0.8rem !important;
-}
 
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 2.2) Content Grouping: Divs #################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+/*      ····························································································
+**      >>> §6.1: Tabular data
 */
-div.tribe-events-single-section {
-	padding-top: (@v-dflt-spcng / 2);
-}
 
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 3.1) Tabular Data ############################################################################################## ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+// TODO: Decide if this is still needed.
+
+/*    ----------------------------------------------------------------------------------------------
+**    §7: Styling included via Less mixins
 */
-@dflt-tbl-hdr-clr: #c4e3f3;
-@dflt-tbl-hdr-txt-clr: @hex-black;
-@dflt-tbl-col1-clr: @hex-white;
-@dflt-tbl-col1-alt-clr: @hex-bright-yellow;
-@dflt-tbl-row-clr: @hex-white;
-@dflt-tbl-row-alt-clr: #eef7fb;
-@dflt-tbl-colspan-clr: #d9edf7;
-@dflt-tbl-sub-row-clr: @hex-lightest-yellow;
-//@dflt-hvr-mix-clr: #ffff00;
-@dflt-hvr-mix-clr: @hex-accent-yellow;
-.tablepress {
-	border-collapse: separate;
-	border-spacing: 0;
-	//box-shadow: 2px 2px 7px rgba(0,0,0,0.5);
-	border: 1px solid @hex-lighter-gray;
-	.dataTables_scrollBody & {
-		border-top: 0;
-	}
-	.dataTables_scrollFoot & {
-		border: 0;
-	}
-	width: 100% !important;
-	thead th {
-		padding-right: .5em;
-		padding-left: .5em;
-		background-color: @dflt-tbl-hdr-clr;
-		color: @dflt-tbl-hdr-txt-clr;
-		border-bottom: 1px solid saturate(darken(@dflt-tbl-hdr-clr, 30%), 5%);
-		&:not(:last-child) {
-			border-right: 1px solid darken(@dflt-tbl-hdr-clr, 30%);
-		}
-		&:not(:first-child) {
-			border-top: 1px solid saturate(lighten(@dflt-tbl-hdr-clr, 5%), 5%);
-			border-left: 1px solid lighten(@dflt-tbl-hdr-clr, 5%);
-		}
-		.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
-	}
-	tbody {
-		td {
-			&:not(.no-padding) {
-				padding-right: 0.5em;
-				padding-left: 0.5em;
-			}
-			&.no-padding {
-				padding: 0;
-			}
-			&:not(:last-child) {
-				border-right: 1px solid darken(@dflt-tbl-row-clr, 30%);
-			}
-			&:not(:first-child) {
-				border-left: 1px solid lighten(@dflt-tbl-row-clr, 5%);
-			}
-			&:first-child:not(:last-child) {
-				border-right: 1px solid darken(@dflt-tbl-col1-clr, 30%);
-			}
-			&[colspan] {
-				font-weight: bold;
-			}
-			.has-responsive-font((@v-p-sz * 0.88), @v-p-lnhght);
-			.transition(~"all 0.3s ease");
-			p,
-			ul,
-			ol {
-				font-size: inherit;
-			}
-		}
-		.odd {
-			td {
-				background-color: @dflt-tbl-row-alt-clr;
-				&:not(:last-child) {
-					border-right: 1px solid darken(@dflt-tbl-row-alt-clr, 30%);
-				}
-				&:not(:first-child) {
-					border-left: 1px solid lighten(@dflt-tbl-row-alt-clr, 5%);
-				}
-				&[colspan] {
-					background-color: @dflt-tbl-colspan-clr;
-				}
-				//&:first-child {
-				//	background-color: @dflt-tbl-col1-alt-clr;
-				//	border-right: 1px solid darken(@dflt-tbl-col1-alt-clr, 30%);
-				//}
-			}
-			&:not(:first-child) td {
-				border-top: 1px solid saturate(lighten(@dflt-tbl-row-alt-clr, 5%), 5%);
-			}
-			&:not(:last-child) td {
-				border-bottom: 1px solid saturate(darken(@dflt-tbl-row-alt-clr, 30%), 5%);
-			}
-		}
-		.even {
-			td {
-				background-color: @dflt-tbl-row-clr;
-				//&:first-child {
-				//	background-color: @dflt-tbl-col1-clr;
-				//}
-				&[colspan] {
-					background-color: @dflt-tbl-colspan-clr;
-				}
-			}
-			&:not(:first-child) td {
-				border-top: 1px solid saturate(lighten(@dflt-tbl-row-clr, 5%), 5%);
-			}
-			&:not(:last-child) td {
-				border-bottom: 1px solid saturate(darken(@dflt-tbl-row-clr, 30%), 5%);
-			}
-		}
-	}
-	.row-hover tr {
-		&:hover td {
-			background-color: lighten(mix(@dflt-tbl-row-clr, @dflt-hvr-mix-clr, 87%), 3%);
-			&:first-child {
-				background-color: lighten(mix(@dflt-tbl-col1-clr, @dflt-hvr-mix-clr, 87%), 3%);
-			}
-		}
-		&.odd:hover td {
-			background-color: lighten(mix(@dflt-tbl-row-alt-clr, @dflt-hvr-mix-clr, 87%), 3%);
-			&:first-child {
-				background-color: lighten(mix(@dflt-tbl-col1-alt-clr, @dflt-hvr-mix-clr, 87%), 3%);
-			}			
-		}
-	}
-	.sorting {
-		.transition(~"all 0.3s ease");
-	}
-	&.learning-goals {
-		thead th:first-child,
-		tbody td:first-child {
-			width: 30%;
-			min-width: 255px;
-		}
-	}
-}
 
-.column h2.tablepress-table-name {
-	padding: 8px 0.5em;
-	margin-bottom: 0;
-	margin-left: 0;
-	margin-right: 0;
-	background-color: @hex-lighter-gray;
-	font-size: 1.3em;
-	text-align: center;
-	text-transform: none;
-	& + table.tablepress {
-		border-top: 1px solid saturate(darken(@dflt-tbl-hdr-clr, 30%), 5%);
-	}
-}
-
-/*! ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### 4.1) Layouts included via LESS mixins ########################################################################## ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*/
 .include-quick-tabs-layout(true);
 .use-linked-columns();
-.use-paragraph-notices(url(https://s3.wp.wsu.edu/uploads/sites/1636/2017/06/icon_genericons-neue_notice_v5.png));
+@pseudo-footer-bg: { background: @hex-white url(/wp-content/uploads/sites/1303/2017/09/site-footer_platinum-background_crimson-tileable_1188x34.jpg) left bottom repeat-x; };
+.use-main-pseudo-footer(@pseudo-footer-bg, 34px);
+.use-sectional-article-headers();
+.use-short-main-header-on-pages();
 
-/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+/*    ----------------------------------------------------------------------------------------------
+**    §8: Site-specific semantic CSS styling
 */
 
-/*! ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗ 
-*   ║ MORE LAYOUTS SPECIFIC TO THE UCORE WEBSITE ########################################################################## ║
-*   ║ #### Written by other authors ####################################################################################### ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*   ║ #### A.1) Layouts written by Lindsey Kimble | lindsey_kimble@wsu.edu ################################################ ║
-*   ╠═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-*/
 .wsuwp-content-syndicate-wrapper {
 	.content-item-byline-author {
 	display: none;
@@ -816,6 +222,3 @@ div.tribe-events-single-section {
 	display: none;
 	}
 }
-
-/*! ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-*/
