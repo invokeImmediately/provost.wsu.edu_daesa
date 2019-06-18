@@ -5035,6 +5035,11 @@ div.auto-scroller ul li {
   color: inherit;
   text-shadow: inherit;
 }
+.h1-header__text-breadcrumb {
+  display: block;
+  font-size: 1rem;
+  line-height: 1rem;
+}
 .on-this-page {
   background-color: #2f3438;
 }
