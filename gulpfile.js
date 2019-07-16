@@ -1,15 +1,34 @@
+/*!
+ * gulpfile.js: Gulp automation task definition file for setting up tasks that build CSS and JS
+ * files for use on the WSUWP website of the WSU Office of Undergraduate Education.
+ *
+ * @author - Daniel Rieck ( danielcrieck@gmail.com ) [https://github.com/invokeImmediately]
+ */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// TABLE OF CONTENTS
+// -----------------
+// §1: Gulp task dependencies..................................................................23
+// §2: Specificiation of build settings .......................................................28
+//   §2.1: getCssBuildSettings()...............................................................31
+//   §2.2: getJsBuildSettings()................................................................64
+// §3: Entry point: Set up of build taks.......................................................96
+////////////////////////////////////////////////////////////////////////////////////////////////////
+
+( function() {
+
 'use strict';
 
-/* -------------------------------------------------------------------------------------------------
-** Variable Declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §1: Gulp task dependencies
 
-// Gulp task dependencies
 var gulpBuilder = require( './WSU-UE---JS/gulpBuilder.js' );
 
-/* -------------------------------------------------------------------------------------------------
-** Function declarations
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §2: Specificiation of build settings 
+
+////////
+// §2.1: getCssBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom CSS build from Less source files.
@@ -41,6 +60,9 @@ se see [https://github.com/invokeImmediately/oue.wsu.edu] for a repository of so
  		minCssFileHeaderStr, sourceFile);
 }
 
+////////
+// §2.2: getJsBuildSettings()
+
 /**
  * Get the settings for a gulp-mediated custom JS build.
  *
@@ -70,9 +92,10 @@ function getJsBuildSettings() {
 	};
 }
 
-/* -------------------------------------------------------------------------------------------------
-** Main execution sequence
-*/
+////////////////////////////////////////////////////////////////////////////////////////////////////
+// §3: Entry point: Set up of build taks
 
 gulpBuilder.setUpCssBuildTask( getCssBuildSettings() );
 gulpBuilder.setUpJsBuildTask( getJsBuildSettings() );
+
+} )();
