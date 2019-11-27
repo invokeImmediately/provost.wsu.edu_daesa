@@ -5820,12 +5820,41 @@ main {
 }
 
 header.main-header {
-	background: #981e32 url(/wp-content/uploads/sites/1303/2017/02/site-header_platinum-background_crimson-tileable.jpg) left top/cover no-repeat scroll;
+	background: #981e32;
 	color: #fff !important;
+	height: auto;
+}
+
+.main-header .header-group {
+	padding-top: 1em !important;
+	position: relative;
+}
+
+.main-header .sup-header {
+	display: none;
+}
+
+.main-header .sub-header {
+	font-size: 1.5rem !important;
+	font-weight: 700;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.main-header .sub-header-default {
+	font-size: inherit !important;
 }
 
 .main-header sub:not(.unset),.main-header sup:not(.unset) {
 	color: #fff !important;
+}
+
+.h1-header {
+	background: #000 url(https://s3.wp.wsu.edu/uploads/sites/57/2019/07/texture_light-gray-marble_1188x230.jpg) left top/cover no-repeat;
+	color: #000;
+}
+
+.h1-header * {
+	color: inherit;
 }
 
 .column aside {
@@ -6447,7 +6476,7 @@ section.row.single.quick-tabs>div.column>h3:first-child+h4+ul+h4+table>tbody tr 
 
 main {
 	padding-bottom: 34px;
-	background: #fff url(/wp-content/uploads/sites/1303/2017/09/site-footer_platinum-background_crimson-tileable_1188x34.jpg) left bottom repeat-x;
+	background: #fff url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==) left bottom repeat-x;
 }
 
 .page.has-short-main-header .main-header {
