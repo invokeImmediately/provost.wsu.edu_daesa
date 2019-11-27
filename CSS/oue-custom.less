@@ -1,33 +1,30 @@
-/*  ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-**  │ FILENAME: ucore-custom.less                                                                  │
-**  │                                                                                              │
-**  │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
-**  │                                                                                              │
-**  │ SUMMARY: Style rules for presenting content on the website for the WSU Office of             │
-**  │   undergraduate Education (OUE) website, which is built using the builder template of the    │
-**  │   Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling         │
-**  │   associated with the theme.                                                                 │
-**  └──────────────────────────────────────────────────────────────────────────────────────────────┘
-*/
-
-/*    ──────────────────────────────────────────────────────────────────────────────────────────────
-**    TABLE OF CONTENTS:
-**    ───────────────────────────────────────────────────────────────────────────────────────────
-**    §1: Settings for global Less variables...................................................33
-**    §2: Import of OUE-wide style rules.......................................................40
-**    §3: Styling at body & page level.........................................................54
-**    §4: Styling at the section level.........................................................79
-**      >>> §4.1: Headers......................................................................83
-**         →→→ §4.1.1: Main header.............................................................87
-**      >>> §4.2: Asides......................................................................101
-**    §5: Styling at the content grouping level...............................................178
-**      >>> §5.1: Lists.......................................................................182
-**    §6: Styling at the embedded content level...............................................188
-**      >>> §6.1: Tabular data................................................................192
-**    §7: Styling included via Less mixins....................................................198
-**    §8: Site-specific semantic CSS styling..................................................209
-**    ──────────────────────────────────────────────────────────────────────────────────────────────
-*/
+/** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
+*** │ FILENAME: ucore-custom.less                                                                  │
+*** │                                                                                              │
+*** │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+*** │                                                                                              │
+*** │ SUMMARY: Style rules for presenting content on the website for the WSU Office of             │
+*** │   undergraduate Education (OUE) website, which is built using the builder template of the    │
+*** │   Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling         │
+*** │   associated with the theme.                                                                 │
+*** └──────────────────────────────────────────────────────────────────────────────────────────────┘
+***   TABLE OF CONTENTS:
+***   ───────────────────────────────────────────────────────────────────────────────────────────
+***   §1: Settings for global Less variables...................................................33
+***   §2: Import of OUE-wide style rules.......................................................40
+***   §3: Styling at body & page level.........................................................54
+***   §4: Styling at the section level.........................................................79
+***     >>> §4.1: Headers......................................................................83
+***        →→→ §4.1.1: Main header.............................................................87
+***     >>> §4.2: Asides......................................................................101
+***   §5: Styling at the content grouping level...............................................178
+***     >>> §5.1: Lists.......................................................................182
+***   §6: Styling at the embedded content level...............................................188
+***     >>> §6.1: Tabular data................................................................192
+***   §7: Styling included via Less mixins....................................................198
+***   §8: Site-specific semantic CSS styling..................................................209
+***   ──────────────────────────────────────────────────────────────────────────────────────────────
+**/
 
 /*    ----------------------------------------------------------------------------------------------
 **    §1: Settings for global Less variables
@@ -90,12 +87,48 @@ main {
 
 header.main-header {
 	&:extend(.has-dflt-font);
-	background: @hex-crimson url(/wp-content/uploads/sites/1303/2017/02/site-header_platinum-background_crimson-tileable.jpg) left top/cover no-repeat scroll;
+	background: @hex-crimson;
 	color: @hex-white !important;
+	height: auto;
 }
 
-.main-header sub:not(.unset), .main-header sup:not(.unset) {
-	color: @hex-white !important;
+.main-header {
+	.header-group {
+		padding-top: 1em !important;
+		position: relative;
+	}
+
+	.sup-header {
+		display: none;
+	}
+
+	.sub-header {
+		font-size: 1.5rem !important;
+		font-weight: bold;
+		font-family: 'Open Sans Condensed', sans-serif;
+	}
+
+	.sub-header-default {
+		font-size: inherit !important;
+	}
+
+	sub:not(.unset),
+	sup:not(.unset) {
+		color: @hex-white !important;
+	}
+}
+
+/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
+**         →→→ §4.1.2: H1 Header Sections
+*/
+
+.h1-header {
+	background: black url(https://s3.wp.wsu.edu/uploads/sites/57/2019/07/texture_light-gray-marble_1188x230.jpg) left top/cover no-repeat;
+	color: black;
+
+	* {
+		color: inherit;
+	}
 }
 
 /*      ····························································································
@@ -201,7 +234,8 @@ header.main-header {
 
 .include-quick-tabs-layout(true);
 .use-linked-columns();
-@pseudo-footer-bg: { background: @hex-white url(/wp-content/uploads/sites/1303/2017/09/site-footer_platinum-background_crimson-tileable_1188x34.jpg) left bottom repeat-x; };
+@pseudo-footer-bg: { background: @hex-white url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==')
+ left bottom repeat-x; };
 .use-main-pseudo-footer(@pseudo-footer-bg, 34px);
 .use-sectional-article-headers();
 .use-short-main-header-on-pages();
