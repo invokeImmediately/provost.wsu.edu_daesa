@@ -1,56 +1,78 @@
 /** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: ucore-custom.less                                                                  │
+*** │ FILENAME: oue-custom.less                                                                    │
+*** │                                                                                              │
+*** │ SUMMARY: Style rules for presenting content on the website of WSU's Division of Academic     │
+*** │   Engagement and Student Achievement (DAESA), which is built using the builder template of   │
+*** │   the Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling     │
+*** │   associated with the theme.                                                                 │
 *** │                                                                                              │
 *** │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
-*** │                                                                                              │
-*** │ SUMMARY: Style rules for presenting content on the website for the WSU Office of             │
-*** │   undergraduate Education (OUE) website, which is built using the builder template of the    │
-*** │   Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling         │
-*** │   associated with the theme.                                                                 │
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
-***   TABLE OF CONTENTS:
-***   ───────────────────────────────────────────────────────────────────────────────────────────
-***   §1: Settings for global Less variables...................................................33
-***   §2: Import of OUE-wide style rules.......................................................40
-***   §3: Styling at body & page level.........................................................54
-***   §4: Styling at the section level.........................................................79
-***     >>> §4.1: Headers......................................................................83
-***        →→→ §4.1.1: Main header.............................................................87
-***     >>> §4.2: Asides......................................................................101
-***   §5: Styling at the content grouping level...............................................178
-***     >>> §5.1: Lists.......................................................................182
-***   §6: Styling at the embedded content level...............................................188
-***     >>> §6.1: Tabular data................................................................192
-***   §7: Styling included via Less mixins....................................................198
-***   §8: Site-specific semantic CSS styling..................................................209
-***   ──────────────────────────────────────────────────────────────────────────────────────────────
+***  TABLE OF CONTENTS:
+***  ────────────────────────────────────────────────────────────────────────────────────────────
+***  §1: Build entry point from DAESA's CSS development project...............................31
+***  §2: Persistent section header comment for unit specific styling..........................42
+***  §3: Styling at body & page level.........................................................74
+***  §4: Styling at the section level.........................................................99
+***    >>> §4.1: Headers.....................................................................103
+***      →→→ §4.1.1: Main header.............................................................107
+***      →→→ §4.1.2: H1 Header Sections......................................................144
+***    >>> §4.2: Asides......................................................................157
+***  §5: Styling at the content grouping level...............................................234
+***    >>> §5.1: Lists.......................................................................238
+***  §6: Styling at the embedded content level...............................................244
+***    >>> §6.1: Tabular data................................................................248
+***  §7: Styling included via Less mixins....................................................254
+***  §8: Site-specific semantic CSS styling..................................................266
+***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
-/*    ----------------------------------------------------------------------------------------------
-**    §1: Settings for global Less variables
-*/
+/** ================================================================================================
+*** §1: Build entry point from DAESA's CSS development project
+**/
 
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
 
-/*    ----------------------------------------------------------------------------------------------
-**    §2: Import of OUE-wide style rules
-*/
-
 @import "..\WSU-UE---CSS\variables.less";
-@import "..\WSU-UE---CSS\wp-master-style-sheet.less";
+@import "..\WSU-UE---CSS\css-build-entry-point.less";
+
+
+/** ================================================================================================
+*** §2: Persistent section header comment for unit specific styling
+**/
 
 /*! ================================================================================================
-*** STYLE RULES SPECIFIC TO THE UCORE WEBSITE
+*** DAESA Website Styling Section
 *** ================================================================================================
-***   GIT REPOSITORY: https://github.com/invokeImmediately/ucore.wsu.edu/
-***     (Please see above git repository for fully documented, precompiled source code.)
+***   SUMMARY: CSS code designed for use on Washington State University's [DAESA website](https://st
+***    age.web.wsu.edu/oue/) that was built from precompiled CSS written in the Less language
+***    extension of CSS.
+***
+***   DESCRIPTION: Fully documented, precompiled source code from which this section of the
+***    custom stylesheet was built is developed and maintained on the following GitHub project:
+***    https://github.com/invokeImmediately/oue.wsu.edu/
+***
+***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+***
+***   LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+***
+***     Permission to use, copy, modify, and/or distribute this software for any purpose with or
+***     without fee is hereby granted, provided that the above copyright notice and this permission
+***     notice appear in all copies.
+***
+***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
+***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
+***     OR PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
 
-/*    ----------------------------------------------------------------------------------------------
-**    §3: Styling at body & page level
-*/
+/** ================================================================================================
+*** §3: Styling at body & page level
+**/
 
 body {
 	background: @hex-bright-gray;
@@ -73,17 +95,17 @@ main {
 	border-left: 1px solid @hex-bright-gray;
 }
 
-/*    ----------------------------------------------------------------------------------------------
-**    §4: Styling at the section level
-*/
+/** ================================================================================================
+*** §4: Styling at the section level
+**/
 
-/*      ····························································································
-**      >>> §4.1: Headers
-*/
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §4.1: Headers
+**/
 
-/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-**         →→→ §4.1.1: Main header
-*/
+/**     ····························································································
+***     →→→ §4.1.1: Main header
+**/
 
 header.main-header {
 	&:extend(.has-dflt-font);
@@ -118,9 +140,9 @@ header.main-header {
 	}
 }
 
-/*         · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · · ·
-**         →→→ §4.1.2: H1 Header Sections
-*/
+/**     ····························································································
+***     →→→ §4.1.2: H1 Header Sections
+**/
 
 .h1-header {
 	background: black url(https://s3.wp.wsu.edu/uploads/sites/57/2019/07/texture_light-gray-marble_1188x230.jpg) left top/cover no-repeat;
@@ -131,9 +153,9 @@ header.main-header {
 	}
 }
 
-/*      ····························································································
-**      >>> §4.2: Asides
-*/
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §4.2: Asides
+**/
 
 // TODO: Remove?
 
@@ -208,29 +230,29 @@ header.main-header {
 	}
 }
 
-/*    ----------------------------------------------------------------------------------------------
-**    §5: Styling at the content grouping level
-*/
+/** ================================================================================================
+*** §5: Styling at the content grouping level
+**/
 
-/*      ····························································································
-**      >>> §5.1: Lists
-*/
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §5.1: Lists
+**/
 
 // TODO: Design layout for programs & Units lists
 
-/*    ----------------------------------------------------------------------------------------------
-**    §6: Styling at the embedded content level
-*/
+/** ================================================================================================
+*** §6: Styling at the embedded content level
+**/
 
-/*      ····························································································
-**      >>> §6.1: Tabular data
-*/
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §6.1: Tabular data
+**/
 
 // TODO: Decide if this is still needed.
 
-/*    ----------------------------------------------------------------------------------------------
-**    §7: Styling included via Less mixins
-*/
+/** ================================================================================================
+*** §7: Styling included via Less mixins
+**/
 
 .include-quick-tabs-layout(true);
 .use-linked-columns();
@@ -240,9 +262,9 @@ header.main-header {
 .use-sectional-article-headers();
 .use-short-main-header-on-pages();
 
-/*    ----------------------------------------------------------------------------------------------
-**    §8: Site-specific semantic CSS styling
-*/
+/** ================================================================================================
+*** §8: Site-specific semantic CSS styling
+**/
 
 .wsuwp-content-syndicate-wrapper {
 	.content-item-byline-author {
