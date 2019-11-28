@@ -60,16 +60,30 @@ function getCssBuildSettings() {
 Roboto+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n';
 	var insertingMediaQuerySectionHeader = {
 			'before': /^@media/,
-			'lineBefore': '/*! ╔═══════════════════════════════════════════════════════════════════\
-════════════════════════════════════════════════════╗\r\n*   ║ MEDIA QUERIES ######################\
-################################################################################# ║\r\n*   ╚═══════\
-═══════════════════════════════════════════════════════════════════════════════════════════════════\
-═════════════╝\r\n*/',
+			'lineBefore': '/*! ====================================================================\
+============================\r\n*** Media queries section\r\n*** ==================================\
+==============================================================\r\n***   SUMMARY: Media queries buil\
+t from precompiled CSS written in the Less language extension of\r\n***    CSS. Queries in this sec\
+tion are a combination of those designed for use on websites belonging to DAESA ***\r\n    and thos\
+e intended specifically for use on the DAESA website.\r\n***\r\n***   DESCRIPTION: Fully documented\
+, precompiled source code from which this section of the custom\r\n***    stylesheet was built is d\
+eveloped and maintained on the following two GitHub projects:\r\n***    https://github.com/invokeIm\
+mediately/WSU-UE---CSS/\r\n***    https://github.com/invokeImmediately/oue.wsu.edu/\r\n***   AUTHOR\
+: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)\r\n***\r\n***   LICENS\
+E: ISC - Copyright (c) 2019 Daniel C. Rieck.\r\n***\r\n***     Permission to use, copy, modify, and\
+/or distribute this software for any purpose with or\r\n***     without fee is hereby granted, prov\
+ided that the above copyright notice and this permission\r\n***     notice appear in all copies.\r\
+\n***\r\n***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH RE\
+GARD TO\r\n***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. I\
+N NO EVENT\r\n***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENT\
+IAL DAMAGES OR\r\n***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETH\
+ER IN AN ACTION OF\r\n***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN C\
+ONNECTION WITH THE USE\r\n***     OR PERFORMANCE OF THIS SOFTWARE.\r\n*** =========================\
+=======================================================================\r\n**/',
 			'stopAfterFirstMatch': true
 		};
 	var minCssFileExtension = '.min.css';
-	var minCssFileHeaderStr = '/*! Built with the Less CSS preprocessor [http://lesscss.org/]. Plea\
-se see [https://github.com/invokeImmediately/oue.wsu.edu] for a repository of source code. */\r\n';
+	var minCssFileHeaderStr = '';
  	var sourceFile = './CSS/oue-custom.less';
 
 	return new gulpBuilder.CssBuildSettings(commentRemovalNeedle, dependenciesPath,
