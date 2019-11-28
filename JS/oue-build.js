@@ -3416,7 +3416,7 @@ $( window ).on( 'load', function () {
  * CUSTOM JQUERY-BASED DYNAMIC CONTENT                                                                      *
  ************************************************************************************************************/
 (function ($) {
-	$(document).ready(function () {
+	$( function () {
 		/**********************************************************************************************
 		 * Tweak HTML source to work around some quirks of WordPress setup                            *
 		 **********************************************************************************************/
@@ -3428,8 +3428,9 @@ $( window ).on( 'load', function () {
 			$('#spine-sitenav').addClass('homeless');
 			break;*/
 		case '/news/':
-			$('div.column.one').first().parent('section').before('<section class="row single gutter pad-top"><div class="column one"><section class="article-header header-newsEvents"><div class="header-content"><h2>News</h2><h3>What We and Our Students Have Accomplished</h3></div></section></div></section>');
+		case '/oue/news/':
+			$('.column.one').first().parent('.row').before('<section id="builder-section-1543274513343" class="row single h1-header gutter pad-ends"><div style="" class="column one "><h1>News</h1></div></section>' );
 			break;
 		}
-	});
+	} );
 })(jQuery);
