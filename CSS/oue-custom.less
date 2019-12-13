@@ -139,6 +139,10 @@ main {
 	.sub-header,
 	.sup-header {
 		display: inline-block;
+
+		@media screen and (max-width: @spine-threshold) {
+			display: block;
+		}
 	}
 
 	.sub-header,
@@ -154,6 +158,12 @@ main {
 		margin-left: 1em;
 		padding-left: 1.25em;
 		color: #fff;
+
+		@media screen and (max-width: @spine-threshold) {
+			border-left: 0;
+			margin-left: 0;
+			padding-left: 0;
+		}
 	}
 
 	.sub-header-default,
