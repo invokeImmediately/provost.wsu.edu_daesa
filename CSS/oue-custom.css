@@ -32,11 +32,26 @@
 .has-dflt-font,
 .ff--sans,
 body,
+<<<<<<< HEAD
 .column h4 {
   font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
 }
 .has-dflt-font.serif,
 .ff--serif,
+=======
+.column h1,
+.column h2,
+.column h3,
+.column h4,
+header.main-header,
+.gform_heading h3.gform_title {
+  font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
+}
+.has-dflt-font.serif,
+.ff--serif {
+  font-family: 'Roboto Slab', 'Palatino Linotype', 'Palatino', serif;
+}
+>>>>>>> cd7e9149a8963b99507b70417c513ff50745a682
 .has-subst-font.serif,
 .ff--serif-2 {
   font-family: 'PT Serif', 'Palatino Linotype', 'Palatino', serif;
@@ -48,6 +63,13 @@ body,
 .article-tagline.sans,
 .article-tagline.article-tagline--sans,
 span.accentuated-text {
+<<<<<<< HEAD
+=======
+  font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+}
+.has-subst-font,
+.ff--condensed-2 {
+>>>>>>> cd7e9149a8963b99507b70417c513ff50745a682
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
 }
 .has-mono-font,
@@ -1138,7 +1160,11 @@ h6.crimson-text.solid::before {
 @media all {
   .article-header:not(.row) .header-content h1,
   .article-header:not(.row) .header-content h2 {
+<<<<<<< HEAD
     font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+=======
+    font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+>>>>>>> cd7e9149a8963b99507b70417c513ff50745a682
     color: #fff;
   }
   .article-header:not(.row) .header-content h3 {
@@ -4657,7 +4683,11 @@ div.auto-scroller ul li {
   color: #ffffff;
   font-size: 1.1em;
   font-weight: 700;
+<<<<<<< HEAD
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+=======
+  font-family: 'Open Sans Condensed', 'Arial Narrow', sans-serif;
+>>>>>>> cd7e9149a8963b99507b70417c513ff50745a682
   margin-bottom: 0em;
   margin-top: 0em;
   margin-left: -1rem;
