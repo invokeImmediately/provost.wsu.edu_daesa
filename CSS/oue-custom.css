@@ -7537,10 +7537,12 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
   }
 }
 .column .footer a {
+  border-width: 0;
   color: white;
-  border-color: white;
 }
 .column .footer a:hover {
+  background-color: transparent;
+  border-bottom-width: 3px;
   color: #ca1237;
 }
 .column .footer ul {
