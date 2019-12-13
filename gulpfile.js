@@ -25,11 +25,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................23
-// §2: Specificiation of build settings .......................................................28
-//   §2.1: getCssBuildSettings()...............................................................31
-//   §2.2: getJsBuildSettings()................................................................64
-// §3: Entry point: Set up of build taks.......................................................96
+// §1: Gulp task dependencies..................................................................40
+// §2: Specificiation of build settings .......................................................45
+//   §2.1: getCssBuildSettings()...............................................................48
+//   §2.2: getJsBuildSettings()................................................................96
+// §3: Entry point: Set up of build taks......................................................128
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -56,8 +56,9 @@ function getCssBuildSettings() {
 	var commentRemovalNeedle = /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm;
 	var dependenciesPath = './WSU-UE---CSS/';
 	var destFolder = './CSS/';
-	var fontImportStr = '@import url(\'https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|\
-Roboto+Condensed:400,700|Roboto+Slab|PT+Serif\');\r\n';
+	var fontImportStr = '@import url(\'https://fonts.googleapis.com/css?family=Open+Sans:300,300i,4\
+00,400i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i\
+,700,700i&display=swap\');\r\n';
 	var insertingMediaQuerySectionHeader = {
 			'before': /^@media/,
 			'lineBefore': '/*! ====================================================================\

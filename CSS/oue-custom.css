@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto+Condensed:400,700|Roboto+Slab|PT+Serif');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Roboto+Condensed:400,400i,700,700i|PT+Serif:400,400i,700,700i|Roboto+Mono:400,400i,700,700i&display=swap');
 /*! ================================================================================================
 *** WSU DAESA Styling Section
 *** ================================================================================================
@@ -32,8 +32,7 @@
 .has-dflt-font,
 .ff--sans,
 body,
-.column h4,
-header.main-header {
+.column h4 {
   font-family: 'Open Sans', 'Lucida Sans', 'Lucida Grande', sans-serif;
 }
 .has-dflt-font.serif,
@@ -6372,42 +6371,72 @@ div.auto-scroller ul li {
 ***     OR PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
-body {
-  background: #eff0f1;
-}
 #jacket {
   background-repeat: no-repeat;
   background-position: right bottom;
   background-attachment: fixed;
 }
-#spine .spine-actions section,
-#spine .spine-actions-tabs .opened,
-#spine .spine-actions-tabs .opened:hover {
-  background-color: #e5e6e8;
+#spine #glue:before {
+  border-right: 1px solid #e5e5e5;
+  background: #fff url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/02/bg-spine.png) no-repeat left bottom;
+  background-attachment: fixed;
+}
+body.home:not(.has-background-image) #jacket,
+#jacket {
+  background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
+  background-attachment: fixed;
+}
+body {
+  background: #eff0f1;
 }
 main {
   background: #fff;
   border-left: 1px solid #eff0f1;
 }
-header.main-header {
-  background: #981e32;
+.main-header {
+  background: #820c23;
+  background: -moz-linear-gradient(left, #820c23 0%, #a60f2d 100%);
+  background: -webkit-linear-gradient(left, #820c23 0%, #a60f2d 100%);
+  background: linear-gradient(to right, #820c23 0%, #a60f2d 100%);
   color: #fff !important;
-  height: auto;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#820c23', endColorstr='#a60f2d', GradientType=1);
+  padding: 1rem 0;
+  position: relative;
+}
+.main-header .header-group:not(.unset) {
+  font-size: 13px;
+  line-height: 1em;
+  padding: 0.7em 2rem;
+  position: relative;
+}
+.main-header .sub-header,
+.main-header .sup-header {
+  display: inline-block;
+}
+.main-header .sub-header,
+.main-header .sup-header,
+.main-header .sub-header-default,
+.main-header .sup-header-default {
+  font-size: inherit !important;
+}
+.main-header .sub-header-default {
+  border-left: 1px solid #fff;
+  font-weight: 300;
+  margin-left: 1em;
+  padding-left: 1.25em;
+  color: #fff;
+}
+.main-header .sub-header-default,
+.main-header .sup-header-default {
+  text-transform: uppercase;
+  width: auto;
+}
+.main-header .sup-header-default {
+  font-weight: bold;
 }
 .main-header .header-group {
   padding-top: 1em !important;
   position: relative;
-}
-.main-header .sup-header {
-  display: none;
-}
-.main-header .sub-header {
-  font-size: 1.5rem !important;
-  font-weight: bold;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
-.main-header .sub-header-default {
-  font-size: inherit !important;
 }
 .main-header sub:not(.unset),
 .main-header sup:not(.unset) {
@@ -7270,10 +7299,6 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
     background-size: cover;
   }
 }
-main {
-  padding-bottom: 34px;
-  background: #fff url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==') left bottom repeat-x;
-}
 .row.halves.article-header,
 .row.single.article-header {
   position: relative;
@@ -7450,9 +7475,6 @@ main {
 .row.article-header.single .column.one {
   right: 0;
 }
-body.page:not(.home) main.spine-blank-template > header.main-header > div.header-group {
-  padding-bottom: 1em !important;
-}
 .wsuwp-content-syndicate-wrapper .content-item-byline-author {
   display: none;
 }
@@ -7461,4 +7483,81 @@ body.page:not(.home) main.spine-blank-template > header.main-header > div.header
 }
 .wsuwp-content-syndicate-wrapper .content-item-read-story {
   display: none;
+}
+.globalbar {
+  background: #820c23;
+  background: -moz-linear-gradient(left, #820c23 0%, #a60f2d 100%);
+  background: -webkit-linear-gradient(left, #820c23 0%, #a60f2d 100%);
+  background: linear-gradient(to right, #820c23 0%, #a60f2d 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#820c23', endColorstr='#a60f2d', GradientType=1);
+  height: 4px;
+  position: fixed;
+  top: 0;
+  width: 1188px;
+  z-index: 99352;
+}
+.footersection {
+  height: auto;
+  position: relative;
+}
+.column .footer {
+  align-items: center;
+  background: #262626;
+  bottom: 0;
+  color: #fff;
+  display: flex;
+  height: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+}
+@media screen and (max-width: 693px) {
+  .column .footer {
+    position: absolute;
+  }
+  .column .footer ul {
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+}
+.column .footer a {
+  color: white;
+  border-color: white;
+}
+.column .footer a:hover {
+  color: #ca1237;
+}
+.column .footer ul {
+  color: #b7b7b7;
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0 2em 0 2.6em;
+  width: 100%;
+}
+.column .footer ul li {
+  display: inline;
+  font-size: 0.65em;
+  font-weight: normal;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+.column .footer ul li::before {
+  content: "";
+  display: none;
+  list-style-type: none;
+}
+.column .footer ul li::after {
+  content: ",";
+  margin: 0;
+  list-style-type: none;
+}
+.column .footer ul li:last-child::after {
+  content: "";
+  list-style-type: none;
 }

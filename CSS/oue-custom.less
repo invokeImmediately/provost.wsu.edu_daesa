@@ -24,6 +24,7 @@
 ***    >>> §6.1: Tabular data................................................................248
 ***  §7: Styling included via Less mixins....................................................254
 ***  §8: Site-specific semantic CSS styling..................................................266
+***  §9: Global DAESA footer.................................................................000
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -74,20 +75,31 @@
 *** §3: Styling at body & page level
 **/
 
-body {
-	background: @hex-bright-gray;
-}
-
 #jacket {
 	background-repeat: no-repeat;
 	background-position: right bottom;
 	background-attachment: fixed;
 }
 
-#spine .spine-actions section,
-#spine .spine-actions-tabs .opened,
-#spine .spine-actions-tabs .opened:hover {
-	background-color: #e5e6e8;
+#spine #glue:before {
+	border-right: 1px solid #e5e5e5;
+	background: #fff url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/02/bg-spine.png) no-repeat left bottom;
+	background-attachment: fixed;
+}
+
+// #spine .spine-actions section,
+// #spine .spine-actions-tabs .opened,
+// #spine .spine-actions-tabs .opened:hover {
+// 	background-color: #e5e6e8;
+// }
+
+body.home:not(.has-background-image) #jacket, #jacket {
+	background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
+	background-attachment: fixed;
+}
+
+body {
+	background: @hex-bright-gray;
 }
 
 main {
@@ -107,11 +119,52 @@ main {
 ***     →→→ §4.1.1: Main header
 **/
 
-header.main-header {
-	&:extend(.has-dflt-font);
-	background: @hex-crimson;
+.main-header {
+	background: rgb(130,12,35,1);
+	background: -moz-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
+	background: -webkit-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
+	background: linear-gradient(to right,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
 	color: @hex-white !important;
-	height: auto;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#820c23',endColorstr='#a60f2d',GradientType=1);
+	padding: 1rem 0;
+	position: relative;
+
+	.header-group:not(.unset) {
+		font-size: 13px;
+		line-height: 1em;
+		padding: .7em 2rem;
+		position: relative;
+	}
+
+	.sub-header,
+	.sup-header {
+		display: inline-block;
+	}
+
+	.sub-header,
+	.sup-header,
+	.sub-header-default,
+	.sup-header-default {
+		font-size: inherit !important;
+	}
+
+	.sub-header-default {
+		border-left: 1px solid #fff;
+		font-weight: 300;
+		margin-left: 1em;
+		padding-left: 1.25em;
+		color: #fff;
+	}
+
+	.sub-header-default,
+	.sup-header-default {
+		text-transform: uppercase;
+		width: auto;
+	}
+
+	.sup-header-default {
+		font-weight: bold;
+	}
 }
 
 .main-header {
@@ -120,19 +173,16 @@ header.main-header {
 		position: relative;
 	}
 
-	.sup-header {
-		display: none;
-	}
+	// .sup-header {
+	// 	display: none;
+	// }
 
-	.sub-header {
-		font-size: 1.5rem !important;
-		font-weight: bold;
-		font-family: 'Open Sans Condensed', sans-serif;
-	}
+	// .sub-header {
+	// 	font-size: 1.5rem !important;
+	// 	font-weight: bold;
+	// 	font-family: 'Open Sans Condensed', sans-serif;
+	// }
 
-	.sub-header-default {
-		font-size: inherit !important;
-	}
 
 	sub:not(.unset),
 	sup:not(.unset) {
@@ -256,11 +306,11 @@ header.main-header {
 
 .include-quick-tabs-layout(true);
 .use-linked-columns();
-@pseudo-footer-bg: { background: @hex-white url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==')
- left bottom repeat-x; };
-.use-main-pseudo-footer(@pseudo-footer-bg, 34px);
+// @pseudo-footer-bg: { background: @hex-white url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==')
+//  left bottom repeat-x; };
+// .use-main-pseudo-footer(@pseudo-footer-bg, 34px);
 .use-sectional-article-headers();
-.use-short-main-header-on-pages();
+// .use-short-main-header-on-pages();
 
 /** ================================================================================================
 *** §8: Site-specific semantic CSS styling
@@ -279,3 +329,99 @@ header.main-header {
 	display: none;
 	}
 }
+
+/** ================================================================================================
+*** §9: Global DAESA bar & footer
+**/
+
+@daesa-global-footer-rs: {
+	.globalbar {
+		background: rgb(130,12,35,1);
+		background: -moz-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
+		background: -webkit-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
+		background: linear-gradient(to right,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#820c23',endColorstr='#a60f2d',GradientType=1);
+		height: 4px;
+		position: fixed;
+		top: 0;
+		width: 1188px;
+		z-index: 99352;
+	}
+
+	.footersection {
+		height: auto;
+		position: relative;
+	}
+
+	.column {
+		.footer {
+			align-items: center;
+			background: #262626;
+			bottom: 0;
+			color: #fff;
+			display: flex;
+			height: auto;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			position: fixed;
+			width: 100%;
+			z-index: 9999;
+
+			@media screen and (max-width: @column-floating-threshold) {
+				position: absolute;
+				
+				ul {
+					white-space: nowrap;
+					overflow-x: auto;
+				}
+			}
+
+			a {
+				color: white;
+				border-color: white;
+
+				&:hover {
+					color: #ca1237;
+				}
+			}
+
+			ul {
+				color: #b7b7b7;
+				display: block;
+				list-style-type: none;
+				margin: 0;
+				padding: 0 2em 0 2.6em;
+				width: 100%;
+
+				li {
+					display: inline;
+					font-size: .65em;
+					font-weight: normal;
+					list-style-type: none;
+					margin: 0;
+					padding: 0;
+					text-align: left;
+
+					&::before {
+						content: "";
+						display: none;
+						list-style-type: none;
+					}
+
+					&::after {
+						content: ",";
+						margin: 0;
+						list-style-type: none;
+					}
+
+					&:last-child::after {
+						content: "";
+						list-style-type: none;
+					}
+				}
+			}
+		}
+	}
+};
+@daesa-global-footer-rs();
