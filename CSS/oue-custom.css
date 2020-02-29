@@ -1367,11 +1367,9 @@ p ~ p {
   margin-top: 1em;
 }
 hr {
-  background: none;
+  background-color: #d7dadb;
   border: 0;
-  border-bottom: 1px solid rgba(42, 48, 51, 0.2);
-  border-top: 1px solid #2a3033;
-  height: 0;
+  height: 1px;
   margin-bottom: 2em;
   margin-top: 2em;
   overflow: visible;
@@ -1708,6 +1706,9 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .article-body {
   position: relative;
   line-height: 1.5em;
+}
+.article-footer {
+  border-top: 1px solid #d7dadb;
 }
 .blog .article-header,
 .archive.category .article-header,
@@ -5338,6 +5339,12 @@ div.auto-scroller ul li {
 .lh--1500mx {
   line-height: 1.5em;
 }
+.lh--1750mx {
+  line-height: 1.75em;
+}
+.lh--2000mx {
+  line-height: 2em;
+}
 .fw--light {
   font-weight: 300;
 }
@@ -6322,28 +6329,28 @@ div.auto-scroller ul li {
 /*! ================================================================================================
 *** DAESA Website Styling Section
 *** ================================================================================================
-***   SUMMARY: CSS code designed for use on Washington State University's [DAESA website](https://st
-***    age.web.wsu.edu/oue/) that was built from precompiled CSS written in the Less language
-***    extension of CSS.
+*** SUMMARY: CSS code designed for use on Washington State University's [DAESA website](https://stag
+***   e.web.wsu.edu/oue/) that was built from precompiled CSS written in the Less language extension
+***   of CSS.
 ***
-***   DESCRIPTION: Fully documented, precompiled source code from which this section of the
-***    custom stylesheet was built is developed and maintained on the following GitHub project:
-***    https://github.com/invokeImmediately/oue.wsu.edu/
+*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
+***   stylesheet was built is developed and maintained on the following GitHub project:
+***   https://github.com/invokeImmediately/provost.wsu.edu_daesa/
 ***
-***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
 ***
-***   LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
 ***
-***     Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***     without fee is hereby granted, provided that the above copyright notice and this permission
-***     notice appear in all copies.
+***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
+***   without fee is hereby granted, provided that the above copyright notice and this permission
+***   notice appear in all copies.
 ***
-***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
-***     OR PERFORMANCE OF THIS SOFTWARE.
+***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
+***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+***   PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
 #jacket {
@@ -6441,6 +6448,14 @@ main {
 }
 .h1-header * {
   color: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
 }
 .column aside {
   font-size: 0.8rem;
@@ -7467,6 +7482,90 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 .row.article-header.single .column.one {
   right: 0;
 }
+.article-header .one > * {
+  animation: fade-in 2s linear 1;
+}
+.column a.recommend-button,
+.column a.glass-button {
+  padding: 1em;
+  border-radius: 7px;
+  border-bottom: none;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+.column a.recommend-button:hover,
+.column a.glass-button:hover {
+  border-radius: 7px;
+}
+.column a.recommend-button::before,
+.column a.glass-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  left: 2px;
+  bottom: 2px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0.025) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.25));
+}
+.column a.recommend-button.crimson,
+.column a.glass-button.crimson {
+  background-color: #981e32;
+  color: white;
+}
+.column a.recommend-button.crimson:hover,
+.column a.glass-button.crimson:hover {
+  background-color: #c60c30;
+  box-shadow: 0 0 18px rgba(198, 12, 48, 0.3333);
+}
+.column a.recommend-button.yellow,
+.column a.glass-button.yellow {
+  background-color: #ffb81c;
+  color: #000;
+}
+.column a.recommend-button.yellow:hover,
+.column a.glass-button.yellow:hover {
+  background-color: #ffde1c;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25), 0 0 18px rgba(255, 222, 28, 0.8);
+}
+.column a.recommend-button.gray,
+.column a.glass-button.gray {
+  background-color: #2a3033;
+  color: white;
+}
+.column a.recommend-button.gray:hover,
+.column a.glass-button.gray:hover {
+  background-color: #8d959a;
+  box-shadow: 0 0 18px rgba(42, 48, 51, 0.3333);
+}
+.column a.recommend-button .icon,
+.column a.glass-button .icon {
+  width: 55px;
+  padding-right: 1em;
+  border: 0;
+  box-shadow: none;
+}
+.column a.recommend-button .icon,
+.column a.glass-button .icon,
+.column a.recommend-button .icon + .label,
+.column a.glass-button .icon + .label {
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+.column a.recommend-button .icon + .label,
+.column a.glass-button .icon + .label {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  width: calc(100% - 55px - 1em);
+}
+.recommend-button,
+.glass-button {
+  display: block;
+  position: relative;
+}
 .wsuwp-content-syndicate-wrapper .content-item-byline-author {
   display: none;
 }
@@ -7566,4 +7665,16 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 }
 #coming-up-feed .content-item-event-venue:empty {
   display: none;
+}
+#daesa-focus-feature {
+  background: #eff0f1;
+}
+#daesa-focus-feature .wp-caption-text {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 100ch;
+}
+#daesa-focus-feature img {
+  border-bottom: 4px solid #a31d36;
+  display: block;
 }

@@ -10,23 +10,25 @@
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project...............................34
-***  §2: Persistent section header comment for unit specific styling..........................43
-***  §3: Styling at body & page level.........................................................75
-***  §4: Styling at the section level........................................................115
-***    >>> §4.1: Headers.....................................................................119
-***      →→→ §4.1.1: Main header.............................................................123
-***      →→→ §4.1.2: H1 Header Sections......................................................197
-***    >>> §4.2: Asides......................................................................210
-***  §5: Styling at the content grouping level...............................................287
-***    >>> §5.1: Lists.......................................................................291
-***  §6: Styling at the embedded content level...............................................297
-***    >>> §6.1: Tabular data................................................................301
-***  §7: Styling included via Less mixins....................................................307
-***  §8: Site-specific semantic CSS styling..................................................319
-***  §9: Global DAESA footer.................................................................337
-***  §10: Styling of specific components.....................................................437
-***    >>> §10.1: Coming up feed.............................................................441
+***  §1: Build entry point from DAESA's CSS development project...............................36
+***  §2: Persistent section header comment for unit specific styling..........................45
+***  §3: Styling at body & page level.........................................................77
+***  §4: Styling at the section level........................................................117
+***    >>> §4.1: Headers.....................................................................121
+***      →→→ §4.1.1: Main header.............................................................125
+***      →→→ §4.1.2: H1 Header Sections......................................................199
+***    >>> §4.2: Headings....................................................................212
+***    >>> §4.3: Asides......................................................................228
+***  §5: Styling at the content grouping level...............................................305
+***    >>> §5.1: Lists.......................................................................309
+***  §6: Styling at the embedded content level...............................................315
+***    >>> §6.1: Tabular data................................................................319
+***  §7: Styling included via Less mixins....................................................325
+***  §8: Site-specific semantic CSS styling..................................................346
+***  §9: Global DAESA footer.................................................................364
+***  §10: Styling of specific components.....................................................464
+***    >>> §10.1: Coming up feed.............................................................468
+***    >>> §10.2: DAESA focus features.......................................................492
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -46,28 +48,28 @@
 /*! ================================================================================================
 *** DAESA Website Styling Section
 *** ================================================================================================
-***   SUMMARY: CSS code designed for use on Washington State University's [DAESA website](https://st
-***    age.web.wsu.edu/oue/) that was built from precompiled CSS written in the Less language
-***    extension of CSS.
+*** SUMMARY: CSS code designed for use on Washington State University's [DAESA website](https://stag
+***   e.web.wsu.edu/oue/) that was built from precompiled CSS written in the Less language extension
+***   of CSS.
 ***
-***   DESCRIPTION: Fully documented, precompiled source code from which this section of the
-***    custom stylesheet was built is developed and maintained on the following GitHub project:
-***    https://github.com/invokeImmediately/oue.wsu.edu/
+*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
+***   stylesheet was built is developed and maintained on the following GitHub project:
+***   https://github.com/invokeImmediately/provost.wsu.edu_daesa/
 ***
-***   AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
 ***
-***   LICENSE: ISC - Copyright (c) 2019 Daniel C. Rieck.
+*** LICENSE: ISC - Copyright (c) 2020 Daniel C. Rieck.
 ***
-***     Permission to use, copy, modify, and/or distribute this software for any purpose with or
-***     without fee is hereby granted, provided that the above copyright notice and this permission
-***     notice appear in all copies.
+***   Permission to use, copy, modify, and/or distribute this software for any purpose with or
+***   without fee is hereby granted, provided that the above copyright notice and this permission
+***   notice appear in all copies.
 ***
-***     THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
-***     THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
-***     SHALL DANIEL RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
-***     ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
-***     CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE
-***     OR PERFORMANCE OF THIS SOFTWARE.
+***   THE SOFTWARE IS PROVIDED "AS IS" AND DANIEL C. RIECK DISCLAIMS ALL WARRANTIES WITH REGARD TO
+***   THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT
+***   SHALL DANIEL C. RIECK BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR
+***   ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF
+***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR
+***   PERFORMANCE OF THIS SOFTWARE.
 *** ================================================================================================
 **/
 
@@ -207,7 +209,23 @@ main {
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.2: Asides
+***   >>> §4.2: Headings
+**/
+
+@esteemed-headings-rs: {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		.tt--uppercase;
+	}
+};
+@esteemed-headings-rs();
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §4.3: Asides
 **/
 
 // TODO: Remove?
@@ -314,6 +332,15 @@ main {
 // .use-main-pseudo-footer(@pseudo-footer-bg, 34px);
 .use-sectional-article-headers();
 // .use-short-main-header-on-pages();
+
+@addl-sctnl-article-header-rs: {
+	.article-header .one > * {
+		.animation(fade-in; 2s; linear; 0s; 1);
+	}
+};
+@addl-sctnl-article-header-rs();
+
+.use-glass-button-layout();
 
 /** ================================================================================================
 *** §8: Site-specific semantic CSS styling
@@ -460,3 +487,25 @@ main {
 		}
 	}
 }
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §10.2: DAESA focus features
+**/
+
+@daesa-focus-feature-rs: {
+	#daesa-focus-feature {
+		background: #eff0f1;
+
+		.wp-caption-text {
+			padding-left: 2rem;
+			padding-right: 2rem;
+			max-width: 100ch;
+		}
+
+		img {
+			border-bottom: 4px solid #a31d36;
+			display: block;
+		}
+	}
+};
+@daesa-focus-feature-rs();
