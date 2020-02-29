@@ -7,7 +7,7 @@
  *
  * DESCRIPTION: This gulp automation task definition file is designed for use on the following
  *   project that is maintained on GitHub:
- *   https://github.com/invokeImmediately/oue.wsu.edu
+ *   https://github.com/invokeImmediately/provost.wsu.edu_daesa
  *
  * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  *
@@ -86,7 +86,7 @@ function getCssBuildSettings() {
 			'ES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF\r' +
 			'\n***   CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTI' +
 			'ON WITH THE USE\r\n***   OR PERFORMANCE OF THIS SOFTWARE.\r\n*** ===================' +
-			'=============================================================================\r\n**/',,
+			'=============================================================================\r\n**/',
 		'stopAfterFirstMatch': true
 	};
 	var minCssFileExtension = '.min.css';
