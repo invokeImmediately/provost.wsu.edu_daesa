@@ -14,11 +14,8 @@
 ***  §2: Persistent section header comment for unit specific styling..........................45
 ***  §3: Styling at body & page level.........................................................77
 ***  §4: Styling at the section level........................................................117
-***    >>> §4.1: Headers.....................................................................121
-***      →→→ §4.1.1: Main header.............................................................125
-***      →→→ §4.1.2: H1 Header Sections......................................................199
-***    >>> §4.2: Headings....................................................................212
-***    >>> §4.3: Asides......................................................................228
+***    >>> §4.1: Headings....................................................................212
+***    >>> §4.2: Asides......................................................................228
 ***  §5: Styling at the content grouping level...............................................305
 ***    >>> §5.1: Lists.......................................................................309
 ***  §6: Styling at the embedded content level...............................................315
@@ -29,6 +26,7 @@
 ***  §10: Styling of specific components.....................................................464
 ***    >>> §10.1: Coming up feed.............................................................468
 ***    >>> §10.2: DAESA focus features.......................................................492
+***    >>> §10.3: ESTEEMED MIRA Training Faculty table.......................................492
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -39,6 +37,8 @@
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
 @import "..\WSU-UE---CSS\variables.less";
+@use-design__daesa-main-headers: false;
+@use-design__provost-main-headers: true;
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 
 /** ================================================================================================
@@ -93,12 +93,6 @@
 	}
 }
 
-// #spine .spine-actions section,
-// #spine .spine-actions-tabs .opened,
-// #spine .spine-actions-tabs .opened:hover {
-// 	background-color: #e5e6e8;
-// }
-
 body.home:not(.has-background-image) #jacket, #jacket {
 	background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
 	background-attachment: fixed;
@@ -118,98 +112,7 @@ main {
 **/
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.1: Headers
-**/
-
-/**     ····························································································
-***     →→→ §4.1.1: Main header
-**/
-
-.main-header {
-	background: rgb(130,12,35,1);
-	background: -moz-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
-	background: -webkit-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
-	background: linear-gradient(to right,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
-	color: @hex-white !important;
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#820c23',endColorstr='#a60f2d',GradientType=1);
-	padding: 1rem 0;
-	position: relative;
-
-	.header-group:not(.unset) {
-		font-size: 13px;
-		line-height: 1em;
-		padding: .7em 2rem;
-		position: relative;
-	}
-
-	.sub-header,
-	.sup-header {
-		display: inline-block;
-
-		@media screen and (max-width: @spine-threshold) {
-			display: block;
-		}
-	}
-
-	.sub-header,
-	.sup-header,
-	.sub-header-default,
-	.sup-header-default {
-		font-size: inherit !important;
-	}
-
-	.sub-header-default {
-		border-left: 1px solid #fff;
-		font-weight: 300;
-		margin-left: 1em;
-		padding-left: 1.25em;
-		color: #fff;
-
-		@media screen and (max-width: @spine-threshold) {
-			border-left: 0;
-			margin-left: 0;
-			padding-left: 0;
-		}
-	}
-
-	.sub-header-default,
-	.sup-header-default {
-		text-transform: uppercase;
-		width: auto;
-	}
-
-	.sup-header-default {
-		font-weight: bold;
-	}
-}
-
-.main-header {
-	.header-group {
-		padding-top: 1em !important;
-		position: relative;
-	}
-
-	sub:not(.unset),
-	sup:not(.unset) {
-		color: @hex-white !important;
-	}
-}
-
-/**     ····························································································
-***     →→→ §4.1.2: H1 Header Sections
-**/
-
-.h1-header {
-	background: black url(https://s3.wp.wsu.edu/uploads/sites/57/2019/07/texture_light-gray-marble_1188x230.jpg) left top/cover no-repeat;
-	color: black;
-
-	* {
-		color: inherit;
-	}
-}
-
-/**   ----------------------------------------------------------------------------------------------
-***   >>> §4.2: Headings
+***   >>> §4.1: Headings
 **/
 
 @esteemed-headings-rs: {
@@ -225,11 +128,10 @@ main {
 @esteemed-headings-rs();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §4.3: Asides
+***   >>> §4.2: Asides
 **/
 
 // TODO: Remove?
-
 .column {
 	aside {
 		font-size: .8rem;
@@ -509,3 +411,210 @@ main {
 	}
 };
 @daesa-focus-feature-rs();
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §10.3: ESTEEMED MIRA Training Faculty table
+**/
+
+@esteemed-mira__training-faculty-table-rs: {
+	@profile_h: 108px;
+	@profile_w: @profile_h;
+
+	#tablepress-2_wrapper {
+		.column-1 {
+			min-width: 10em;
+		}
+	}
+
+	.tf-profile {
+		.tf-profile__image {
+			background-color: #eff0f1;
+			background-size: cover;
+			display: block;
+			height: @profile_h;
+			margin-bottom: .25em;
+			width: @profile_w;
+		}
+
+		&.tf-profile--suzanne-appleyard-wayman {
+			.tf-profile__image {
+				background-image: url(https://ipn.vetmed.wsu.edu/images/librariesprovider28/faculty/appleyard-suzanne.jpg);
+			}
+		}
+
+		&.tf-profile--santanu-bose {
+			.tf-profile__image {
+				background-image: url(https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/santanu-bosec48f1b9200636ae48082ff00000c094d.jpg);
+			}
+		}
+
+		&.tf-profile--jim-brozik {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/06/DSC_7353-396x264.jpg);
+			}
+		}
+
+		&.tf-profile--jean-celli {
+			.tf-profile__image {
+				background-image: url(https://globalhealth.wsu.edu/images/librariesprovider28/faculty/celli-jean.jpg);
+			}
+		}
+
+		&.tf-profile--michael-cleveland {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/908/2016/08/Michael-Cleveland-compressed.jpg);
+			}
+		}
+
+		&.tf-profile--allison-coffin {
+			.tf-profile__image {
+				background-image: url(https://directory.vancouver.wsu.edu/sites/directory.vancouver.wsu.edu/files/styles/rectangle/public/profile_photos/coffin_0.jpg);
+			}
+		}
+
+		&.tf-profile--min-du {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/386/2017/06/MinDu20170531_200x237.jpg);
+			}
+		}
+
+		&.tf-profile--rita-fuchs-lokensgard {
+			.tf-profile__image {
+				background-image: url(https://ipn.vetmed.wsu.edu/images/librariesprovider28/faculty/rita-fuchs.jpg);
+			}
+		}
+
+		&.tf-profile--hassan-ghasemzadeh {
+			.tf-profile__image {
+				background-image: url(https://school.eecs.wsu.edu/wp-content/uploads/Ghasemzadeh_Hassan_EECS-225x300.jpg);
+			}
+		}
+
+		&.tf-profile--alan-goodman {
+			.tf-profile__image {
+				background-image: url(https://smb.wsu.edu/images/librariesprovider28/faculty/alan-goodman.jpg);
+			}
+		}
+
+		&.tf-profile--thomas-kawula {
+			.tf-profile__image {
+				background-image: url(https://globalhealth.wsu.edu/images/librariesprovider28/faculty/kawula-tom.jpg);
+			}
+		}
+
+		&.tf-profile--leigh-knodler {
+			.tf-profile__image {
+				background-image: url(https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/knodler-leigh.jpg);
+			}
+		}
+
+		&.tf-profile--michael-konkel {
+			.tf-profile__image {
+				background-image: url(https://smb.wsu.edu/images/librariesprovider28/faculty/michael-konkel.jpg);
+			}
+		}
+
+		&.tf-profile--alla-kostyukova {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/akostyukova-headshot-2019-150w-132x198.jpg);
+			}
+		}
+
+		&.tf-profile--david-lin {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/dlin-headshot-2019-150w-132x198.jpg);
+			}
+		}
+
+		&.tf-profile--eric-lofgren {
+			.tf-profile__image {
+				background-image: url(https://globalhealth.wsu.edu/images/librariesprovider28/faculty/eric-lofgren.jpg);
+			}
+		}
+
+		&.tf-profile--ryan-mclaughlin {
+			.tf-profile__image {
+				background-image: url(https://ipn.vetmed.wsu.edu/images/librariesprovider28/faculty/ryan-mclaughlin.jpg);
+			}
+		}
+
+		&.tf-profile--anthony-nicola {
+			.tf-profile__image {
+				background-image: url(https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/nicola-anthony.jpg);
+			}
+		}
+
+		&.tf-profile--roberta-o-connor {
+			.tf-profile__image {
+				background-image: url("https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/roberta-(robbie)-o\'connor.jpeg");
+			}
+		}
+
+		&.tf-profile--anders-omsland {
+			.tf-profile__image {
+				background-image: url(https://globalhealth.wsu.edu/images/librariesprovider28/faculty/omsland-anders.jpg);
+			}
+		}
+
+		&.tf-profile--james-pru {
+			.tf-profile__image {
+				background-image: url(https://ansci.wsu.edu/wp-content/uploads/sites/386/2014/12/pru.jpg);
+			}
+		}
+
+		&.tf-profile--ray-quock {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/514/2015/02/raymond_quock.jpg);
+			}
+		}
+
+		&.tf-profile--steven-roberts {
+			.tf-profile__image {
+				background-image: url(https://smb.wsu.edu/images/librariesprovider28/faculty/steven-roberts.jpg);
+			}
+		}
+
+		&.tf-profile--dana-shaw {
+			.tf-profile__image {
+				background-image: url(https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/dana-shaw-sm.jpg);
+			}
+		}
+
+		&.tf-profile--michael-skinner {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/1176/2018/10/Michael-Skinner_6196.jpg);
+			}
+		}
+
+		&.tf-profile--viveka-vadyvaloo {
+			.tf-profile__image {
+				background-image: url(https://vmp.vetmed.wsu.edu/images/librariesprovider28/faculty/vadyvaloo-viveka.jpg);
+			}
+		}
+
+		&.tf-profile--anita-vasavada {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/734/2019/08/vasavada-headshot-2019-150w-132x198.jpg);
+			}
+		}
+
+		&.tf-profile--gary-wayman {
+			.tf-profile__image {
+				background-image: url(https://ipn.vetmed.wsu.edu/images/librariesprovider28/faculty/wayman_gary.jpg);
+			}
+		}
+
+		&.tf-profile--john-wyrick {
+			.tf-profile__image {
+				background-image: url(https://smb.wsu.edu/images/librariesprovider28/faculty/john-wyrick.jpg);
+			}
+		}
+
+		&.tf-profile--ming-xian {
+			.tf-profile__image {
+				background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/07/Xian11-396x594.jpg);
+			}
+		}
+	}
+};
+@esteemed-mira__training-faculty-table-rs();
