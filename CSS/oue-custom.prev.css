@@ -2467,85 +2467,6 @@ figure figcaption {
 	background-color: #049cdb;
 }
 
-input.read-more-state {
-	display: none;
-}
-
-input.read-more-state:checked~.read-more-target {
-	margin-top: 0;
-	height: auto;
-	opacity: 1;
-}
-
-input.read-more-state~p label.read-more-trigger:before {
-	content: 'Show more';
-}
-
-label.read-more-trigger {
-	animation: orange-glow 5s linear infinite;
-	background-color: rgba(255,184,28,.25);
-	border: 1px solid #2a3033;
-	border-radius: .25rem;
-	color: #5e5e5e;
-	cursor: pointer;
-	display: inline-block;
-	font-size: .9rem;
-	line-height: 2;
-	padding: 0 .5rem;
-	position: relative;
-	transition: all .3333s ease;
-}
-
-@keyframes orange-glow {
-	0% {
-		background-color: rgba(255,184,28,.25);
-		box-shadow: 0 0 9px rgba(255,184,28,0);
-		color: #5e5e5e;
-	}
-	
-	50% {
-		background-color: rgba(255,184,28,.5);
-		box-shadow: 0 0 18px rgba(255,184,28,.5);
-		color: #2a3033;
-	}
-	
-	100% {
-		background-color: rgba(255,184,28,.25);
-		box-shadow: 0 0 9px rgba(255,184,28,0);
-	}
-}
-
-label.read-more-trigger:after {
-	border-radius: .25rem;
-	bottom: 0;
-	content: "";
-	left: 2px;
-	position: absolute;
-	right: 2px;
-	top: 2px;
-	background: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.1) 50%,rgba(0,0,0,0) 50%,rgba(0,0,0,.1));
-}
-
-label.read-more-trigger:hover {
-	animation: none;
-	background-color: #ffb81c;
-	border: 1px solid #2a3033;
-	box-shadow: 0 0 18px rgba(255,184,28,.6667);
-	color: #2a3033;
-}
-
-div.read-more-target {
-	height: 0;
-	margin-top: .5rem;
-	opacity: 0;
-	overflow: hidden;
-	transition: all .333s ease;
-}
-
-.read-more-state:checked~p label.read-more-trigger:before {
-	content: 'Show less';
-}
-
 .column .gform_wrapper {
 	max-width: 990px;
 }
@@ -2747,6 +2668,7 @@ div.read-more-target {
 
 .column .gform_fields>.gfield.gfield_contains_required input:not(.gf-value-entered):not(:focus),.column .gform_fields>.gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),.column .gform_fields>.gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
 	background-color: rgba(255,0,0,.1);
+	background: linear-gradient(to bottom,rgba(255,0,0,.1),rgba(255,0,0,0));
 }
 
 .column .gform_fields>.gfield.gfield_contains_required .gfield_checkbox,.column .gform_fields>.gfield.gfield_contains_required .gfield_radio {
@@ -2755,92 +2677,15 @@ div.read-more-target {
 
 .column .gform_fields>.gfield.gfield_contains_required .gfield_checkbox:not(.gf-value-entered),.column .gform_fields>.gfield.gfield_contains_required .gfield_radio:not(.gf-value-entered) {
 	background-color: rgba(255,0,0,.1);
+	background: linear-gradient(to bottom,rgba(255,0,0,.1),rgba(255,0,0,0));
 }
 
-.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input {
-	background-color: #fff !important;
+.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input,.column .gform_fields>.gfield.gfield_contains_required .name_middle input,.column .gform_fields>.gfield.gfield_contains_required .name_suffix input {
+	background: #fff !important;
 }
 
-.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input:focus {
+.column .gform_fields>.gfield.gfield_contains_required .address_line_2 input:focus,.column .gform_fields>.gfield.gfield_contains_required .name_middle input:focus,.column .gform_fields>.gfield.gfield_contains_required .name_suffix input:focus {
 	background-color: #edf3f4 !important;
-}
-
-.oue-gf-hghlghts-rqrd-input input,.oue-gf-hghlghts-rqrd-input select,.oue-gf-hghlghts-rqrd-select input,.oue-gf-hghlghts-rqrd-select select,.oue-gf-rqrd-input input,.oue-gf-rqrd-input select,.oue-gf-rqrd-select input,.oue-gf-rqrd-select select {
-	transition: background .3s ease;
-}
-
-.oue-gf-hghlghts-rqrd-input input:focus,.oue-gf-hghlghts-rqrd-input select:focus,.oue-gf-hghlghts-rqrd-select input:focus,.oue-gf-hghlghts-rqrd-select select:focus,.oue-gf-rqrd-input input:focus,.oue-gf-rqrd-input select:focus,.oue-gf-rqrd-select input:focus,.oue-gf-rqrd-select select:focus {
-	background-color: #edf3f4 !important;
-}
-
-.oue-gf-hghlghts-rqrd-input.gfield_contains_required input:not(.gf-value-entered):not(:focus),.oue-gf-hghlghts-rqrd-input.gfield_contains_required select:not(.gf-value-entered):not(:focus),.oue-gf-hghlghts-rqrd-select.gfield_contains_required input:not(.gf-value-entered):not(:focus),.oue-gf-hghlghts-rqrd-select.gfield_contains_required select:not(.gf-value-entered):not(:focus),.oue-gf-rqrd-input.gfield_contains_required input:not(.gf-value-entered):not(:focus),.oue-gf-rqrd-input.gfield_contains_required select:not(.gf-value-entered):not(:focus),.oue-gf-rqrd-select.gfield_contains_required input:not(.gf-value-entered):not(:focus),.oue-gf-rqrd-select.gfield_contains_required select:not(.gf-value-entered):not(:focus) {
-	background-color: rgba(255,0,0,.1);
-}
-
-.oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox,.oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_radio,.oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox,.oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_radio {
-	transition: background .3s ease;
-}
-
-.oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),.oue-gf-hghlghts-rqrd-checkbox.gfield_contains_required ul.gfield_radio:not(.gf-value-entered),.oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_checkbox:not(.gf-value-entered),.oue-gf-rqrd-checkbox.gfield_contains_required ul.gfield_radio:not(.gf-value-entered) {
-	background-color: rgba(255,0,0,.1);
-}
-
-.oue-gf-hghlghts-rqrd-txtarea textarea,.oue-gf-rqrd-txtarea textarea {
-	transition: background .3s ease;
-}
-
-.oue-gf-hghlghts-rqrd-txtarea textarea:focus,.oue-gf-rqrd-txtarea textarea:focus {
-	background-color: #edf3f4;
-}
-
-.oue-gf-hghlghts-rqrd-txtarea.gfield_contains_required textarea:not(.gf-value-entered):not(:focus),.oue-gf-rqrd-txtarea.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
-	background-color: rgba(255,0,0,.1);
-}
-
-.oue-gf-actvtr-checkbox {
-	transition: background .3s ease;
-}
-
-.oue-gf-actvtr-checkbox.gf-activated {
-	display: none !important;
-}
-
-.oue-gf-actvtr-chain {
-	transition: all .3s ease;
-}
-
-.oue-gf-actvtr-chain.gf-hidden {
-	display: none !important;
-}
-
-.oue-gf-upload-chain input {
-	transition: background .3s ease;
-}
-
-.oue-gf-upload-chain input:focus {
-	background-color: #edf3f4;
-}
-
-.oue-gf-upload-chain.gfield_contains_required input:not(.gf-value-entered):not(:focus) {
-	background-color: rgba(255,0,0,.1);
-}
-
-.oue-gf-upload-chain.gf-hidden {
-	display: none !important;
-}
-
-.oue-gf-revealed {
-	animation: gf-fades-in .5s linear 1;
-}
-
-@keyframes gf-fades-in {
-	0% {
-		opacity: 0;
-	}
-	
-	100% {
-		opacity: 1;
-	}
 }
 
 .post-password-required {
