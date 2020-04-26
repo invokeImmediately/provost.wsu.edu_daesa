@@ -7429,3 +7429,66 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 .tf-profile.tf-profile--ming-xian .tf-profile__image {
   background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/07/Xian11-396x594.jpg);
 }
+.progress-indicator {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+@media screen and (max-width: 875px) {
+  .progress-indicator {
+    flex-wrap: wrap;
+  }
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
+  list-style-type: none !important;
+  margin-left: 0;
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
+  list-style-type: none !important;
+}
+.progress-indicator__l-connector,
+.progress-indicator__r-connector {
+  background-color: #e5e6e8;
+  position: absolute;
+  height: 5px;
+  top: 50%;
+  width: 18px;
+}
+.progress-indicator__section-complete .progress-indicator__l-connector,
+.progress-indicator__section-complete .progress-indicator__r-connector {
+  background-color: #981e32;
+}
+.progress-indicator__l-connector {
+  left: 0;
+  transform: translate(-100%,-50%);
+}
+.progress-indicator__section-active .progress-indicator__l-connector {
+  background-color: #981e32;
+}
+.progress-indicator__r-connector {
+  right: 0;
+  transform: translate(100%,-50%);
+}
+.progress-indicator__section {
+  background-color: #e5e6e8;
+  border-radius: 0.25em;
+  color: black;
+  padding: 0.5em 1em;
+  position: relative;
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section {
+  margin-right: 18px;
+  padding: 0.5em 1em;
+}
+.progress-indicator__section-active {
+  background-color: #58111d;
+  color: white;
+}
+.progress-indicator__section-complete {
+  background-color: #981e32;
+  color: white;
+}
