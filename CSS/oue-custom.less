@@ -636,18 +636,31 @@ main {
 
 	.progress-indicator {
 		align-items: center;
+		border-top: 1px dotted #ccc;
 		display: flex;
 		justify-content: center;
 		list-style-type: none;
+		position: relative;
 
 		@media screen and (max-width: @empi__wrap-width) {
 			flex-wrap: wrap;
 		}
 
+		&::before {
+			color: @hex-dark-gray;
+			content: "Application Progress:";
+			position: absolute;
+			left: 0;
+			text-transform: uppercase;
+			top: 1.3em;
+		}
+
 		body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol&,
 		body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol& {
 			list-style-type: none !important;
+			margin-bottom: 0;
 			margin-left: 0;
+			padding-top: 2.3em;
 
 			li {
 				list-style-type: none !important;

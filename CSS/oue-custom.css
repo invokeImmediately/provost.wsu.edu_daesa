@@ -7431,19 +7431,31 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 }
 .progress-indicator {
   align-items: center;
+  border-top: 1px dotted #ccc;
   display: flex;
   justify-content: center;
   list-style-type: none;
+  position: relative;
 }
 @media screen and (max-width: 875px) {
   .progress-indicator {
     flex-wrap: wrap;
   }
 }
+.progress-indicator::before {
+  color: #5e5e5e;
+  content: "Application Progress:";
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 1.3em;
+}
 body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,
 body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
   list-style-type: none !important;
+  margin-bottom: 0;
   margin-left: 0;
+  padding-top: 2.3em;
 }
 body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,
 body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
