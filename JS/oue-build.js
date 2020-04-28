@@ -1539,8 +1539,8 @@ function showDefinitionListButtons( slctrDefList, expandAllClass, collapseAllCla
  * jQuery.forms.js
  * -------------------------------------------------------------------------------------------------
  * PROJECT SUMMARY: Enhancements mediated by jQuery to dynamic behavior of Gravity Forms and
- * intended for Washington State University (WSU) websites built in the WSU WordPress platform.
- * Designed especially for the websites of the WSU Office of Undergraduate Education.
+ *   intended for Washington State University (WSU) websites built in the WSU WordPress platform.
+ *   Designed especially for the websites of the WSU Office of Undergraduate Education.
  *
  * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  *
@@ -2122,15 +2122,17 @@ ill automatically be corrected. Please check the result to see if further correc
 					var $editorBody = $( this ).contents().find( '#tinymce' );
 					$editorBody.css( 'fontFamily', '"Open sans", sans-serif' );
 					if ( $editorBody.text().replace( /\n|\uFEFF/g, '' ) == ''  ) {
-						$editorBody.css( 'backgroundColor', 'rgba(255,0,0,0.1)' );
+						$editorBody.css( 'background', '#fff linear-gradient(to bottom,' +
+							' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
 					}
 					$editorBody.focus( function () {
-						$( this ).css( 'background-color', 'rgba(255,255,255,1)' );
+						$( this ).css( 'background', '#fff' );
 					} );
 					$editorBody.blur( function () {
 						var $this = $( this );
 						if ( $this.text().replace( /\n|\uFEFF/g, '' ) == '' ) {
-							$this.css( 'background-color', 'rgba(255,0,0,0.1)' );
+							$this.css( 'background', '#fff linear-gradient(to bottom,' +
+								' rgba(255,0,0,0.1), rgba(255,0,0,0)) no-repeat' );
 						}
 					} );
 				} );
