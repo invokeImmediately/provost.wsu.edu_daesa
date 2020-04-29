@@ -1685,10 +1685,10 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .article-footer {
   border-top: 1px solid #d7dadb;
 }
-.blog .article-header,
-.archive.category .article-header,
-.archive.tag .article-header,
-.single-post.post-template-default .article-header {
+.blog .article-header:not(.row),
+.archive.category .article-header:not(.row),
+.archive.tag .article-header:not(.row),
+.single-post.post-template-default .article-header:not(.row) {
   background-color: #eff0f1;
   border-bottom: 1px solid rgba(127, 127, 127, 0.2);
   border-top-left-radius: 5px;
@@ -1700,19 +1700,19 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   padding-right: 1em;
   padding-top: 1em;
 }
-.blog .article-header + *,
-.archive.category .article-header + *,
-.archive.tag .article-header + *,
-.single-post.post-template-default .article-header + * {
+.blog .article-header:not(.row) + *,
+.archive.category .article-header:not(.row) + *,
+.archive.tag .article-header:not(.row) + *,
+.single-post.post-template-default .article-header:not(.row) + * {
   margin-top: 1em;
 }
-.column .article-header .article-title,
-.column .article-header .article-title {
+.column .article-header:not(.row) .article-title,
+.column .article-header:not(.row) .article-title {
   font-size: 2em;
   line-height: 1.1em;
 }
-.column .article-header .article-title a,
-.column .article-header .article-title a {
+.column .article-header:not(.row) .article-title a,
+.column .article-header:not(.row) .article-title a {
   font-weight: bold;
 }
 .article-summary {
@@ -3556,6 +3556,81 @@ figure figcaption {
 .post-password-required {
   padding-left: 2rem;
   padding-top: 2rem;
+}
+.progress-indicator {
+  align-items: center;
+  border-top: 1px dotted #ccc;
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  position: relative;
+}
+@media screen and (max-width: 875px) {
+  .progress-indicator {
+    flex-wrap: wrap;
+  }
+}
+.progress-indicator::before {
+  color: #5e5e5e;
+  content: "Application Progress:";
+  position: absolute;
+  left: 0;
+  text-transform: uppercase;
+  top: 1.3em;
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
+  list-style-type: none !important;
+  margin-bottom: 0;
+  margin-left: 0;
+  padding-top: 2.3em;
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
+  list-style-type: none !important;
+}
+.progress-indicator__l-connector,
+.progress-indicator__r-connector {
+  background-color: #e5e6e8;
+  position: absolute;
+  height: 5px;
+  top: 50%;
+  width: 18px;
+}
+.progress-indicator__section-complete .progress-indicator__l-connector,
+.progress-indicator__section-complete .progress-indicator__r-connector {
+  background-color: #981e32;
+}
+.progress-indicator__l-connector {
+  left: 0;
+  transform: translate(-100%,-50%);
+}
+.progress-indicator__section-active .progress-indicator__l-connector {
+  background-color: #981e32;
+}
+.progress-indicator__r-connector {
+  right: 0;
+  transform: translate(100%,-50%);
+}
+.progress-indicator__section {
+  background-color: #e5e6e8;
+  border-radius: 0.25em;
+  color: black;
+  padding: 0.5em 1em;
+  position: relative;
+}
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section,
+body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section {
+  margin-right: 18px;
+  padding: 0.5em 1em;
+}
+.progress-indicator__section-active {
+  background-color: #58111d;
+  color: white;
+}
+.progress-indicator__section-complete {
+  background-color: #981e32;
+  color: white;
 }
 .drop-down-toggle {
   position: relative;
@@ -7428,79 +7503,4 @@ section.row.single.quick-tabs > div.column > h3:first-child + h4 + ul + h4 + tab
 }
 .tf-profile.tf-profile--ming-xian .tf-profile__image {
   background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/07/Xian11-396x594.jpg);
-}
-.progress-indicator {
-  align-items: center;
-  border-top: 1px dotted #ccc;
-  display: flex;
-  justify-content: center;
-  list-style-type: none;
-  position: relative;
-}
-@media screen and (max-width: 875px) {
-  .progress-indicator {
-    flex-wrap: wrap;
-  }
-}
-.progress-indicator::before {
-  color: #5e5e5e;
-  content: "Application Progress:";
-  position: absolute;
-  left: 0;
-  text-transform: uppercase;
-  top: 1.3em;
-}
-body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,
-body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
-  list-style-type: none !important;
-  margin-bottom: 0;
-  margin-left: 0;
-  padding-top: 2.3em;
-}
-body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,
-body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
-  list-style-type: none !important;
-}
-.progress-indicator__l-connector,
-.progress-indicator__r-connector {
-  background-color: #e5e6e8;
-  position: absolute;
-  height: 5px;
-  top: 50%;
-  width: 18px;
-}
-.progress-indicator__section-complete .progress-indicator__l-connector,
-.progress-indicator__section-complete .progress-indicator__r-connector {
-  background-color: #981e32;
-}
-.progress-indicator__l-connector {
-  left: 0;
-  transform: translate(-100%,-50%);
-}
-.progress-indicator__section-active .progress-indicator__l-connector {
-  background-color: #981e32;
-}
-.progress-indicator__r-connector {
-  right: 0;
-  transform: translate(100%,-50%);
-}
-.progress-indicator__section {
-  background-color: #e5e6e8;
-  border-radius: 0.25em;
-  color: black;
-  padding: 0.5em 1em;
-  position: relative;
-}
-body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section,
-body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section {
-  margin-right: 18px;
-  padding: 0.5em 1em;
-}
-.progress-indicator__section-active {
-  background-color: #58111d;
-  color: white;
-}
-.progress-indicator__section-complete {
-  background-color: #981e32;
-  color: white;
 }
