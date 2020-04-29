@@ -6820,6 +6820,84 @@ section.row.single.quick-tabs>div.column>h3:first-child+h4+ul+h4+table>tbody tr 
 	background-image: url(https://s3.wp.wsu.edu/uploads/sites/89/2014/07/Xian11-396x594.jpg);
 }
 
+.progress-indicator {
+	align-items: center;
+	border-top: 1px dotted #ccc;
+	display: flex;
+	justify-content: center;
+	list-style-type: none;
+	position: relative;
+}
+
+.progress-indicator::before {
+	color: #5e5e5e;
+	content: "Application Progress:";
+	position: absolute;
+	left: 0;
+	text-transform: uppercase;
+	top: 1.3em;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator {
+	list-style-type: none !important;
+	margin-bottom: 0;
+	margin-left: 0;
+	padding-top: 2.3em;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol.progress-indicator li {
+	list-style-type: none !important;
+}
+
+.progress-indicator__l-connector,.progress-indicator__r-connector {
+	background-color: #e5e6e8;
+	position: absolute;
+	height: 5px;
+	top: 50%;
+	width: 18px;
+}
+
+.progress-indicator__section-complete .progress-indicator__l-connector,.progress-indicator__section-complete .progress-indicator__r-connector {
+	background-color: #981e32;
+}
+
+.progress-indicator__l-connector {
+	left: 0;
+	transform: translate(-100%,-50%);
+}
+
+.progress-indicator__section-active .progress-indicator__l-connector {
+	background-color: #981e32;
+}
+
+.progress-indicator__r-connector {
+	right: 0;
+	transform: translate(100%,-50%);
+}
+
+.progress-indicator__section {
+	background-color: #e5e6e8;
+	border-radius: .25em;
+	color: #000;
+	padding: .5em 1em;
+	position: relative;
+}
+
+body .gform_wrapper div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section,body .gform_wrapper form div.gform_body ul.gform_fields li.gfield.gfield_html ol .progress-indicator__section {
+	margin-right: 18px;
+	padding: .5em 1em;
+}
+
+.progress-indicator__section-active {
+	background-color: #58111d;
+	color: #fff;
+}
+
+.progress-indicator__section-complete {
+	background-color: #981e32;
+	color: #fff;
+}
+
 /*! ================================================================================================
 *** Media queries section
 *** ================================================================================================
@@ -7099,6 +7177,12 @@ section.row.single.quick-tabs>div.column>h3:first-child+h4+ul+h4+table>tbody tr 
 @media all and (max-width:989px) {
 	span.hides-with-spine {
 		display: none;
+	}
+}
+
+@media screen and (max-width:875px) {
+	.progress-indicator {
+		flex-wrap: wrap;
 	}
 }
 
