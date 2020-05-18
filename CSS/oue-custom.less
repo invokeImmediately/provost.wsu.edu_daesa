@@ -10,24 +10,17 @@
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project...............................36
-***  §2: Persistent section header comment for unit specific styling..........................47
-***  §3: Styling at body & page level.........................................................79
-***  §4: Styling at the section level........................................................113
-***    >>> §4.1: Headings....................................................................117
-***    >>> §4.2: Asides......................................................................133
-***  §5: Styling at the content grouping level...............................................209
-***    >>> §5.1: Lists.......................................................................213
-***  §6: Styling at the embedded content level...............................................219
-***    >>> §6.1: Tabular data................................................................223
-***  §7: Styling included via Less mixins....................................................229
-***  §8: Site-specific semantic CSS styling..................................................250
-***  §9: Global DAESA footer.................................................................268
-***  §10: Styling of specific components.....................................................368
-***    >>> §10.1: Coming up feed.............................................................372
-***    >>> §10.2: DAESA focus features.......................................................396
-***    >>> §10.3: ESTEEMED MIRA Training Faculty table.......................................418
-***    >>> §10.4: DAESA website art..........................................................625
+***  §1: Build entry point from DAESA's CSS development project................................28
+***  §2: Persistent section header comment for unit specific styling...........................41
+***  §3: Overall site branding.................................................................73
+***  §4: Headings.............................................................................107
+***  §5: Optional styling included via Less mixins............................................123
+***  §6: Global DAESA bar & footer............................................................142
+***  §7: Styling of specific components.......................................................241
+***    >>> §10.1: Coming up feed..............................................................245
+***    >>> §10.2: DAESA focus features........................................................269
+***    >>> §10.3: ESTEEMED MIRA Training Faculty table........................................291
+***    >>> §10.4: DAESA website art...........................................................498
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -41,6 +34,7 @@
 @use-design__daesa-main-headers: false;
 @use-design__provost-main-headers: true;
 @use-design__gf-progress-indicators: true;
+@use-design__insider-news-feeds: true;
 @import "..\WSU-UE---CSS\css-build-entry-point.less";
 
 /** ================================================================================================
@@ -76,7 +70,7 @@
 **/
 
 /** ================================================================================================
-*** §3: Styling at body & page level
+*** §3: Overall site branding
 **/
 
 #jacket {
@@ -110,14 +104,10 @@ main {
 }
 
 /** ================================================================================================
-*** §4: Styling at the section level
+*** §4: Headings
 **/
 
-/**   ----------------------------------------------------------------------------------------------
-***   >>> §4.1: Headings
-**/
-
-@esteemed-headings-rs: {
+@rs-daesa-headings: {
 	h1,
 	h2,
 	h3,
@@ -127,115 +117,17 @@ main {
 		.tt--uppercase;
 	}
 };
-@esteemed-headings-rs();
-
-/**   ----------------------------------------------------------------------------------------------
-***   >>> §4.2: Asides
-**/
-
-// TODO: Remove?
-.column {
-	aside {
-		font-size: .8rem;
-		&+aside {
-			margin-top: @v-dflt-spcng;
-		}
-		p, ul {
-			font-size: inherit;
-			&:not(:last-child) {
-				margin-bottom: 0.8rem;
-			}
-			&:last-child:not(.no-bottom-pad) {
-				padding-bottom: 0;
-			}
-		}
-		&.article-sidebar {
-			background: #f8f1eb url(/wp-content/uploads/sites/1303/2016/11/tileable-concrete-texture_128x128.png) left top repeat;
-			&.green-marble {
-				background: #e3dfcd url(/wp-content/uploads/sites/1303/2016/11/seamless-marble-texture_528x528.png) left top repeat;
-				border: 1px solid #afa370;
-				box-shadow: 3px 3px 3px rgba(57,50,21,0.3333);
-			}
-			&.bluish-gray {
-				background: #edf3f4 url(/wp-content/uploads/sites/1303/2016/11/vertically-tileable-gray-acrylic_opacity-0.15.png) left top repeat-y;
-				background-size: 100% auto;
-				border: 1px solid #464e54;
-				box-shadow: 3px 3px 3px rgba(42,48,51,0.3333);
-			}
-		}
-	}
-}
-
-.column .widget_rss {
-	a {
-		border-bottom: none;
-		box-shadow: none;
-		&:hover {
-			border-bottom: none;
-			box-shadow: none;		
-		}
-		&.rsswidget img {
-			display: none;
-		}
-	}
-	ul li {
-		list-style-type: disc;
-	}
-}
-
-.recent-posts {
-	padding-bottom: (@v-dflt-spcng / 2);
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	background-color: #edf3f4;
-	box-shadow: 0 1px 2px rgba(red(@hex-black), green(@hex-black), blue(@hex-black), 0.33);
-	& > h4.fancy.with-top-border:first-child {
-		background: linear-gradient(to right,
-		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075),
-		 rgba(red(@hex-crimson), green(@hex-crimson), blue(@hex-crimson), 0.075)),
-		 linear-gradient(to right, @hex-white, @hex-white);
-		.has-responsive-font(@v-h4-sz * @v-scl-dwn, @v-hX-lnhght);
-	}
-	a {
-		border-bottom: none;
-		box-shadow: none;
-	}
-	& + & {
-		margin-top: @v-dflt-spcng;
-	}
-}
+@rs-daesa-headings();
 
 /** ================================================================================================
-*** §5: Styling at the content grouping level
-**/
-
-/**   ----------------------------------------------------------------------------------------------
-***   >>> §5.1: Lists
-**/
-
-// TODO: Design layout for programs & Units lists
-
-/** ================================================================================================
-*** §6: Styling at the embedded content level
-**/
-
-/**   ----------------------------------------------------------------------------------------------
-***   >>> §6.1: Tabular data
-**/
-
-// TODO: Decide if this is still needed.
-
-/** ================================================================================================
-*** §7: Styling included via Less mixins
+*** §5: Optional styling included via Less mixins
 **/
 
 .include-quick-tabs-layout(true);
+
 .use-linked-columns();
-// @pseudo-footer-bg: { background: @hex-white url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAiAAEDAREAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAj/xAAWAQEBAQAAAAAAAAAAAAAAAAAABgj/2gAMAwEAAhADEAAAAYTk92AAf//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAQUCP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQMBAT8BP//EABQRAQAAAAAAAAAAAAAAAAAAACD/2gAIAQIBAT8BP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEABj8CP//EABQQAQAAAAAAAAAAAAAAAAAAACD/2gAIAQEAAT8hP//aAAwDAQACAAMAAAAQAAH/xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAEDAQE/ED//xAAUEQEAAAAAAAAAAAAAAAAAAAAg/9oACAECAQE/ED//xAAUEAEAAAAAAAAAAAAAAAAAAAAg/9oACAEBAAE/ED//2Q==')
-//  left bottom repeat-x; };
-// .use-main-pseudo-footer(@pseudo-footer-bg, 34px);
+
 .use-sectional-article-headers();
-// .use-short-main-header-on-pages();
 
 @addl-sctnl-article-header-rs: {
 	.article-header .one > * {
@@ -247,28 +139,10 @@ main {
 .use-glass-button-layout();
 
 /** ================================================================================================
-*** §8: Site-specific semantic CSS styling
+*** §6: Global DAESA bar & footer
 **/
 
-.wsuwp-content-syndicate-wrapper {
-	.content-item-byline-author {
-	display: none;
-	}
-
-	.content-item-byline-date {
-	display: none;
-	}
-
-	.content-item-read-story {
-	display: none;
-	}
-}
-
-/** ================================================================================================
-*** §9: Global DAESA bar & footer
-**/
-
-@daesa-global-footer-rs: {
+@rs-daesa-global-footer: {
 	.globalbar {
 		background: rgb(130,12,35,1);
 		background: -moz-linear-gradient(left,rgba(130,12,35,1) 0%,rgba(166,15,45,1) 100%);
@@ -360,16 +234,15 @@ main {
 		}
 	}
 };
-
-@daesa-global-footer-rs();
+@rs-daesa-global-footer();
 
 
 /** ================================================================================================
-*** §10: Styling of specific components
+*** §7: Styling of specific components
 **/
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §10.1: Coming up feed
+***   >>> §7.1: Coming up feed
 **/
 
 #coming-up-feed {
@@ -393,10 +266,10 @@ main {
 }
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §10.2: DAESA focus features
+***   >>> §7.2: DAESA focus features
 **/
 
-@daesa-focus-feature-rs: {
+@rs-daesa-focus-feature: {
 	#daesa-focus-feature {
 		background: #eff0f1;
 
@@ -412,13 +285,13 @@ main {
 		}
 	}
 };
-@daesa-focus-feature-rs();
+@rs-daesa-focus-feature();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §10.3: ESTEEMED MIRA Training Faculty table
+***   >>> §7.3: ESTEEMED MIRA Training Faculty table
 **/
 
-@esteemed-mira__training-faculty-table-rs: {
+@rs-esteemed-mira-training-faculty-table: {
 	@profile_h: 108px;
 	@profile_w: @profile_h;
 
@@ -619,13 +492,13 @@ main {
 		}
 	}
 };
-@esteemed-mira__training-faculty-table-rs();
+@rs-esteemed-mira-training-faculty-table();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §10.4: DAESA website art
+***   >>> §7.4: DAESA website art
 **/
 
-@daesa-rs__ws-art: {
+@rs-daesa-ws-art: {
 	.row.img-loading {
 		background: url("data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD//gATQ3JlYXRlZCB3aXRoIEdJTVD/4gKwSUNDX1BST0ZJTEUAAQEAAAKgbGNtcwQwAABtbnRyUkdCIFhZWiAH5AAFAAQADwAcADBhY3NwTVNGVAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA9tYAAQAAAADTLWxjbXMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA1kZXNjAAABIAAAAEBjcHJ0AAABYAAAADZ3dHB0AAABmAAAABRjaGFkAAABrAAAACxyWFlaAAAB2AAAABRiWFlaAAAB7AAAABRnWFlaAAACAAAAABRyVFJDAAACFAAAACBnVFJDAAACFAAAACBiVFJDAAACFAAAACBjaHJtAAACNAAAACRkbW5kAAACWAAAACRkbWRkAAACfAAAACRtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACQAAAAcAEcASQBNAFAAIABiAHUAaQBsAHQALQBpAG4AIABzAFIARwBCbWx1YwAAAAAAAAABAAAADGVuVVMAAAAaAAAAHABQAHUAYgBsAGkAYwAgAEQAbwBtAGEAaQBuAABYWVogAAAAAAAA9tYAAQAAAADTLXNmMzIAAAAAAAEMQgAABd7///MlAAAHkwAA/ZD///uh///9ogAAA9wAAMBuWFlaIAAAAAAAAG+gAAA49QAAA5BYWVogAAAAAAAAJJ8AAA+EAAC2xFhZWiAAAAAAAABilwAAt4cAABjZcGFyYQAAAAAAAwAAAAJmZgAA8qcAAA1ZAAAT0AAACltjaHJtAAAAAAADAAAAAKPXAABUfAAATM0AAJmaAAAmZwAAD1xtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAEcASQBNAFBtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEL/2wBDAAEBAQEBAQEBAQEBAQEBAQICAQEBAQMCAgICAwMEBAMDAwMEBAYFBAQFBAMDBQcFBQYGBgYGBAUHBwcGBwYGBgb/2wBDAQEBAQEBAQMCAgMGBAMEBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgYGBgb/wgARCAAgACADAREAAhEBAxEB/8QAGQABAAIDAAAAAAAAAAAAAAAABAUGAwcJ/8QAGQEAAwEBAQAAAAAAAAAAAAAAAAQGAwUH/9oADAMBAAIQAxAAAAHrQvQIzcG5JyAZOfcIzcZ1PO7IGswkAGvQIzcnHJOyBR+fcIzc/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABBQIH/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAwEBPwEH/8QAFBEBAAAAAAAAAAAAAAAAAAAAQP/aAAgBAgEBPwEH/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQAGPwIH/8QAFBABAAAAAAAAAAAAAAAAAAAAQP/aAAgBAQABPyEH/9oADAMBAAIAAwAAABAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAEDAQE/EAf/xAAUEQEAAAAAAAAAAAAAAAAAAABA/9oACAECAQE/EAf/xAAUEAEAAAAAAAAAAAAAAAAAAABA/9oACAEBAAE/EAf/2Q==") repeat;
 	}
@@ -642,4 +515,4 @@ main {
 		padding-bottom: 50%;
 	}
 };
-@daesa-rs__ws-art();
+@rs-daesa-ws-art();
