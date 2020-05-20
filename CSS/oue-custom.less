@@ -558,3 +558,118 @@ main {
 	}
 };
 @rs-more-news();
+
+/**   ----------------------------------------------------------------------------------------------
+***   >>> §7.6: DAESA Staff List
+**/
+
+@rs-daesa-staff-list: {
+	.daesa-staff-list,
+	.daesa-staff-list__unit-people {
+		list-style-type: none;
+		max-width: none;
+		padding-left: 0;
+	}
+
+	.daesa-staff-list__staff-member {
+		box-sizing: border-box;
+
+		@media screen and (min-width: @desktop-width) {
+			flex-basis: 33%;
+
+			&:nth-child(3n) {
+				padding-left: 1.33rem;
+			}
+
+			&:nth-child(3n + 1) {
+				padding-right: 1.33rem;
+			}
+
+			&:nth-child(3n + 2) {
+				padding-left: .67rem;
+				padding-right: .67rem;
+			}
+		}
+
+		@media screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)) {
+			flex-basis: 50%;
+
+			&:nth-child(2n) {
+				padding-left: 1rem;
+			}
+
+			&:nth-child(2n + 1) {
+				padding-right: 1rem;
+			}
+		}
+
+		@media screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+			flex-basis: 50%;
+
+			&:nth-child(2n) {
+				padding-left: .5rem;
+			}
+
+			&:nth-child(2n + 1) {
+				padding-right: .5rem;
+			}
+		}
+
+		@media screen and (max-width: 396px) {
+			flex-basis: 100%;
+		}
+	}
+
+	.daesa-staff-list__staff-email,
+	.daesa-staff-list__staff-name,
+	.daesa-staff-list__staff-phone,
+	.daesa-staff-list__staff-title {
+		display: inline-block;
+		margin-left: 1rem;
+		text-indent: -1rem;
+	}
+
+	.daesa-staff-list__staff-member {
+		@media screen and (min-width: @desktop-width) {
+			&:nth-child(3) ~ & {
+				margin-top: 2rem;
+			}
+		}
+
+		@media screen and (max-width: (@desktop-width - 1)) and (min-width: 397px) {
+			&:nth-child(2) ~ & {
+				margin-top: 2rem;
+			}
+		}
+
+		@media screen and (max-width: 396px) {
+			& ~ & {
+				margin-top: 2rem;
+			}
+		}
+	}
+
+	.daesa-staff-list__staff-name {
+		.fw--semi-bold;
+	}
+
+	.daesa-staff-list__staff-phone {
+		.daesa-staff-list__staff-email ~ & {
+			margin-top: .3em;
+		}
+	}
+
+	.daesa-staff-list__staff-photo {
+		border-bottom: 4px solid #a31d36;
+		padding-bottom: 2px;
+	}
+
+	.daesa-staff-list__unit-people {
+		.column & {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: 2rem;
+		}
+	}
+}
+@rs-daesa-staff-list();
