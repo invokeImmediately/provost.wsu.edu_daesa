@@ -10,17 +10,20 @@
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project................................28
-***  §2: Persistent section header comment for unit specific styling...........................41
-***  §3: Overall site branding.................................................................73
-***  §4: Headings.............................................................................107
-***  §5: Optional styling included via Less mixins............................................123
-***  §6: Global DAESA bar & footer............................................................142
-***  §7: Styling of specific components.......................................................241
-***    >>> §10.1: Coming up feed..............................................................245
-***    >>> §10.2: DAESA focus features........................................................269
-***    >>> §10.3: ESTEEMED MIRA Training Faculty table........................................291
-***    >>> §10.4: DAESA website art...........................................................498
+***  §1: Build entry point from DAESA's CSS development project................................31
+***  §2: Persistent section header comment for unit specific styling...........................44
+***  §3: Overall site branding.................................................................76
+***  §4: Headings.............................................................................113
+***  §5: Optional styling included via Less mixins............................................129
+***  §6: Global DAESA bar & footer............................................................148
+***  §7: Styling of specific components.......................................................247
+***    >>> §7.1: Coming up feed...............................................................251
+***    >>> §7.2: DAESA focus features.........................................................275
+***    >>> §7.3: ESTEEMED MIRA Training Faculty table.........................................297
+***    >>> §7.4: DAESA website art............................................................504
+***    >>> §7.5: More news section on home page...............................................527
+***    >>> §7.6: DAESA website art............................................................569
+***  §8: Hotfix for HTML-snippet—JSON-feed bug................................................684
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -73,35 +76,38 @@
 *** §3: Overall site branding
 **/
 
-#jacket {
-	background-repeat: no-repeat;
-	background-position: right bottom;
-	background-attachment: fixed;
-}
-
-#spine #glue:before {
-	border-right: 1px solid #e5e5e5;
-	background: #fff url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/02/bg-spine.png) no-repeat left bottom;
-	background-attachment: fixed;
-
-	@media only screen and (max-width: 1488px) {
-		background: #fff;
+@rs-daesa-overall-branding: {
+	#jacket {
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-attachment: fixed;
 	}
-}
 
-body.home:not(.has-background-image) #jacket, #jacket {
-	background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
-	background-attachment: fixed;
-}
+	#spine #glue:before {
+		border-right: 1px solid #e5e5e5;
+		background: #fff url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/02/bg-spine.png) no-repeat left bottom;
+		background-attachment: fixed;
 
-body {
-	background: @hex-bright-gray;
-}
+		@media only screen and (max-width: 1488px) {
+			background: #fff;
+		}
+	}
 
-main {
-	background: @hex-white;
-	border-left: 1px solid @hex-bright-gray;
-}
+	body.home:not(.has-background-image) #jacket, #jacket {
+		background: #e5e5e5 url(https://s3.wp.wsu.edu/uploads/sites/1368/2017/03/bg-jacket-4.jpg) no-repeat right top;
+		background-attachment: fixed;
+	}
+
+	body {
+		background: @hex-bright-gray;
+	}
+
+	main {
+		background: @hex-white;
+		border-left: 1px solid @hex-bright-gray;
+	}
+};
+@rs-daesa-overall-branding();
 
 /** ================================================================================================
 *** §4: Headings
@@ -518,7 +524,7 @@ main {
 @rs-daesa-ws-art();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §7.5: More News section on homepage
+***   >>> §7.5: More News section on home page
 **/
 
 @rs-more-news: {
@@ -560,7 +566,7 @@ main {
 @rs-more-news();
 
 /**   ----------------------------------------------------------------------------------------------
-***   >>> §7.6: DAESA Staff List
+***   >>> §7.6: DAESA staff list
 **/
 
 @rs-daesa-staff-list: {
@@ -673,3 +679,16 @@ main {
 	}
 }
 @rs-daesa-staff-list();
+
+/** ================================================================================================
+*** §8: Hotfix for HTML-snippet—JSON-feed bug
+**/
+
+@rs-html-snippet-hotfix: {
+	.html-snippet {
+		p.attachment {
+			display: none;
+		}
+	}
+};
+@rs-html-snippet-hotfix();
