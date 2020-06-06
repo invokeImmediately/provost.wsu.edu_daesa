@@ -7669,3 +7669,6 @@ ul .more-news__list-entry:not(:first-child) {
   flex-wrap: wrap;
   margin-top: 2rem;
 }
+.html-snippet p.attachment {
+  display: none;
+}
