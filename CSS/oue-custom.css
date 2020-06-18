@@ -1664,7 +1664,7 @@ ul.cascaded-layout.blank > li {
     margin-bottom: 6%;
   }
 }
-@media all and (max-width: 1205px) {
+@media all and (max-width: 1386px) {
   ul.cascaded-layout.blank > li {
     overflow-x: visible;
   }
@@ -2028,7 +2028,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.975);
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-content {
     font-size: 2.1179vw;
     line-height: 2.8592vw;
@@ -2064,7 +2064,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
   padding-bottom: 10px;
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-inner-content p {
     padding: 1vw;
   }
@@ -2087,12 +2087,12 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-overlay {
   display: none;
 }
-@media all and (min-width: 1205px) {
+@media all and (min-width: 1386px) {
   .builder-banner-slide:hover .builder-banner-content {
     font-size: 2rem;
   }
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-slide:hover .builder-banner-content {
     font-size: 2.8239vw;
     line-height: 3.8122vw;
@@ -4425,8 +4425,8 @@ div.auto-scroller ul li {
   padding: 1rem;
 }
 .style--card--raised {
-  border: 1px solid #3b4042;
-  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.22);
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.11);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 1rem;
@@ -5395,6 +5395,16 @@ div.auto-scroller ul li {
     display: none !important;
   }
 }
+@media all and (max-width: 693px) {
+  .show-when-floating-columns {
+    display: none !important;
+  }
+}
+@media all and (min-width: 694px) {
+  .hide-when-floating-columns {
+    display: none !important;
+  }
+}
 .dy--flex {
   display: flex;
 }
@@ -6083,87 +6093,6 @@ div.auto-scroller ul li {
 .bgc--transparent {
   background-color: transparent;
 }
-.c--gray--lightest {
-  color: #eff0f1;
-}
-.c--gray--lighter {
-  color: #d7dadb;
-}
-.c--gray--light {
-  color: #b5babe;
-}
-.c--gray--lightish {
-  color: #8d959a;
-}
-.c--gray--darkish {
-  color: #5e5e5e;
-}
-.c--gray--dark {
-  color: #3b4042;
-}
-.c--gray--darker {
-  color: #2a3033;
-}
-.c--gray--darkest {
-  color: #000000;
-}
-.c--gray--accent {
-  color: #ffffff;
-}
-.bgc--gray--lightest {
-  background-color: #eff0f1;
-}
-.bgc--gray--lightest--25pct {
-  background-color: rgba(239, 240, 241, 0.25);
-}
-.bgc--gray--lighter {
-  background-color: #d7dadb;
-}
-.bgc--gray--lighter--25pct {
-  background-color: rgba(215, 218, 219, 0.25);
-}
-.bgc--gray--light {
-  background-color: #b5babe;
-}
-.bgc--gray--light--25pct {
-  background-color: rgba(181, 186, 190, 0.25);
-}
-.bgc--gray--lightish {
-  background-color: #8d959a;
-}
-.bgc--gray--lightish--25pct {
-  background-color: rgba(141, 149, 154, 0.25);
-}
-.bgc--gray--darkish {
-  background-color: #5e5e5e;
-}
-.bgc--gray--darkish--25pct {
-  background-color: rgba(94, 94, 94, 0.25);
-}
-.bgc--gray--dark {
-  background-color: #3b4042;
-}
-.bgc--gray--dark--25pct {
-  background-color: rgba(59, 64, 66, 0.25);
-}
-.bgc--gray--darker {
-  background-color: #2a3033;
-}
-.bgc--gray--darker--25pct {
-  background-color: rgba(42, 48, 51, 0.25);
-}
-.bgc--gray--darkest {
-  background-color: #000000;
-}
-.bgc--gray--darkest--25pct {
-  background-color: rgba(0, 0, 0, 0.25);
-}
-.bgc--gray--accent {
-  background-color: #ffffff;
-}
-.bgc--gray--accent--25pct {
-  background-color: rgba(255, 255, 255, 0.25);
-}
 .c--crimson--lightest {
   color: #dc4e65;
 }
@@ -6247,18 +6176,6 @@ div.auto-scroller ul li {
 }
 .bgc--crimson--tint {
   background-color: #f2e2e4;
-}
-.bgc--green--tint {
-  background-color: #f4f3de;
-}
-.bgc--yellow--tint {
-  background-color: #fff6e1;
-}
-.bgc--blue--tint {
-  background-color: #def3f6;
-}
-.bgc--orange--tint {
-  background-color: #feefe2;
 }
 /*! ================================================================================================
 *** DAESA Website Styling Section
