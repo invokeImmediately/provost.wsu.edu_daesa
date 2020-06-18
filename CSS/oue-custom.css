@@ -1664,7 +1664,7 @@ ul.cascaded-layout.blank > li {
     margin-bottom: 6%;
   }
 }
-@media all and (max-width: 1205px) {
+@media all and (max-width: 1386px) {
   ul.cascaded-layout.blank > li {
     overflow-x: visible;
   }
@@ -2028,7 +2028,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-content:hover > div.builder-banner-inner-content {
   background-color: rgba(0, 0, 0, 0.975);
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-content {
     font-size: 2.1179vw;
     line-height: 2.8592vw;
@@ -2064,7 +2064,7 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-inner-content p:last-child:not(.no-bottom-pad) {
   padding-bottom: 10px;
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-inner-content p {
     padding: 1vw;
   }
@@ -2087,12 +2087,12 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 .builder-banner-overlay {
   display: none;
 }
-@media all and (min-width: 1205px) {
+@media all and (min-width: 1386px) {
   .builder-banner-slide:hover .builder-banner-content {
     font-size: 2rem;
   }
 }
-@media all and (max-width: 1204px) and (min-width: 990px) {
+@media all and (max-width: 1385px) and (min-width: 990px) {
   .builder-banner-slide:hover .builder-banner-content {
     font-size: 2.8239vw;
     line-height: 3.8122vw;
@@ -4425,8 +4425,8 @@ div.auto-scroller ul li {
   padding: 1rem;
 }
 .style--card--raised {
-  border: 1px solid #3b4042;
-  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.22);
+  border: 1px solid #eaeaea;
+  box-shadow: 0 4px 8px 1px rgba(0, 0, 0, 0.11);
   border-radius: 4px;
   box-sizing: border-box;
   padding: 1rem;
