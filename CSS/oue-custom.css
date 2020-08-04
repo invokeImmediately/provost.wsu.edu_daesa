@@ -1512,12 +1512,19 @@ ul.cascaded-layout.blank > li.gutter-sizer {
   font-weight: bold;
 }
 
+.article-sub-heading {
+  border-bottom: 1px solid rgba(127, 127, 127, 0.2);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
 .article-summary {
   line-height: 1.5em;
 }
 
 .article-summary .article-media-contacts,
 .article-summary .article-sidebar,
+.article-summary .article-sub-heading,
 .article-summary figure:not(.article-thumbnail),
 .article-summary img,
 .article-summary object,
@@ -1536,6 +1543,10 @@ ul.cascaded-layout.blank > li.gutter-sizer {
 
 .single-post .article-media-contacts {
   font-size: 0.9em;
+}
+
+* + .single-post .article-media-contacts {
+  margin-top: 1em;
 }
 
 .single-post .column .article-media-contacts + :not(.article-media-contacts) {
@@ -7492,6 +7503,8 @@ ul .more-news__list-entry:not(:first-child) {
 
 .daesa-staff-list,
 .daesa-staff-list__unit-people {
+  display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   max-width: none;
   padding-left: 0;
@@ -7504,7 +7517,9 @@ ul .more-news__list-entry:not(:first-child) {
 .daesa-staff-list__staff-email,
 .daesa-staff-list__staff-name,
 .daesa-staff-list__staff-phone,
-.daesa-staff-list__staff-title {
+.daesa-staff-list__staff-title,
+.daesa-staff-list__unit-address,
+.daesa-staff-list__unit-building {
   display: inline-block;
   margin-left: 1rem;
   text-indent: -1rem;
@@ -7523,9 +7538,23 @@ ul .more-news__list-entry:not(:first-child) {
   padding-bottom: 2px;
 }
 
+.daesa-staff-list__unit {
+  box-sizing: border-box;
+}
+
+.daesa-staff-list__unit--half-column {
+  flex-basis: 50%;
+}
+
+.daesa-staff-list__unit--left {
+  padding-right: 1rem;
+}
+
+.daesa-staff-list__unit--right {
+  padding-left: 1rem;
+}
+
 .column .daesa-staff-list__unit-people {
-  display: flex;
-  flex-wrap: wrap;
   margin-top: 2rem;
 }
 
@@ -7786,6 +7815,12 @@ ul .more-news__list-entry:not(:first-child) {
   .daesa-staff-list__staff-member:nth-child(3n + 2) {
     padding-left: 0.67rem;
     padding-right: 0.67rem;
+  }
+
+  .daesa-staff-list__staff-member--in-half-column-unit:nth-child(3n),
+  .daesa-staff-list__staff-member--in-half-column-unit:nth-child(3n + 1),
+  .daesa-staff-list__staff-member--in-half-column-unit:nth-child(3n + 2) {
+    padding: 0;
   }
 
   .daesa-staff-list__staff-member:nth-child(3) ~ .daesa-staff-list__staff-member {
@@ -8261,6 +8296,18 @@ ul .more-news__list-entry:not(:first-child) {
     right: 0;
     height: 50%;
     top: 50%;
+  }
+
+  .daesa-staff-list__unit--half-column {
+    flex-basis: 100%;
+  }
+
+  .daesa-staff-list__unit--left {
+    padding-right: 0;
+  }
+
+  .daesa-staff-list__unit--right {
+    padding-left: 0;
   }
 }
 
@@ -8799,6 +8846,20 @@ ul .more-news__list-entry:not(:first-child) {
 
   .daesa-staff-list__staff-member:nth-child(2n + 1) {
     padding-right: 0.5rem;
+  }
+}
+
+@media screen and (min-width: 1073px), screen and (max-width: 1072px) and (min-width: 481px), screen and (max-width: 480px) and (min-width: 397px) {
+  .daesa-staff-list__staff-member--in-half-column-unit {
+    flex-basis: 100%;
+    max-width: 370.58px;
+  }
+}
+
+@media screen and (max-width: 1072px) and (min-width: 481px), screen and (max-width: 480px) and (min-width: 397px) {
+  .daesa-staff-list__staff-member--in-half-column-unit:nth-child(2n),
+  .daesa-staff-list__staff-member--in-half-column-unit:nth-child(2n + 1) {
+    padding: 0;
   }
 }
 

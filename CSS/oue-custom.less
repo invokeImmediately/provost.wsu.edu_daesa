@@ -22,8 +22,8 @@
 ***    >>> §7.3: ESTEEMED MIRA Training Faculty table.........................................297
 ***    >>> §7.4: DAESA website art............................................................504
 ***    >>> §7.5: More news section on home page...............................................527
-***    >>> §7.6: DAESA website art............................................................569
-***  §8: Hotfix for HTML-snippet—JSON-feed bug................................................684
+***    >>> §7.6: DAESA staff list.............................................................569
+***  §8: Hotfix for HTML-snippet—JSON-feed bug................................................740
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -572,6 +572,8 @@
 @rs-daesa-staff-list: {
 	.daesa-staff-list,
 	.daesa-staff-list__unit-people {
+		display: flex;
+		flex-wrap: wrap;
 		list-style-type: none;
 		max-width: none;
 		padding-left: 0;
@@ -624,12 +626,39 @@
 		@media screen and (max-width: 396px) {
 			flex-basis: 100%;
 		}
+
+		&--in-half-column-unit {
+			@media screen and (min-width: @desktop-width),
+			screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)),
+			screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+				flex-basis: 100%;
+				max-width: 370.58px;
+			}
+
+			@media screen and (min-width: @desktop-width) {
+				&:nth-child(3n),
+				&:nth-child(3n + 1),
+				&:nth-child(3n + 2) {
+					padding: 0;
+				}
+			}
+
+			@media screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)),
+			screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
+				&:nth-child(2n),
+				&:nth-child(2n + 1) {
+					padding: 0;
+				}
+			}
+		}
 	}
 
 	.daesa-staff-list__staff-email,
 	.daesa-staff-list__staff-name,
 	.daesa-staff-list__staff-phone,
-	.daesa-staff-list__staff-title {
+	.daesa-staff-list__staff-title,
+	.daesa-staff-list__unit-address,
+	.daesa-staff-list__unit-building {
 		display: inline-block;
 		margin-left: 1rem;
 		text-indent: -1rem;
@@ -670,10 +699,36 @@
 		padding-bottom: 2px;
 	}
 
+	.daesa-staff-list__unit {
+		box-sizing: border-box;
+
+		&--half-column  {
+			flex-basis: 50%;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				flex-basis: 100%;
+			}
+		}
+
+		&--left {
+			padding-right: 1rem;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				padding-right: 0;
+			}
+		}
+
+		&--right {
+			padding-left: 1rem;
+
+			@media screen and (max-width: @large-mobile-screen-width) {
+				padding-left: 0;
+			}
+		}
+	}
+
 	.daesa-staff-list__unit-people {
 		.column & {
-			display: flex;
-			flex-wrap: wrap;
 			margin-top: 2rem;
 		}
 	}
