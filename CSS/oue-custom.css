@@ -3190,18 +3190,20 @@ figure figcaption {
 .column .gform_fields > .gfield.gfield_contains_required select:not(.gf-value-entered):not(:focus),
 .column .gform_fields > .gfield.gfield_contains_required textarea:not(.gf-value-entered):not(:focus) {
   background-color: rgba(255, 0, 0, 0.1);
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 0, rgba(255, 0, 0, 0) 1.5em);
 }
 
 .column .gform_fields > .gfield.gfield_contains_required .gfield_checkbox,
 .column .gform_fields > .gfield.gfield_contains_required .gfield_radio {
+  border: 1px solid #767676;
+  padding: 0.25em 0.5em 0.1em !important;
   transition: background 0.3s ease;
 }
 
 .column .gform_fields > .gfield.gfield_contains_required .gfield_checkbox:not(.gf-value-entered),
 .column .gform_fields > .gfield.gfield_contains_required .gfield_radio:not(.gf-value-entered) {
   background-color: rgba(255, 0, 0, 0.1);
-  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1), rgba(255, 0, 0, 0));
+  background: linear-gradient(to bottom, rgba(255, 0, 0, 0.1) 0, rgba(255, 0, 0, 0) 1.5em);
 }
 
 .column .gform_fields > .gfield.gfield_contains_required .address_line_2 input,
