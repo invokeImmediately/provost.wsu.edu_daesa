@@ -583,7 +583,7 @@
 		box-sizing: border-box;
 
 		@media screen and (min-width: @desktop-width) {
-			flex-basis: 33%;
+			width: 33%;
 
 			&:nth-child(3n) {
 				padding-left: 1.33rem;
@@ -600,7 +600,7 @@
 		}
 
 		@media screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)) {
-			flex-basis: 50%;
+			width: 50%;
 
 			&:nth-child(2n) {
 				padding-left: 1rem;
@@ -612,7 +612,7 @@
 		}
 
 		@media screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
-			flex-basis: 50%;
+			width: 50%;
 
 			&:nth-child(2n) {
 				padding-left: .5rem;
@@ -624,14 +624,14 @@
 		}
 
 		@media screen and (max-width: 396px) {
-			flex-basis: 100%;
+			width: 100%;
 		}
 
 		&--in-half-column-unit {
 			@media screen and (min-width: @desktop-width),
 			screen and (max-width: (@desktop-width - 1)) and (min-width: (@large-mobile-screen-width + 1)),
 			screen and (max-width: @large-mobile-screen-width) and (min-width: 397px) {
-				flex-basis: 100%;
+				width: 100%;
 				max-width: 370.58px;
 			}
 
@@ -703,10 +703,10 @@
 		box-sizing: border-box;
 
 		&--half-column  {
-			flex-basis: 50%;
+			width: 50%;
 
 			@media screen and (max-width: @large-mobile-screen-width) {
-				flex-basis: 100%;
+				width: 100%;
 			}
 		}
 
