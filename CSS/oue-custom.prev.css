@@ -4369,6 +4369,18 @@ div.auto-scroller ul li {
 	max-width: 640px !important;
 }
 
+.w--704px {
+	width: 704px;
+}
+
+.mnw--704px {
+	min-width: 704px;
+}
+
+.mw--704px {
+	max-width: 704px !important;
+}
+
 .w--768px {
 	width: 768px;
 }
