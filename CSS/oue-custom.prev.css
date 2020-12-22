@@ -7321,6 +7321,257 @@ ul .more-news__list-entry:not(:first-child) {
 	margin-top: 2rem;
 }
 
+#daesa-star-issue p {
+	margin: 10px 0;
+	padding: 0;
+}
+
+#daesa-star-issue table {
+	border-collapse: collapse;
+}
+
+#daesa-star-issue h1,#daesa-star-issue h2,#daesa-star-issue h3,#daesa-star-issue h4,#daesa-star-issue h5,#daesa-star-issue h6 {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+#daesa-star-issue a img,#daesa-star-issue img {
+	border: 0;
+	height: auto;
+	outline: 0;
+	text-decoration: none;
+}
+
+#daesa-star-issue #bodyCell,#daesa-star-issue #bodyTable {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#daesa-star-issue .mcnPreviewText {
+	display: none !important;
+}
+
+#daesa-star-issue img {
+	-ms-interpolation-mode: bicubic;
+}
+
+#daesa-star-issue .ReadMsgBody {
+	width: 100%;
+}
+
+#daesa-star-issue .ExternalClass {
+	width: 100%;
+}
+
+#daesa-star-issue a[href^=sms],#daesa-star-issue a[href^=tel] {
+	color: inherit;
+	cursor: default;
+	text-decoration: none;
+}
+
+#daesa-star-issue a,#daesa-star-issue blockquote,#daesa-star-issue li,#daesa-star-issue p,#daesa-star-issue table,#daesa-star-issue td {
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+#daesa-star-issue .ExternalClass,#daesa-star-issue .ExternalClass div,#daesa-star-issue .ExternalClass font,#daesa-star-issue .ExternalClass p,#daesa-star-issue .ExternalClass span,#daesa-star-issue .ExternalClass td {
+	line-height: 100%;
+}
+
+#daesa-star-issue a[x-apple-data-detectors] {
+	color: inherit !important;
+	text-decoration: none !important;
+	font-size: inherit !important;
+	font-family: inherit !important;
+	font-weight: inherit !important;
+	line-height: inherit !important;
+}
+
+#daesa-star-issue #bodyCell {
+	border-top: 0;
+	padding: 10px;
+}
+
+#daesa-star-issue .templateContainer {
+	border: 0;
+	max-width: 600px !important;
+}
+
+#daesa-star-issue a.mcnButton {
+	display: block;
+}
+
+#daesa-star-issue .mcnImage,#daesa-star-issue .mcnRetinaImage {
+	vertical-align: bottom;
+}
+
+#daesa-star-issue .mcnTextContent {
+	word-break: break-word;
+}
+
+#daesa-star-issue .mcnTextContent img {
+	height: auto !important;
+}
+
+#daesa-star-issue .mcnDividerBlock {
+	table-layout: fixed !important;
+}
+
+#daesa-star-issue #bodyTable {
+	background-color: #fafafa;
+}
+
+#daesa-star-issue h1 {
+	color: #202020;
+	font-family: Helvetica;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+	letter-spacing: normal;
+	text-align: left;
+}
+
+#daesa-star-issue h2 {
+	color: #202020;
+	font-family: Helvetica;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+	letter-spacing: normal;
+	text-align: left;
+}
+
+#daesa-star-issue h3 {
+	color: #202020;
+	font-family: Helvetica;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+	letter-spacing: normal;
+	text-align: left;
+}
+
+#daesa-star-issue h4 {
+	color: #202020;
+	font-family: Helvetica;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 125%;
+	letter-spacing: normal;
+	text-align: left;
+}
+
+#daesa-star-issue #templatePreheader {
+	background-color: #fafafa;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top: 0;
+	border-bottom: 0;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+#daesa-star-issue #templatePreheader .mcnTextContent,#daesa-star-issue #templatePreheader .mcnTextContent p {
+	color: #656565;
+	font-family: Helvetica;
+	font-size: 12px;
+	line-height: 150%;
+	text-align: left;
+}
+
+#daesa-star-issue #templatePreheader .mcnTextContent a,#daesa-star-issue #templatePreheader .mcnTextContent p a {
+	color: #656565;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+#daesa-star-issue #templateHeader {
+	background-color: #fafafa;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top: 0;
+	border-bottom: 0;
+	padding-top: 9px;
+	padding-bottom: 0;
+}
+
+#daesa-star-issue #templateHeader .mcnTextContent,#daesa-star-issue #templateHeader .mcnTextContent p {
+	color: #202020;
+	font-family: Helvetica;
+	font-size: 16px;
+	line-height: 150%;
+	text-align: left;
+}
+
+#daesa-star-issue #templateHeader .mcnTextContent a,#daesa-star-issue #templateHeader .mcnTextContent p a {
+	color: #007c89;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+#daesa-star-issue #templateBody {
+	background-color: transparent;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top: 2px none #eaeaea;
+	border-bottom: 2px none #eaeaea;
+	padding-top: 0;
+	padding-bottom: 9px;
+}
+
+#daesa-star-issue #templateBody .mcnTextContent,#daesa-star-issue #templateBody .mcnTextContent p {
+	color: #202020;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 150%;
+	text-align: left;
+}
+
+#daesa-star-issue #templateBody .mcnTextContent a,#daesa-star-issue #templateBody .mcnTextContent p a {
+	color: #a60f2d;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
+#daesa-star-issue #templateFooter {
+	background-color: #fafafa;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	border-top: 0;
+	border-bottom: 0;
+	padding-top: 9px;
+	padding-bottom: 9px;
+}
+
+#daesa-star-issue #templateFooter .mcnTextContent,#daesa-star-issue #templateFooter .mcnTextContent p {
+	color: #656565;
+	font-family: Helvetica;
+	font-size: 12px;
+	line-height: 150%;
+	text-align: center;
+}
+
+#daesa-star-issue #templateFooter .mcnTextContent a,#daesa-star-issue #templateFooter .mcnTextContent p a {
+	color: #656565;
+	font-weight: 400;
+	text-decoration: underline;
+}
+
 .html-snippet p.attachment {
 	display: none;
 }
@@ -7465,6 +7716,12 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	.row.has-linked-columns:not(.gutter).for-faculty .column:not(:first-child) {
 		border-left: 10px solid #fff;
+	}
+}
+
+@media only screen and (min-width:768px) {
+	#daesa-star-issue .templateContainer {
+		width: 600px !important;
 	}
 }
 
@@ -8052,6 +8309,125 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	.daesa-staff-list__unit--right {
 		padding-left: 0;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	#daesa-star-issue a,#daesa-star-issue blockquote,#daesa-star-issue li,#daesa-star-issue p,#daesa-star-issue table,#daesa-star-issue td {
+		-webkit-text-size-adjust: none !important;
+	}
+	
+	#daesa-star-issue body {
+		width: 100% !important;
+		min-width: 100% !important;
+	}
+	
+	#daesa-star-issue .mcnRetinaImage {
+		max-width: 100% !important;
+	}
+	
+	#daesa-star-issue .mcnImage {
+		width: 100% !important;
+	}
+	
+	#daesa-star-issue .mcnBoxedTextContentContainer,#daesa-star-issue .mcnCaptionBottomContent,#daesa-star-issue .mcnCaptionLeftImageContentContainer,#daesa-star-issue .mcnCaptionLeftTextContentContainer,#daesa-star-issue .mcnCaptionRightImageContentContainer,#daesa-star-issue .mcnCaptionRightTextContentContainer,#daesa-star-issue .mcnCaptionTopContent,#daesa-star-issue .mcnCartContainer,#daesa-star-issue .mcnImageCardLeftImageContentContainer,#daesa-star-issue .mcnImageCardLeftTextContentContainer,#daesa-star-issue .mcnImageCardRightImageContentContainer,#daesa-star-issue .mcnImageCardRightTextContentContainer,#daesa-star-issue .mcnImageGroupContentContainer,#daesa-star-issue .mcnRecContentContainer,#daesa-star-issue .mcnTextContentContainer {
+		max-width: 100% !important;
+		width: 100% !important;
+	}
+	
+	#daesa-star-issue .mcnBoxedTextContentContainer {
+		min-width: 100% !important;
+	}
+	
+	#daesa-star-issue .mcnImageGroupContent {
+		padding: 9px !important;
+	}
+	
+	#daesa-star-issue .mcnCaptionLeftContentOuter .mcnTextContent,#daesa-star-issue .mcnCaptionRightContentOuter .mcnTextContent {
+		padding-top: 9px !important;
+	}
+	
+	#daesa-star-issue .mcnCaptionBlockInner .mcnCaptionTopContent:last-child .mcnTextContent,#daesa-star-issue .mcnCaptionBottomContent:last-child .mcnCaptionBottomImageContent,#daesa-star-issue .mcnImageCardTopImageContent {
+		padding-top: 18px !important;
+	}
+	
+	#daesa-star-issue .mcnImageCardBottomImageContent {
+		padding-bottom: 9px !important;
+	}
+	
+	#daesa-star-issue .mcnImageGroupBlockInner {
+		padding-top: 0 !important;
+		padding-bottom: 0 !important;
+	}
+	
+	#daesa-star-issue .mcnImageGroupBlockOuter {
+		padding-top: 9px !important;
+		padding-bottom: 9px !important;
+	}
+	
+	#daesa-star-issue .mcnBoxedTextContentColumn,#daesa-star-issue .mcnTextContent {
+		padding-right: 18px !important;
+		padding-left: 18px !important;
+	}
+	
+	#daesa-star-issue .mcnImageCardLeftImageContent,#daesa-star-issue .mcnImageCardRightImageContent {
+		padding-right: 18px !important;
+		padding-bottom: 0 !important;
+		padding-left: 18px !important;
+	}
+	
+	#daesa-star-issue .mcpreview-image-uploader {
+		display: none !important;
+		width: 100% !important;
+	}
+	
+	#daesa-star-issue h1 {
+		font-size: 22px !important;
+		line-height: 125% !important;
+	}
+	
+	#daesa-star-issue h2 {
+		font-size: 20px !important;
+		line-height: 125% !important;
+	}
+	
+	#daesa-star-issue h3 {
+		font-size: 18px !important;
+		line-height: 125% !important;
+	}
+	
+	#daesa-star-issue h4 {
+		font-size: 16px !important;
+		line-height: 150% !important;
+	}
+	
+	#daesa-star-issue .mcnBoxedTextContentContainer .mcnTextContent,#daesa-star-issue .mcnBoxedTextContentContainer .mcnTextContent p {
+		font-size: 14px !important;
+		line-height: 150% !important;
+	}
+	
+	#daesa-star-issue #templatePreheader {
+		display: block !important;
+	}
+	
+	#daesa-star-issue #templatePreheader .mcnTextContent,#daesa-star-issue #templatePreheader .mcnTextContent p {
+		font-size: 14px !important;
+		line-height: 150% !important;
+	}
+	
+	#daesa-star-issue #templateHeader .mcnTextContent,#daesa-star-issue #templateHeader .mcnTextContent p {
+		font-size: 16px !important;
+		line-height: 150% !important;
+	}
+	
+	#daesa-star-issue #templateBody .mcnTextContent,#daesa-star-issue #templateBody .mcnTextContent p {
+		font-size: 16px !important;
+		line-height: 150% !important;
+	}
+	
+	#daesa-star-issue #templateFooter .mcnTextContent,#daesa-star-issue #templateFooter .mcnTextContent p {
+		font-size: 14px !important;
+		line-height: 150% !important;
 	}
 }
 
