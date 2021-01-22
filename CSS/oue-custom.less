@@ -1,30 +1,27 @@
 /** ┌──────────────────────────────────────────────────────────────────────────────────────────────┐
-*** │ FILENAME: oue-custom.less                                                                    │
-*** │                                                                                              │
-*** │ SUMMARY: Style rules for presenting content on the website of WSU's Division of Academic     │
-*** │   Engagement and Student Achievement (DAESA), which is built using the builder template of   │
-*** │   the Spine parent theme of WSUWP. Styles are designed to accompany or supersede styling     │
-*** │   associated with the theme.                                                                 │
-*** │                                                                                              │
-*** │ AUTHOR: Daniel Rieck <daniel.rieck@wsu.edu> (https://github.com/invokeImmediately)           │
+***   ▄▀▀▄ █  █ █▀▀▀    ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   █    █▀▀▀ ▄▀▀▀ ▄▀▀▀
+***   █  █ █  █ █▀▀  ▀▀ █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   █  ▄ █▀▀  ▀▀▀█ ▀▀▀█
+***    ▀▀   ▀▀  ▀▀▀▀     ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀ ▀ ▀▀▀  ▀▀▀▀ ▀▀▀  ▀▀▀ 
+***
+***   See persistent section header comment below (§2) for additional information and license.
 *** └──────────────────────────────────────────────────────────────────────────────────────────────┘
 ***  TABLE OF CONTENTS:
 ***  ────────────────────────────────────────────────────────────────────────────────────────────
-***  §1: Build entry point from DAESA's CSS development project................................32
-***  §2: Persistent section header comment for unit specific styling...........................45
-***  §3: Overall site branding.................................................................81
-***  §4: Headings.............................................................................118
-***  §5: Optional styling included via Less mixins............................................134
-***  §6: Global DAESA bar & footer............................................................155
-***  §7: Styling of specific components.......................................................254
-***    >>> §7.1: Coming up feed...............................................................258
-***    >>> §7.2: DAESA focus features.........................................................282
-***    >>> §7.3: ESTEEMED MIRA Training Faculty table.........................................315
-***    >>> §7.4: DAESA website art............................................................522
-***    >>> §7.5: More news section on home page...............................................545
-***    >>> §7.6: DAESA staff list.............................................................587
-***    >>> §7.7: DAESA Star enewsletter archive...............................................757
-***  §8: Hotfix for HTML-snippet—JSON-feed bug...............................................1245
+***  §1: Build entry point from DAESA's CSS development project................................29
+***  §2: Persistent section header comment for unit specific styling...........................42
+***  §3: Overall site branding.................................................................77
+***  §4: Headings.............................................................................114
+***  §5: Optional styling included via Less mixins............................................130
+***  §6: Global DAESA bar & footer............................................................151
+***  §7: Styling of specific components.......................................................250
+***    >>> §7.1: Coming up feed...............................................................254
+***    >>> §7.2: DAESA focus features.........................................................278
+***    >>> §7.3: ESTEEMED MIRA Training Faculty table.........................................313
+***    >>> §7.4: DAESA website art............................................................520
+***    >>> §7.5: More news section on home page...............................................543
+***    >>> §7.6: DAESA staff list.............................................................585
+***    >>> §7.7: DAESA Star enewsletter archive...............................................755
+***  §8: Hotfix for HTML-snippet—JSON-feed bug...............................................1243
 ***  ───────────────────────────────────────────────────────────────────────────────────────────────
 **/
 
@@ -34,46 +31,45 @@
 
 @grid-behavior: "hybrid";
 @oue-rules-wrapper: ~"";
-@import "..\WSU-UE---CSS\variables.less";
+@import "..\WSU-DAESA-CSS\build-settings.less";
 @use-design__daesa-main-headers: false;
 @use-design__provost-main-headers: true;
 @use-design__gf-progress-indicators: true;
 @use-design__insider-news-feeds: true;
-@import "..\WSU-UE---CSS\css-build-entry-point.less";
+@import "..\WSU-DAESA-CSS\build-entry-point.less";
 
 /** ================================================================================================
 *** §2: Persistent section header comment for unit specific styling
 **/
 
 /*! ================================================================================================
-*** Styling Specific to the DAESA Website
+*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌  ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌  ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀  ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-*** SUMMARY: CSS code designed specifically for use on Washington State University's [DAESA website]
+*** CSS code designed specifically for use on Washington State University's [DAESA website]
 ***   (https://daesa.wsu.edu) that was built from precompiled CSS written in the Less language
 ***   extension of CSS.
 ***
-*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
-***   stylesheet was built is developed and maintained on the following GitHub project:
-***   https://github.com/invokeImmediately/daesa.wsu.edu/
+*** Fully documented, precompiled source code from which this section of the custom stylesheet was
+***   built is developed and maintained on the linked GitHub project.
 ***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: MIT — Copyright (c) 2020 Washington State University.
-***
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @link https://github.com/invokeImmediately/daesa.wsu.edu/
+*** @license MIT — Copyright (c) 2021 Washington State University.
 ***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-***   and associated documentation files (the “Software”), to deal in the Software without
-***   restriction, including without limitation the rights to use, copy, modify, merge, publish,
-***   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
-***   Software is furnished to do so, subject to the following conditions:
-***
+***     and associated documentation files (the “Software”), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
 ***   The above copyright notice and this permission notice shall be included in all copies or
-***   substantial portions of the Software.
-***
+***     substantial portions of the Software.
 ***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-***   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-***   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-***   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-***   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+***     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+***     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 
@@ -287,9 +283,11 @@
 		background: #eff0f1;
 
 		.wp-caption-text {
+			margin-left: auto;
+			margin-right: auto;
 			padding-left: 2rem;
 			padding-right: 2rem;
-			max-width: 100ch;
+			max-width: 80ch;
 
 			.declare-mobile-layout(
 				{
