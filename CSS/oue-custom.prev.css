@@ -1,37 +1,35 @@
 ﻿@import  'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap';
 
 /*! ================================================================================================
-*** Styling Applied to All DAESA Websites
+*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌   ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌   ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀   ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-*** SUMMARY: The following section of this stylesheet contains CSS code written for use on all
-***   websites designed, built, and maintained by the Divsion of Academic Engagement and Student
-***   Achievement (DAESA) in the Office of the Provost at Washington State University (WSU).
+*** The following section of this stylesheet contains CSS code written for use on all websites
+***   designed, built, and maintained by the Divsion of Academic Engagement and Student Achievement
+***   (DAESA) in the Office of the Provost at Washington State University (WSU).
 ***
-*** DESCRIPTION: The CSS code in the following section was generated from precompiled CSS written in
-***   the Less language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet
-***   Editor functioning in add-on mode.
+*** The CSS code in the following section was generated from precompiled CSS written in the Less
+***   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
+***   functioning in add-on mode.
+*** Please refer to the linked GitHub project for fully documented, precompiled source code.
 ***
-***   Please refer to the GitHub proejct at https://github.com/invokeImmediately/WSU-UE---CSS/ for
-***   fully documented, precompiled source code.  
-***     
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: MIT — Copyright (c) 2020 Washington State University.
-***
+*** @link https://github.com/invokeImmediately/WSU-DAESA-CSS
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2020 Washington State University
 ***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-***   and associated documentation files (the “Software”), to deal in the Software without
-***   restriction, including without limitation the rights to use, copy, modify, merge, publish,
-***   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
-***   Software is furnished to do so, subject to the following conditions:
-***
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
 ***   The above copyright notice and this permission notice shall be included in all copies or
-***   substantial portions of the Software.
-***
-***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-***   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-***   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-***   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-***   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 .ff--sans,.has-dflt-font,body {
@@ -2470,6 +2468,47 @@ main>.page>.row:last-child>.column:last-child {
 	text-decoration: none;
 }
 
+.simple-button {
+	border-radius: 4px;
+	display: inline-block;
+	margin-bottom: 9px;
+	padding: .5rem 1rem;
+}
+
+.simple-button:not(:hover) {
+	background-color: #eff0f1;
+	border: 1px solid #a60f2d;
+	box-shadow: 0 12px 16px 2px rgba(0,0,0,.03), 0 5px 22px 4px rgba(0,0,0,.03), 0 6px 13px 0 rgba(0,0,0,.02);
+}
+
+.simple-button:hover {
+	background-color: #eff0f1;
+	border: 1px solid #ca1237;
+	box-shadow: 0 12px 16px 2px rgba(202,18,55,.05), 0 5px 22px 4px rgba(202,18,55,.05), 0 6px 13px 0 rgba(202,18,55,.02);
+}
+
+.column .simple-button:hover {
+	border-bottom-width: 1px;
+	text-shadow: none;
+}
+
+.simple-button.simple-button--crimson:not(:hover) {
+	background-color: #a60f2d;
+	border: 0;
+	color: #fff;
+}
+
+.simple-button.simple-button--crimson:hover {
+	background-color: #ca1237;
+	border: 0;
+	box-shadow: 0 5px 18px rgba(202,18,55,.4);
+	color: #fff;
+}
+
+.column .simple-button.simple-button--crimson:hover {
+	border-bottom-width: 0;
+}
+
 strong.opening-line {
 	font-size: 1.0625em;
 	color: #72652a;
@@ -4793,8 +4832,16 @@ div.auto-scroller ul li {
 	margin-top: 1em;
 }
 
+.column *+.sv--1250mx {
+	margin-top: 1.25em;
+}
+
 .column *+.sv--1500mx {
 	margin-top: 1.5em;
+}
+
+.column *+.sv--1750mx {
+	margin-top: 1.75em;
 }
 
 .column *+.sv--2000mx {
@@ -5078,6 +5125,26 @@ div.auto-scroller ul li {
 	margin-top: 1em;
 }
 
+.ma--1250mx {
+	margin: 1.25em;
+}
+
+.mb--1250mx {
+	margin-bottom: 1.25em;
+}
+
+.ml--1250mx {
+	margin-left: 1.25em;
+}
+
+.mr--1250mx {
+	margin-right: 1.25em;
+}
+
+.mt--1250mx {
+	margin-top: 1.25em;
+}
+
 .ma--1500mx {
 	margin: 1.5em;
 }
@@ -5096,6 +5163,26 @@ div.auto-scroller ul li {
 
 .mt--1500mx {
 	margin-top: 1.5em;
+}
+
+.ma--1750mx {
+	margin: 1.75em;
+}
+
+.mb--1750mx {
+	margin-bottom: 1.75em;
+}
+
+.ml--1750mx {
+	margin-left: 1.75em;
+}
+
+.mr--1750mx {
+	margin-right: 1.75em;
+}
+
+.mt--1750mx {
+	margin-top: 1.75em;
 }
 
 .ma--2000mx {
@@ -6618,7 +6705,6 @@ section.row.single.quick-tabs>div.column>h3:first-child+h4+ul+h4+table>tbody tr 
 
 .column a.glass-button.yellow,.column a.recommend-button.yellow {
 	background-color: #ffb81c;
-	color: #000;
 }
 
 .column a.glass-button.yellow:hover,.column a.recommend-button.yellow:hover {
@@ -7080,9 +7166,11 @@ section.row.single.quick-tabs>div.column>h3:first-child+h4+ul+h4+table>tbody tr 
 }
 
 .daesa-focus-feature .wp-caption-text {
+	margin-left: auto;
+	margin-right: auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
-	max-width: 100ch;
+	max-width: 80ch;
 }
 
 .daesa-focus-feature img {
@@ -7762,7 +7850,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -7782,7 +7870,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -8483,6 +8571,11 @@ ul .more-news__list-entry:not(:first-child) {
 		left: .5rem;
 		right: .5rem;
 	}
+	
+	.daesa-focus-feature .wp-caption-text {
+		padding-left: .5rem;
+		padding-right: .5rem;
+	}
 }
 
 @media all and (max-width:360px) {
@@ -8490,7 +8583,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.0584em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.0584em;
 	}
 	
@@ -8523,7 +8616,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: .882em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .882em;
 	}
 	
@@ -8580,6 +8673,11 @@ ul .more-news__list-entry:not(:first-child) {
 		left: 1rem;
 		right: 1rem;
 	}
+	
+	.daesa-focus-feature .wp-caption-text {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
 }
 
 @media all and (min-width:990px) and (max-width:1072px) {
@@ -8587,7 +8685,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8607,7 +8705,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -8633,7 +8731,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.3416em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8653,7 +8751,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.118em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -8679,7 +8777,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.2em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.2em;
 	}
 	
@@ -8699,7 +8797,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: 1em;
 	}
 	
@@ -8725,7 +8823,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: 1.1292em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		font-size: 1.1292em;
 	}
 	
@@ -8758,7 +8856,7 @@ ul .more-news__list-entry:not(:first-child) {
 		font-size: .941em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		font-size: .941em;
 	}
 	
@@ -8934,7 +9032,7 @@ ul .more-news__list-entry:not(:first-child) {
 		line-height: 1.5em;
 	}
 	
-	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-right .article-deck.two {
+	.row.halves .article-deck,.row.mimic-two-column-sections .article-deck,.row.side-left .article-deck.one,.row.side-left .article-deck.two.mimic-sidebar,.row.side-right .article-deck.one.mimic-sidebar,.row.side-right .article-deck.two {
 		line-height: 1.5em;
 	}
 	
@@ -8954,7 +9052,7 @@ ul .more-news__list-entry:not(:first-child) {
 		line-height: 1.5em;
 	}
 	
-	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-right .column.two {
+	.row.halves .column,.row.mimic-two-column-sections .column,.row.side-left .column.one,.row.side-left .column.two.mimic-sidebar,.row.side-right .column.one.mimic-sidebar,.row.side-right .column.two {
 		line-height: 1.5em;
 	}
 	
