@@ -12,11 +12,12 @@
 *** The CSS code in the following section was generated from precompiled CSS written in the Less
 ***   language extension of CSS. It is designed to be applied via the WSUWP CSS Stylesheet Editor
 ***   functioning in add-on mode.
+***
 *** Please refer to the linked GitHub project for fully documented, precompiled source code.
 ***
 *** @link https://github.com/invokeImmediately/WSU-DAESA-CSS
 *** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-*** @license MIT Copyright (c) 2020 Washington State University
+*** @license MIT Copyright (c) 2021 Washington State University
 ***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
 ***     and associated documentation files (the "Software"), to deal in the Software without
 ***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
@@ -1265,362 +1266,6 @@ ul.cascaded-layout.blank>li.gutter-sizer {
 	margin-top: 1em;
 }
 
-.article-body {
-	position: relative;
-	line-height: 1.5em;
-}
-
-.article-footer {
-	border-top: 1px solid #d7dadb;
-}
-
-.archive.category .article-header:not(.row),.archive.tag .article-header:not(.row),.blog .article-header:not(.row),.single-post.post-template-default .article-header:not(.row) {
-	background-color: #eff0f1;
-	border-bottom: 1px solid rgba(127,127,127,.2);
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	margin-left: -1em;
-	margin-right: -1em;
-	margin-top: -1em;
-	padding-left: 1em;
-	padding-right: 1em;
-	padding-top: 1em;
-}
-
-.archive.category .article-header:not(.row)+*,.archive.tag .article-header:not(.row)+*,.blog .article-header:not(.row)+*,.single-post.post-template-default .article-header:not(.row)+* {
-	margin-top: 1em;
-}
-
-.column .article-header:not(.row) .article-title {
-	font-size: 2em;
-	line-height: 1.1em;
-}
-
-.column .article-header:not(.row) .article-title a {
-	font-weight: 700;
-}
-
-.article-sub-heading {
-	border-bottom: 1px solid rgba(127,127,127,.2);
-	padding-bottom: 1rem;
-	margin-bottom: 1rem;
-}
-
-.article-summary {
-	line-height: 1.5em;
-}
-
-.article-summary .article-media-contacts,.article-summary .article-sidebar,.article-summary .article-sub-heading,.article-summary .photo-caption,.article-summary figure:not(.article-thumbnail),.article-summary img,.article-summary object,.article-summary>h3 {
-	display: none;
-}
-
-.article-summary .attachment-spine-thumbnail_size {
-	display: block;
-}
-
-.column .article-summary .article-media-contacts+:not(.article-media-contacts) {
-	margin-top: 0;
-}
-
-.single-post .article-media-contacts {
-	font-size: .9em;
-}
-
-*+.single-post .article-media-contacts {
-	margin-top: 1em;
-}
-
-.single-post .column .article-media-contacts+:not(.article-media-contacts) {
-	border-top: 1px solid rgba(127,127,127,.2);
-	padding-top: 15px;
-}
-
-.single-post .main-header+.featured-image {
-	display: none;
-}
-
-.single-post .article-header .article-title,.single-post .article-header:not(.row),.summary-divided .article-header .article-title,.summary-divided .article-header:not(.row) {
-	margin-bottom: 15px;
-}
-
-.single-post .article-footer,.summary-divided .article-footer {
-	margin-top: 15px;
-}
-
-.widget {
-	background-color: #eff0f1;
-	border-radius: 5px;
-	box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0,0,0,.2), 3px 4px 4px rgba(0,0,0,.25) !important;
-	padding: 1em;
-	overflow: hidden;
-}
-
-.widget.widget_recent_entries ul {
-	padding: 0;
-}
-
-.widget.widget_recent_entries ul li {
-	padding-bottom: 1em;
-}
-
-.widget.widget_recent_entries .post-date:before {
-	font-weight: 700;
-	content: "/ ";
-}
-
-.widget.widget_tag_cloud a {
-	border-bottom: none;
-	box-shadow: none;
-}
-
-.widget+.widget {
-	margin-top: 2rem;
-}
-
-.widget header {
-	background-color: #d7dadb;
-	border-top-left-radius: 5px;
-	border-top-right-radius: 5px;
-	border-bottom: 1px solid rgba(103,103,103,.2);
-	font-size: 1rem;
-	font-weight: 700;
-	margin: -1rem -1rem .5rem;
-	padding: .5rem 1rem;
-}
-
-.widget ul li {
-	list-style: disc inside none;
-}
-
-.widget_archive label.screen-reader-text {
-	display: none;
-}
-
-.wsuwp-json--headlines .content-item-byline-author {
-	display: none;
-}
-
-.wsuwp-json--headlines .content-item-byline-date {
-	display: block;
-	padding-bottom: .25em;
-	margin-top: .5em;
-	margin-bottom: .75em;
-	color: #737373;
-	text-transform: uppercase;
-}
-
-.wsuwp-json--headlines .content-item-byline-date:before {
-	content: "Posted on ";
-}
-
-.wsuwp-json--headlines .content-item-excerpt .article-media-contacts,.wsuwp-json--headlines .content-item-excerpt .article-sidebar,.wsuwp-json--headlines .content-item-excerpt .more-link,.wsuwp-json--headlines .content-item-excerpt .photo-caption,.wsuwp-json--headlines .content-item-excerpt img,.wsuwp-json--headlines .content-item-excerpt object,.wsuwp-json--headlines .content-item-excerpt>h3 {
-	display: none;
-}
-
-.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
-	display: inline-block;
-}
-
-.wsuwp-json--headlines .content-item-excerpt .content-item-read-story,.wsuwp-json--headlines .content-item-excerpt>*+* {
-	margin-top: 1em;
-}
-
-.wsuwp-json--headlines .content-item-title {
-	font-size: 1.325em;
-	font-weight: 700;
-	line-height: 1.4em;
-	line-height: calc(1.4em + 1px);
-}
-
-.wsuwp-json--headlines .content-item-title a {
-	border-bottom-color: transparent;
-	box-shadow: none;
-	text-decoration: underline;
-}
-
-.wsuwp-json--headlines .content-item-title a:hover {
-	text-decoration: none;
-}
-
-.wsuwp-json--headlines .content-item-thumbnail {
-	float: right;
-	margin-bottom: .5em;
-	margin-left: .5em;
-	max-width: 136px;
-	min-width: 96px;
-	width: 28.5%;
-}
-
-.wsuwp-json--headlines .wsuwp-content-syndicate-item {
-	box-sizing: border-box;
-	line-height: 1.5em;
-	list-style-image: none !important;
-}
-
-.wsuwp-json--headlines *+.wsuwp-content-syndicate-item {
-	margin-top: 1em;
-}
-
-.wsuwp-json--headlines .wsuwp-content-syndicate-list {
-	display: flex;
-	flex-wrap: wrap;
-	list-style-type: none;
-	padding: 0;
-}
-
-.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-list {
-	font-size: .9em;
-	max-width: none !important;
-}
-
-.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
-	padding-bottom: 2em;
-	padding-right: 2em;
-	width: 50%;
-}
-
-.wsuwp-json--headlines.layout--2-columns *+.wsuwp-content-syndicate-item {
-	margin-top: 0;
-}
-
-.daesa-news-summary {
-	display: none;
-}
-
-.daesa-news-feed {
-	max-width: none;
-}
-
-.daesa-news-feed .content-item-byline-author {
-	display: none;
-}
-
-.daesa-news-feed .content-item-byline-date,.daesa-news-feed .content-item-thumbnail,.daesa-news-feed .content-item-title {
-	display: block;
-}
-
-.daesa-news-feed .content-item-byline-date {
-	font-size: .9rem;
-	line-height: 1.5em;
-	margin-bottom: .5rem;
-}
-
-.daesa-news-feed .content-item-byline-date:before {
-	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/date.svg) center/100% no-repeat;
-	content: "";
-	display: inline-block;
-	height: .75rem;
-	margin: 0 .375rem -.0625rem 0;
-	width: .75rem;
-}
-
-.daesa-news-feed .content-item-thumbnail {
-	background: #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
-	background: linear-gradient(90deg,transparent,#a60f2d 18%,#a60f2d 82%,transparent), #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
-}
-
-.daesa-news-feed .content-item-thumbnail img {
-	border-left: 1px solid #000;
-	border-right: 1px solid #000;
-	display: block;
-	margin: 0 auto;
-}
-
-.daesa-news-feed .content-item-excerpt>:not(.daesa-news-summary):not(.content-item-read-story) {
-	display: none;
-}
-
-.daesa-news-feed .content-item-read-story {
-	display: inline-block;
-	margin-top: .5em;
-}
-
-.daesa-news-feed .content-item-title {
-	margin: .5em 0;
-}
-
-.daesa-news-feed .daesa-news-summary {
-	display: block;
-}
-
-.daesa-news-feed .wsuwp-content-syndicate-item {
-	flex-basis: 30%;
-	padding-bottom: 2rem;
-}
-
-.daesa-news-feed .wsuwp-content-syndicate-list {
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-between;
-	list-style-type: none;
-	margin-top: .5em;
-	max-width: none;
-	padding: 0 1em 0 0;
-}
-
-.daesa-news-feed a {
-	font-weight: 700;
-}
-
-.daesa-news-feed a:after {
-	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
-	content: "";
-	height: 1em;
-	margin: 0 0 -.05em .1em;
-	position: absolute;
-	width: 1em;
-}
-
-.daesa-news-feed a:not(:hover) {
-	border-bottom: 3px solid transparent;
-	box-shadow: none;
-	color: #000;
-}
-
-.daesa-news-feed--gray .content-item-thumbnail {
-	background: #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
-	background: linear-gradient(90deg,transparent,#b5babe 18%,#b5babe 82%,transparent), #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
-}
-
-.daesa-news-feed--1-col .wsuwp-content-syndicate-item {
-	flex-basis: 100%;
-}
-
-.daesa-news-feed--2-col .wsuwp-content-syndicate-item {
-	box-sizing: border-box;
-	flex-basis: 50%;
-}
-
-.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n) {
-	padding-left: 1rem;
-}
-
-.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n+1) {
-	padding-right: 1rem;
-}
-
-.archive.category .column .article-title,.archive.tag .column .article-title,.blog .column .article-title {
-	padding-right: 1rem;
-}
-
-.archive.category .column .article-title a,.archive.tag .column .article-title a,.blog .column .article-title a {
-	text-decoration: none;
-}
-
-.archive.category .column .article-title a:after,.archive.tag .column .article-title a:after,.blog .column .article-title a:after {
-	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/60% no-repeat;
-	content: "";
-	height: 1em;
-	margin: 0 0 -.05em .1em;
-	position: absolute;
-	width: 1em;
-}
-
-.award-banner {
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-}
-
 .builder-banner-content {
 	border: 0;
 	bottom: 0;
@@ -2339,26 +1984,31 @@ main>.page>.row:last-child>.column:last-child {
 }
 
 .column a {
-	border: 1px solid transparent;
-	border-bottom-color: #981e32;
-	border-left: 0;
-	border-right: 0;
+	border-bottom: 1px solid #981e32;
 	text-decoration: none;
-	transition: color .4s, background .4s, border .1s;
+	transition: color .2s ease, background .2s ease, border-width .05s;
 }
 
-.column a:hover {
-	background-color: rgba(198,12,48,.15);
+.column a:focus,.column a:hover {
+	background-color: rgba(198,12,48,.1);
 	border-bottom-width: 3px;
 	border-color: #c60c30;
 	text-shadow: 1px 1px 2px rgba(152,30,50,.3);
+}
+
+.column a:not([class*=fw--]) {
+	font-weight: 400;
 }
 
 .column a.gform_anchor {
 	border: none;
 }
 
-.column strong a {
+.column h1 a:not([class*=fw--]),.column h2 a:not([class*=fw--]),.column h3 a:not([class*=fw--]),.column h4 a:not([class*=fw--]),.column h5 a:not([class*=fw--]),.column h6 a:not([class*=fw--]),.gform_heading h3.gform_title a:not([class*=fw--]) {
+	font-weight: inherit;
+}
+
+.column b a:not([class*=fw--]),.column strong a:not([class*=fw--]) {
 	font-weight: 700;
 }
 
@@ -3727,6 +3377,362 @@ div.auto-scroller ul li {
 	margin: 0;
 	list-style-type: none;
 	list-style-image: none;
+}
+
+.article-body {
+	position: relative;
+	line-height: 1.5em;
+}
+
+.article-footer {
+	border-top: 1px solid #d7dadb;
+}
+
+.archive.category .article-header:not(.row),.archive.tag .article-header:not(.row),.blog .article-header:not(.row),.single-post.post-template-default .article-header:not(.row) {
+	background-color: #eff0f1;
+	border-bottom: 1px solid rgba(127,127,127,.2);
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	margin-left: -1em;
+	margin-right: -1em;
+	margin-top: -1em;
+	padding-left: 1em;
+	padding-right: 1em;
+	padding-top: 1em;
+}
+
+.archive.category .article-header:not(.row)+*,.archive.tag .article-header:not(.row)+*,.blog .article-header:not(.row)+*,.single-post.post-template-default .article-header:not(.row)+* {
+	margin-top: 1em;
+}
+
+.column .article-header:not(.row) .article-title {
+	font-size: 2em;
+	line-height: 1.1em;
+}
+
+.column .article-header:not(.row) .article-title a {
+	font-weight: 700;
+}
+
+.article-sub-heading {
+	border-bottom: 1px solid rgba(127,127,127,.2);
+	padding-bottom: 1rem;
+	margin-bottom: 1rem;
+}
+
+.article-summary {
+	line-height: 1.5em;
+}
+
+.article-summary .article-media-contacts,.article-summary .article-sidebar,.article-summary .article-sub-heading,.article-summary .photo-caption,.article-summary figure:not(.article-thumbnail),.article-summary img,.article-summary object,.article-summary>h3 {
+	display: none;
+}
+
+.article-summary .attachment-spine-thumbnail_size {
+	display: block;
+}
+
+.column .article-summary .article-media-contacts+:not(.article-media-contacts) {
+	margin-top: 0;
+}
+
+.single-post .article-media-contacts {
+	font-size: .9em;
+}
+
+*+.single-post .article-media-contacts {
+	margin-top: 1em;
+}
+
+.single-post .column .article-media-contacts+:not(.article-media-contacts) {
+	border-top: 1px solid rgba(127,127,127,.2);
+	padding-top: 15px;
+}
+
+.single-post .main-header+.featured-image {
+	display: none;
+}
+
+.single-post .article-header .article-title,.single-post .article-header:not(.row),.summary-divided .article-header .article-title,.summary-divided .article-header:not(.row) {
+	margin-bottom: 15px;
+}
+
+.single-post .article-footer,.summary-divided .article-footer {
+	margin-top: 15px;
+}
+
+.widget {
+	background-color: #eff0f1;
+	border-radius: 5px;
+	box-shadow: 0 0 0 1px rgba(255,255,255,.9), 0 0 0 2px rgba(0,0,0,.2), 3px 4px 4px rgba(0,0,0,.25) !important;
+	padding: 1em;
+	overflow: hidden;
+}
+
+.widget.widget_recent_entries ul {
+	padding: 0;
+}
+
+.widget.widget_recent_entries ul li {
+	padding-bottom: 1em;
+}
+
+.widget.widget_recent_entries .post-date:before {
+	font-weight: 700;
+	content: "/ ";
+}
+
+.widget.widget_tag_cloud a {
+	border-bottom: none;
+	box-shadow: none;
+}
+
+.widget+.widget {
+	margin-top: 2rem;
+}
+
+.widget header {
+	background-color: #d7dadb;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	border-bottom: 1px solid rgba(103,103,103,.2);
+	font-size: 1rem;
+	font-weight: 700;
+	margin: -1rem -1rem .5rem;
+	padding: .5rem 1rem;
+}
+
+.widget ul li {
+	list-style: disc inside none;
+}
+
+.widget_archive label.screen-reader-text {
+	display: none;
+}
+
+.wsuwp-json--headlines .content-item-byline-author {
+	display: none;
+}
+
+.wsuwp-json--headlines .content-item-byline-date {
+	display: block;
+	padding-bottom: .25em;
+	margin-top: .5em;
+	margin-bottom: .75em;
+	color: #737373;
+	text-transform: uppercase;
+}
+
+.wsuwp-json--headlines .content-item-byline-date:before {
+	content: "Posted on ";
+}
+
+.wsuwp-json--headlines .content-item-excerpt .article-media-contacts,.wsuwp-json--headlines .content-item-excerpt .article-sidebar,.wsuwp-json--headlines .content-item-excerpt .more-link,.wsuwp-json--headlines .content-item-excerpt .photo-caption,.wsuwp-json--headlines .content-item-excerpt img,.wsuwp-json--headlines .content-item-excerpt object,.wsuwp-json--headlines .content-item-excerpt>h3 {
+	display: none;
+}
+
+.wsuwp-json--headlines .content-item-excerpt .content-item-read-story {
+	display: inline-block;
+}
+
+.wsuwp-json--headlines .content-item-excerpt .content-item-read-story,.wsuwp-json--headlines .content-item-excerpt>*+* {
+	margin-top: 1em;
+}
+
+.wsuwp-json--headlines .content-item-title {
+	font-size: 1.325em;
+	font-weight: 700;
+	line-height: 1.4em;
+	line-height: calc(1.4em + 1px);
+}
+
+.wsuwp-json--headlines .content-item-title a {
+	border-bottom-color: transparent;
+	box-shadow: none;
+	text-decoration: underline;
+}
+
+.wsuwp-json--headlines .content-item-title a:hover {
+	text-decoration: none;
+}
+
+.wsuwp-json--headlines .content-item-thumbnail {
+	float: right;
+	margin-bottom: .5em;
+	margin-left: .5em;
+	max-width: 136px;
+	min-width: 96px;
+	width: 28.5%;
+}
+
+.wsuwp-json--headlines .wsuwp-content-syndicate-item {
+	box-sizing: border-box;
+	line-height: 1.5em;
+	list-style-image: none !important;
+}
+
+.wsuwp-json--headlines *+.wsuwp-content-syndicate-item {
+	margin-top: 1em;
+}
+
+.wsuwp-json--headlines .wsuwp-content-syndicate-list {
+	display: flex;
+	flex-wrap: wrap;
+	list-style-type: none;
+	padding: 0;
+}
+
+.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-list {
+	font-size: .9em;
+	max-width: none !important;
+}
+
+.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
+	padding-bottom: 2em;
+	padding-right: 2em;
+	width: 50%;
+}
+
+.wsuwp-json--headlines.layout--2-columns *+.wsuwp-content-syndicate-item {
+	margin-top: 0;
+}
+
+.daesa-news-summary {
+	display: none;
+}
+
+.daesa-news-feed {
+	max-width: none;
+}
+
+.daesa-news-feed .content-item-byline-author {
+	display: none;
+}
+
+.daesa-news-feed .content-item-byline-date,.daesa-news-feed .content-item-thumbnail,.daesa-news-feed .content-item-title {
+	display: block;
+}
+
+.daesa-news-feed .content-item-byline-date {
+	font-size: .9rem;
+	line-height: 1.5em;
+	margin-bottom: .5rem;
+}
+
+.daesa-news-feed .content-item-byline-date:before {
+	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/date.svg) center/100% no-repeat;
+	content: "";
+	display: inline-block;
+	height: .75rem;
+	margin: 0 .375rem -.0625rem 0;
+	width: .75rem;
+}
+
+.daesa-news-feed .content-item-thumbnail {
+	background: #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+	background: linear-gradient(90deg,transparent,#a60f2d 18%,#a60f2d 82%,transparent), #a60f2d url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+}
+
+.daesa-news-feed .content-item-thumbnail img {
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+	display: block;
+	margin: 0 auto;
+}
+
+.daesa-news-feed .content-item-excerpt>:not(.daesa-news-summary):not(.content-item-read-story) {
+	display: none;
+}
+
+.daesa-news-feed .content-item-read-story {
+	display: inline-block;
+	margin-top: .5em;
+}
+
+.daesa-news-feed .content-item-title {
+	margin: .5em 0;
+}
+
+.daesa-news-feed .daesa-news-summary {
+	display: block;
+}
+
+.daesa-news-feed .wsuwp-content-syndicate-item {
+	flex-basis: 30%;
+	padding-bottom: 2rem;
+}
+
+.daesa-news-feed .wsuwp-content-syndicate-list {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	list-style-type: none;
+	margin-top: .5em;
+	max-width: none;
+	padding: 0 1em 0 0;
+}
+
+.daesa-news-feed a:not([class*=fw--]) {
+	font-weight: 700;
+}
+
+.daesa-news-feed a:after {
+	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/70% no-repeat;
+	content: "";
+	height: 1em;
+	margin: 0 0 -.05em .1em;
+	position: absolute;
+	width: 1em;
+}
+
+.daesa-news-feed a:not(:hover) {
+	border-bottom: 3px solid transparent;
+	box-shadow: none;
+	color: #000;
+}
+
+.daesa-news-feed--gray .content-item-thumbnail {
+	background: #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+	background: linear-gradient(90deg,transparent,#b5babe 18%,#b5babe 82%,transparent), #b5babe url(https://s3.wp.wsu.edu/uploads/sites/2334/2018/10/bg-dots.png) top left repeat;
+}
+
+.daesa-news-feed--1-col .wsuwp-content-syndicate-item {
+	flex-basis: 100%;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item {
+	box-sizing: border-box;
+	flex-basis: 50%;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n) {
+	padding-left: 1rem;
+}
+
+.daesa-news-feed--2-col .wsuwp-content-syndicate-item:nth-child(2n+1) {
+	padding-right: 1rem;
+}
+
+.archive.category .column .article-title,.archive.tag .column .article-title,.blog .column .article-title {
+	padding-right: 1rem;
+}
+
+.archive.category .column .article-title a,.archive.tag .column .article-title a,.blog .column .article-title a {
+	text-decoration: none;
+}
+
+.archive.category .column .article-title a:after,.archive.tag .column .article-title a:after,.blog .column .article-title a:after {
+	background: url(https://s3.wp.wsu.edu/uploads/sites/56/2020/02/link.svg) .2em/60% no-repeat;
+	content: "";
+	height: 1em;
+	margin: 0 0 -.05em .1em;
+	position: absolute;
+	width: 1em;
+}
+
+.award-banner {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .daesa-card,.style--card {
@@ -5974,34 +5980,33 @@ div.auto-scroller ul li {
 }
 
 /*! ================================================================================================
-*** Styling Specific to the DAESA Website
+*** █▀▀▄ ▄▀▀▄ █▀▀▀ ▄▀▀▀ ▄▀▀▄   ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌  ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+*** █  █ █▄▄█ █▀▀  ▀▀▀█ █▄▄█   █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌  ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+*** ▀▀▀  █  ▀ ▀▀▀▀ ▀▀▀  █  ▀    ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀  ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
 *** ================================================================================================
-*** SUMMARY: CSS code designed specifically for use on Washington State University's [DAESA website]
+*** CSS code designed specifically for use on Washington State University's [DAESA website]
 ***   (https://daesa.wsu.edu) that was built from precompiled CSS written in the Less language
 ***   extension of CSS.
 ***
-*** DESCRIPTION: Fully documented, precompiled source code from which this section of the custom
-***   stylesheet was built is developed and maintained on the following GitHub project:
-***   https://github.com/invokeImmediately/daesa.wsu.edu/
+*** Fully documented, precompiled source code from which this section of the custom stylesheet was
+***   built is developed and maintained on the linked GitHub project.
 ***
-*** AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
-***
-*** LICENSE: MIT — Copyright (c) 2020 Washington State University.
-***
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @link https://github.com/invokeImmediately/daesa.wsu.edu/
+*** @license MIT — Copyright (c) 2021 Washington State University.
 ***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
-***   and associated documentation files (the “Software”), to deal in the Software without
-***   restriction, including without limitation the rights to use, copy, modify, merge, publish,
-***   distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
-***   Software is furnished to do so, subject to the following conditions:
-***
+***     and associated documentation files (the “Software”), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
 ***   The above copyright notice and this permission notice shall be included in all copies or
-***   substantial portions of the Software.
-***
+***     substantial portions of the Software.
 ***   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
-***   BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-***   NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-***   DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-***   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+***     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+***     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
 *** ================================================================================================
 **/
 #jacket {
@@ -7994,18 +7999,6 @@ ul .more-news__list-entry:not(:first-child) {
 	}
 }
 
-@media only screen and (max-width:791px) {
-	.daesa-news-feed .content-item-thumbnail {
-		background: 0 0;
-	}
-	
-	.daesa-news-feed .content-item-thumbnail img {
-		border-left: none;
-		border-right: none;
-		margin: 0;
-	}
-}
-
 @media all and (max-width:791px) {
 	.interactively-flipped-panels .container .panel-wrapper .panel .front p {
 		font-size: 4.42478vw;
@@ -8026,6 +8019,18 @@ ul .more-news__list-entry:not(:first-child) {
 	
 	.hide-on-tablet {
 		display: none !important;
+	}
+}
+
+@media only screen and (max-width:791px) {
+	.daesa-news-feed .content-item-thumbnail {
+		background: 0 0;
+	}
+	
+	.daesa-news-feed .content-item-thumbnail img {
+		border-left: none;
+		border-right: none;
+		margin: 0;
 	}
 }
 
@@ -8199,14 +8204,6 @@ ul .more-news__list-entry:not(:first-child) {
 }
 
 @media all and (max-width:480px) {
-	.article-summary .article-thumbnail img {
-		width: 96px;
-	}
-	
-	.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
-		width: 100%;
-	}
-	
 	.builder-banner-content {
 		font-size: 5.1568vw;
 		line-height: 6.9616vw;
@@ -8301,6 +8298,14 @@ ul .more-news__list-entry:not(:first-child) {
 		float: none;
 		margin-left: 0;
 		padding-bottom: 40%;
+		width: 100%;
+	}
+	
+	.article-summary .article-thumbnail img {
+		width: 96px;
+	}
+	
+	.wsuwp-json--headlines.layout--2-columns .wsuwp-content-syndicate-item {
 		width: 100%;
 	}
 	
