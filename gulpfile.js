@@ -51,8 +51,8 @@ var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // §2: Specificiation of build settings 
 
-////////
-// §2.1: getCssBuildSettings()
+  ////////
+  // §2.1: getCssBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom CSS build from Less source files.
@@ -62,7 +62,7 @@ var gulpBuilder = require( './WSU-DAESA-JS/gulpCssJsBuilder.js' );
 function getCssBuildSettings() {
 	return new gulpBuilder.CssBuildSettings( {
 		commentRemovalNeedle: /^(?:[ \t]*)?\/\*[^!].*$\n(?:^\*\*?[^/].*$\n)*\*\*?\/\n\n?/gm,
-		dependenciesPath: './WSU-UE---CSS/',
+		dependenciesPath: './WSU-DAESA-CSS/',
 		destFolder: './CSS/',
 		fontImportStr: '@import url(\'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wgh' +
 			't@0,300;0,400;0,600;0,700;1,300;1,400;1,600;1,700&family=PT+Serif:ital,wght@0,400;0,' +
@@ -103,8 +103,8 @@ function getCssBuildSettings() {
 	} );
 }
 
-////////
-// §2.2: getJsBuildSettings()
+  ////////
+  // §2.2: getJsBuildSettings()
 
 /**
  * Get the settings for a gulp-mediated custom JS build.
@@ -114,7 +114,7 @@ function getCssBuildSettings() {
 function getJsBuildSettings() {
 	return {
 		buildDependenciesList: [
-			'./WSU-DAESA-JS/jQuery.oue-custom.js',
+			'./WSU-DAESA-JS/jQuery.daesa-custom.js',
 			'./WSU-DAESA-JS/jQuery.oue-animate.js',
 			'./WSU-DAESA-JS/jQuery.cookieObjs.js',
 			'./WSU-DAESA-JS/jQuery.forms.js',
