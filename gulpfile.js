@@ -1,42 +1,37 @@
 /*!*************************************************************************************************
- * gulpfile.js
- * -------------------------------------------------------------------------------------------------
- * SUMMARY: Gulp automation task definition file for setting up tasks that build CSS and JS
- *    files for use on the WSUWP website of the Division of Academic Engagement and Student
- *    Achievement (DAESA) at Washington State University (WSU).
+ * █▀▀▀ █  █ █    █▀▀▄ █▀▀▀ ▀█▀ █    █▀▀▀      █ ▄▀▀▀
+ * █ ▀▄ █  █ █  ▄ █▄▄▀ █▀▀▀  █  █  ▄ █▀▀    ▄  █ ▀▀▀█
+ * ▀▀▀▀  ▀▀  ▀▀▀  █    ▀    ▀▀▀ ▀▀▀  ▀▀▀▀ ▀ ▀▄▄█ ▀▀▀ 
  *
- * DESCRIPTION: This gulp automation task definition file is designed for use on the following
- *    project that is maintained on GitHub:
- *    https://github.com/invokeImmediately/daesa.wsu.edu
+ * Gulp automation task definition file for setting up tasks that build CSS and JS files for use on
+ *   the WSUWP website of the Division of Academic Engagement and Student Achievement (DAESA) at
+ *   Washington State University (WSU).
  *
- * AUTHOR: Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
- *
- * LICENSE: MIT - Copyright (c) 2020 Washington State University
- *
+ * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/master/gulpfile.js
+ * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+ * @license MIT - Copyright (c) 2021 Washington State University
  *   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
- *    and associated documentation files (the “Software”), to deal in the Software without
- *    restriction, including without limitation the rights to use, copy, modify, merge, publish,
- *    distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the
- *    Software is furnished to do so, subject to the following conditions:
- *
+ *     and associated documentation files (the “Software”), to deal in the Software without
+ *     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+ *     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+ *     the Software is furnished to do so, subject to the following conditions:
  *   The above copyright notice and this permission notice shall be included in all copies or
- *    substantial portions of the Software.
- *
+ *     substantial portions of the Software.
  *   THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
- *    BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
- *    NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
- *    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- *    OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ *     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ *     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
+ *     DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ *     FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  **************************************************************************************************/
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................47
-// §2: Specificiation of build settings .......................................................52
-//   §2.1: getCssBuildSettings()...............................................................55
-//   §2.2: getJsBuildSettings()...............................................................107
-// §3: Entry point: Set up of build taks......................................................139
+// §1: Gulp task dependencies..................................................................42
+// §2: Specificiation of build settings .......................................................47
+//   §2.1: getCssBuildSettings()...............................................................50
+//   §2.2: getJsBuildSettings()...............................................................102
+// §3: Entry point: Set up of build taks......................................................134
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
@@ -99,7 +94,7 @@ function getCssBuildSettings() {
 		},
 		minCssFileExtension: '.min.css',
 		minCssFileHeaderStr: '',
-		sourceFile: './CSS/oue-custom.less'
+		sourceFile: './CSS/daesa-custom.less'
 	} );
 }
 
