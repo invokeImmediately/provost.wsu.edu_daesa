@@ -7,6 +7,8 @@
  *   the WSUWP website of the Division of Academic Engagement and Student Achievement (DAESA) at
  *   Washington State University (WSU).
  *
+ * @version 1.0.0
+ *
  * @link https://github.com/invokeImmediately/daesa.wsu.edu/blob/master/gulpfile.js
  * @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
  * @license MIT - Copyright (c) 2021 Washington State University
@@ -27,11 +29,11 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TABLE OF CONTENTS
 // -----------------
-// §1: Gulp task dependencies..................................................................42
-// §2: Specificiation of build settings .......................................................47
-//   §2.1: getCssBuildSettings()...............................................................50
-//   §2.2: getJsBuildSettings()...............................................................102
-// §3: Entry point: Set up of build taks......................................................134
+// §1: Gulp task dependencies..................................................................44
+// §2: Specificiation of build settings .......................................................49
+//   §2.1: getCssBuildSettings()...............................................................52
+//   §2.2: getJsBuildSettings()...............................................................104
+// §3: Entry point: Set up of build taks......................................................136
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ( function() {
